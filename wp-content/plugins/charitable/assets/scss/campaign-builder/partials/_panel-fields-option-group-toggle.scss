@@ -1,0 +1,215 @@
+// Form Builder styles.
+//
+// Field Option group tabs (Basic, Advanced, Smart logic).
+//
+// @since 1.8.0
+
+
+.charitable-field-option-group-toggle,
+.charitable-group-toggle {
+	color: $color_primary_text;
+	display: block;
+	font-size: $font_size_m - 1px;
+	left: 270px;
+	margin: 0;
+	outline: 0;
+	overflow: hidden;
+	padding: 12px 12px 9px 12px;
+	position: fixed;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: capitalize;
+	top: calc( 124px + var( --charitable-admin-bar-height ) );
+	white-space: nowrap;
+	z-index: 1;
+
+	@include transition( "top, width, left", "#{$transition_slow}, #{$transition_normal}, #{$transition_normal}", ease-out );
+
+	&:hover {
+		color: $color_fields_secondary_text;
+	}
+
+}
+
+.charitable-layout-options-tabs-toggle {
+	color: $color_primary_text;
+	display: block;
+	font-size: $font_size_m - 1px;
+	left: 205px;
+	margin: 0;
+	outline: 0;
+	overflow: hidden;
+	padding: 12px 12px 9px 12px;
+	position: fixed;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: capitalize;
+	top: calc( 124px + var( --charitable-admin-bar-height ) );
+	white-space: nowrap;
+	z-index: 1;
+
+	@include transition( "top, width, left", "#{$transition_slow}, #{$transition_normal}, #{$transition_normal}", ease-out );
+
+	&:hover {
+		color: $color_fields_secondary_text;
+	}
+
+}
+
+.charitable-field-option-field-title {
+	color: $color_primary_text;
+	display: block;
+	font-size: $font_size_m - 1px;
+	font-weight: 600;
+	line-height: $font_size_l;
+	margin: 0 0 0 1px;
+	outline: 0;
+	padding: $spacing_m $spacing_m 0 $spacing_m;
+	text-decoration: none;
+
+	span {
+		color: $color_fields_secondary_text;
+		font-weight: 400;
+	}
+}
+
+.charitable-field-option-group-basic,
+.charitable-layout-options-tab-general {
+
+	.charitable-field-option-group-toggle,
+	.charitable-group-toggle  {
+		left: #{ $panels_toggle_width + $spacing_m };
+		max-width: 83px;
+	}
+}
+
+.charitable-field-option-group-advanced,
+.charitable-layout-options-group-advanced {
+
+	.charitable-field-option-group-toggle,
+	.charitable-group-toggle  {
+		left: #{ $panels_toggle_width + 97px };
+		max-width: 99px;
+	}
+}
+
+.charitable-field-option-group-conditionals {
+
+	.charitable-field-option-group-toggle,
+	.charitable-group-toggle  {
+		left: #{ $panels_toggle_width + 186px };
+		max-width: 116px;
+	}
+}
+
+.charitable-panel-sidebar-closed {
+
+	.charitable-field-option-group-basic {
+
+		.charitable-field-option-group-toggle,
+		.charitable-group-toggle  {
+			left: calc( #{ $panels_toggle_width + $spacing_m } - 400px );
+			max-width: 83px;
+		}
+	}
+
+	.charitable-field-option-group-advanced {
+
+		.charitable-field-option-group-toggle,
+		.charitable-group-toggle  {
+			left: calc( #{ $panels_toggle_width + 97px } - 400px );
+			max-width: 99px;
+		}
+	}
+
+	.charitable-field-option-group-conditionals {
+
+		.charitable-field-option-group-toggle,
+		.charitable-group-toggle  {
+			left: calc( #{ $panels_toggle_width + 186px } - 400px );
+			max-width: 116px;
+		}
+	}
+}
+
+.charitable-layout-options-tab.charitable-layout-options-tab-general {
+	position: relative; //fixed;
+}
+
+.charitable-field-option-group,
+.charitable-layout-options-tab {
+
+	.charitable-field-option-group-inner,
+	.charitable-layout-options-group-inner {
+		display: none;
+		padding: $spacing_m;
+	}
+
+	&.active {
+
+		.charitable-field-option-group-toggle,
+		.charitable-group-toggle  {
+			border-bottom: 3px solid $color_orange;
+			font-weight: 600;
+
+			&:hover {
+				color: $color_primary_text;
+			}
+		}
+
+		.charitable-field-option-group-inner,
+		.charitable-layout-options-group-inner {
+			display: block;
+		}
+	}
+
+	button.charitable-tab-groups-add {
+		margin-top: 20px;
+		width: 100%;
+		background-color: #EEEEEE;
+		border: 1px solid #CFCFD2;
+		color: #595B67;
+		font-weight: 600;
+		text-transform: capitalize;
+		border-radius: 8px;
+	}
+	button.charitable-tab-groups-add:hover {
+		background-color: #d7d7d7;
+	}
+}
+
+.charitable-layout-options-group-inner-generic {
+	display: none;
+	padding: $spacing_m;
+}
+
+#charitable-field-options {
+
+	&:before {
+		background-color: $color_fields_background;
+		border-bottom: 1px solid $color_fields_divider;
+		content: '';
+		display: block;
+		height: 40px;
+		// left: $panels_toggle_width + $spacing_m;
+		left: 0;
+		top: -39px;
+		position: absolute;
+		// top: calc( #{ $toolbar_height + 49px } + var( --charitable-admin-bar-height ) );
+		/* width: #{ $sidebar_width - 2 * $spacing_m }; */
+		width: 100%;
+		z-index: 10;
+
+		@include transition( "top, width, left", "#{ $transition_slow }, #{ $transition_normal }, #{ $transition_normal }", "ease-out, ease-out, ease-in-out" );
+	}
+}
+
+.charitable-panel-sidebar-closed {
+
+	#charitable-field-options {
+
+		&:before {
+			left: calc( #{ $panels_toggle_width + $spacing_m } - 400px );
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// Form Builder styles.
+//
+// Admin popup + Form embed wizard.
+//
+// @since 1.8.0
+
+#charitable-panel-field-settings-campaign_campaign_creator_info-wrap {
+
+    .charitable-campaign-creator-info-container {
+        display: table;
+        clear: all;
+        .charitable-campaign-creator-avatar {
+            max-width: 150px;
+            float: left;
+            img {
+                border: 1px solid black;
+                padding: 5px;
+                margin: 5px;
+            }
+        }
+        .charitable-campaign-creator-info {
+            float: left;
+            margin: 0 20px;
+            ul {
+                margin: 5px 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    border-right: 1px solid $color_brighter_grey;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+                li:first-child {
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+                li:last-child {
+                    border-right: 0;
+                    margin-right: 0;
+                    padding-right: 0;
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,145 @@
+// Form Builder styles.
+//
+// Panels.
+//
+// @since 1.8.0
+
+.charitable-panel {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.charitable-panel-full-content,
+.charitable-panel-sidebar-content {
+	.charitable-panel-content-wrap {
+		background-color: $color_dark_grey_background;
+		bottom: 0;
+		left: $panels_toggle_width;
+		overflow: auto;
+		padding: 50px;
+		position: fixed;
+		right: 0;
+		top: calc( #{ $toolbar_height } + var( --charitable-admin-bar-height ) );
+		z-index: 10;
+
+		@include transition( "top, left", "#{$transition_slow}, #{$transition_normal}", "ease-out, ease-in-out" );
+	}
+
+	.charitable-panel-content {
+		background-color: $color_white;
+		box-shadow: 0 5px 30px rgba( 0, 0, 0, .2 );
+		min-height: 100%;
+		padding: $spacing_l;
+		border-radius: 5px;
+	}
+}
+
+.charitable-panel-sidebar-content {
+
+	.charitable-panel-sidebar-toggle-icon {
+		align-items: center;
+		background-image: url(../../images/campaign-builder/toggle-tab-bg.svg);
+		background-size: 100% 58px;
+		background-repeat: no-repeat;
+		border-radius: 5px 5px 0 0;
+		color: $color_fields_secondary_text;
+		display: flex;
+		font-size: $font_size_ll;
+		height: 58px;
+		left: 495px;
+		cursor: pointer;
+		position: absolute;
+		top: calc( 50% + 24px );
+		width: 15px;
+		z-index: 15;
+
+		@include transition( "left, width", "#{ $transition_normal }", ease-in-out );
+
+		&:hover {
+			color: $color_primary_text;
+
+			i {
+				left: -3px;
+			}
+		}
+
+		i {
+			left: 0;
+			position: relative;
+
+			@include transition( "transform, left", $transition_normal, ease-in-out );
+		}
+	}
+
+	.charitable-panel-content-wrap {
+		left: 495px;
+	}
+
+	.charitable-panel-sidebar {
+		background-color: $color_fields_background;
+		bottom: 0;
+		left: $panels_toggle_width;
+		overflow: auto;
+		position: fixed;
+		top: calc( #{ $toolbar_height } + var( --charitable-admin-bar-height ) );
+		width: $sidebar_width;
+	}
+}
+
+#charitable-panel-design .charitable-panel-sidebar-content {
+
+	&.charitable-panel-sidebar-closed {
+
+		.charitable-panel-sidebar-toggle-vertical-line {
+			position: absolute;
+			border-right: 3px solid #ebf3fb;
+			top: calc( #{ $toolbar_height } + var( --charitable-admin-bar-height ) );
+			height: 100%;
+			left: $panels_toggle_width;
+			z-index: 0;
+			cursor: pointer;
+
+			@include transition( "z-index", "#{ $transition_normal }", ease-in-out );
+
+			&:hover {
+				z-index: 15;
+			}
+		}
+
+		.charitable-panel-sidebar-toggle-icon {
+			justify-content: center;
+			left: $panels_toggle_width;
+
+			i {
+				transform: rotate( 180deg );
+			}
+		}
+
+		.charitable-panel-sidebar,
+		.charitable-panel-sidebar .charitable-tabs {
+			left: -305px;
+		}
+
+		.charitable-panel-content-wrap {
+			left: $panels_toggle_width;
+		}
+
+		.charitable-panel-sidebar-toggle:hover {
+
+			.charitable-panel-sidebar-toggle-vertical-line {
+				z-index: 15;
+			}
+
+			.charitable-panel-sidebar-toggle-icon {
+				width: 18px;
+
+				i {
+					left: 0;
+				}
+			}
+		}
+	}
+}

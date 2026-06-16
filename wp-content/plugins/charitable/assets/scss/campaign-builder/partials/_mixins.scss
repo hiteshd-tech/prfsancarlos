@@ -1,0 +1,143 @@
+// Form Builder styles.
+//
+// Mixins.
+//
+// @since 1.8.0
+
+// Animation.
+//
+// @since 1.8.0
+//
+// @param $keyframes Animation keyframes name.
+//
+@mixin animation( $keyframes ) {
+
+	-webkit-animation: $keyframes;
+	-moz-animation: $keyframes;
+	-ms-animation: $keyframes;
+	-o-animation: $keyframes;
+	animation: $keyframes;
+}
+
+// Scrollbar.
+//
+// @since 1.8.0
+//
+// @param $width            Scrollbar width.
+// @param $track_background Track background.
+// @param $thumb_background Thumb background.
+//
+@mixin scrollbar( $width, $track_background, $thumb_background ) {
+
+	// Webkit browsers.
+	&::-webkit-scrollbar {
+		background: $track_background;
+		width: #{ $width + 10 };
+	}
+
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 #{ $width + 10 } #{ $width + 10 } transparent;
+		border: solid $width transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		box-shadow: inset 0 0 #{ $width + 10 } #{ $width + 10 } $thumb_background;
+		border-radius: #{ ( $width + 10 ) / 2};
+		border: solid 4px transparent;
+	}
+
+	&::-webkit-resizer,
+	&::-webkit-scrollbar-button,
+	&::-webkit-scrollbar-corner {
+		display: none;
+	}
+
+	overflow: overlay !important;
+
+	// For Firefox.
+	@if $width <= 8px {
+		scrollbar-width: thin;
+	}
+	scrollbar-color: $thumb_background $track_background;
+}
+
+// Transition.
+//
+// @since 1.8.0
+//
+// @param $elements Elements.
+// @param $duration Duration.
+// @param $easy     Duration.
+//
+@mixin transition( $elements, $duration, $easy ) {
+
+	transition-property: #{$elements};
+	transition-duration: #{$duration};
+	transition-timing-function: #{$easy};
+}
+
+// Focus visible.
+//
+// @since 1.8.0
+//
+@mixin focus_visible() {
+
+	outline-offset: 0;
+	outline: 1px dotted $color_black_trans_35;
+}
+
+// Font smoothing.
+//
+// @since 1.8.0
+//
+@mixin font_smoothing() {
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Inset absolute and fixed positioned element.
+//
+// @since 1.8.0
+//
+@mixin inset_0() {
+
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+// Centering on both axes.
+//
+// @since 1.8.0
+//
+@mixin flex_center_both_axes() {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+// Reset appearance.
+//
+// @since 1.8.0
+//
+@mixin reset_appearance() {
+
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+// Unflippable ChoicesJS
+//
+// @since 1.7.9
+//
+@mixin choicesjs_unflippable() {
+
+	top: 100%;
+	bottom: auto;
+	margin-top: -1px;
+	margin-bottom: 0;
+}

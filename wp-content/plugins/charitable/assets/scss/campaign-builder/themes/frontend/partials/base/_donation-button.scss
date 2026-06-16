@@ -1,0 +1,33 @@
+.charitable-campaign-field.charitable-campaign-field-donate-button {
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    a.charitable-button,
+    button.charitable-button {
+        background-color: var( --charitable_campaign_theme_button );
+        border-color: var( --charitable_campaign_theme_button );
+        text-transform: none;
+        border-radius: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        &.charitable-disabled {
+            opacity: 0.5;
+        }
+    }
+    a.charitable-button:hover,
+    button.charitable-button:hover {
+        text-decoration: none;
+        filter: brightness(150%);
+    }
+
+}

@@ -1,0 +1,88 @@
+// Form Builder styles.
+//
+// Panels Toggle Buttons.
+//
+// @since 1.8.0
+
+.charitable-panels-toggle {
+	display: flex;
+	flex-direction: column;
+	background: $color_black_background;
+	color: $color_white;
+	min-height: calc( 100vh - #{ $toolbar_height } - var( --charitable-admin-bar-height ) );
+	max-height: calc( 100vh - #{ $toolbar_height } - var( --charitable-admin-bar-height ) );
+	left: 0;
+	margin: $toolbar_height -100px 0 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0;
+	position: fixed;
+	text-align: left;
+	top: var( --charitable-admin-bar-height );
+	transform: translateZ( 0 );
+	width: $panels_toggle_width;
+	z-index: 15;
+
+	@include transition( top, $transition_slow, ease-out );
+
+	button {
+
+		background: none;
+		border: none;
+		border-bottom: 1px solid $color_black_background_hover;
+		cursor: pointer;
+		display: block;
+		margin: 0 0 0 0;
+		padding: 18px 11px;
+		width: 100%;
+
+		&.active,
+		&.active:hover {
+			background-color: #5AA152;
+
+			.fa {
+				color: $color_white;
+			}
+		}
+
+		&:hover {
+			background-color: $color_black_background_hover;
+		}
+
+		&.disabled,
+		&.disabled:hover {
+			background-color: none;
+			opacity: 0.2;
+			cursor:default;
+
+			.fa {
+				color: $color_white;
+			}
+		}
+
+		.fa {
+			color: $color_button_icon_grey;
+			display: block;
+			font-size: 30px;
+			margin: 0 auto $spacing_xs auto;
+			text-align: center !important;
+		}
+
+		span {
+			color: $color_white;
+			font-weight: 400;
+			display: block;
+			font-size: $font_size_s;
+			line-height: 23px;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+
+}
+.charitable-panels-toggle button[data-panel="template"] {
+	padding-top: 20px;
+	padding-bottom: 15px;
+}

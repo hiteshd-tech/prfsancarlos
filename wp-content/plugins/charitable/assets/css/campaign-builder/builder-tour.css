@@ -1,0 +1,246 @@
+.tippy-tooltip {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.shepherd-content .shepherd-text p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #777777;
+}
+.shepherd-content .shepherd-text p.charitable-tour-tip {
+  background-color: #5AA152;
+  color: #fff;
+  font-weight: 200;
+  padding: 10px 30px;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+}
+
+.shepherd-has-title .shepherd-content {
+  padding: 15px 30px;
+}
+.shepherd-has-title .shepherd-content header.shepherd-header {
+  background-color: transparent;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+.shepherd-has-title .shepherd-content header.shepherd-header h3 {
+  margin-top: 0;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  letter-spacing: 0;
+  color: #444444;
+}
+.shepherd-has-title .shepherd-content header.shepherd-header .shepherd-cancel-icon {
+  color: grey;
+}
+.shepherd-has-title .shepherd-content .shephard-text {
+  margin: 0 0 15px 0;
+}
+.shepherd-has-title .shepherd-cancel-icon {
+  position: absolute;
+  font-size: 1.25em;
+  top: 5px;
+  right: 9px;
+}
+.shepherd-has-title footer {
+  justify-content: center;
+}
+
+.wpchar-visual-campaign-builder-step-2 .shepherd-text {
+  text-align: left;
+}
+
+.shepherd-footer {
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Progress */
+.shepherd-content .charitable-tour-progress-bar {
+  display: block;
+  border: 1px solid #e6e6e6;
+  width: 50%;
+  height: 5px;
+  margin: 0 auto;
+}
+.shepherd-content .charitable-tour-progress {
+  background-color: #5AA152;
+  display: block;
+  height: 5px;
+}
+
+/* Buttons */
+.charitable-tour-btn-primary.shepherd-button {
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600 !important;
+  line-height: 19px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #df7739;
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: normal;
+}
+
+.charitable-tour-btn-primary.shepherd-button:hover {
+  background-color: #f89d36;
+}
+
+.charitable-tour-btn-disabled {
+  opacity: 0.5;
+}
+
+.shepherd.tippy-popper[x-placement^=bottom].shepherd-has-title .tippy-arrow {
+  border-bottom-color: white !important;
+}
+
+/* Step 0 */
+.wpchar-visual-campaign-builder-step-0 {
+  padding: 20px 50px;
+}
+.wpchar-visual-campaign-builder-step-0 header {
+  display: none;
+}
+.wpchar-visual-campaign-builder-step-0 .shepherd-text {
+  text-align: center;
+}
+.wpchar-visual-campaign-builder-step-0 .shepherd-text h2 {
+  margin-top: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0;
+  color: #444444;
+}
+.wpchar-visual-campaign-builder-step-0 .shepherd-text p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #777777;
+}
+.wpchar-visual-campaign-builder-step-0 .shepherd-footer {
+  justify-content: center;
+  margin-top: 0px;
+}
+.wpchar-visual-campaign-builder-step-0 .shepherd-content .charitable-tour-progress,
+.wpchar-visual-campaign-builder-step-0 .shepherd-content .charitable-tour-progress-bar {
+  border: 0;
+  visibility: hidden;
+  display: none !important;
+}
+
+/* Video */
+/* Tour Blocks */
+#tippy-3 {
+  max-width: 375px !important;
+}
+
+#tippy-4 {
+  max-width: 400px !important;
+}
+
+#tippy-2,
+#tippy-5,
+#tippy-6,
+#tippy-7,
+#tippy-13 {
+  max-width: 400px !important;
+}
+
+#tippy-9,
+#tippy-10,
+#tippy-11,
+#tippy-12 {
+  max-width: 300px !important;
+}
+
+body[data-shepherd-step="wpchar-visual-campaign-builder-step-13"] #tippy-12 {
+  max-width: 600px !important;
+}
+
+.charitable-tour-check {
+  background-image: url("../../images/campaign-builder/check-circle.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  position: relative;
+  top: 4px;
+}
+
+#charitable-tour-block-1,
+#charitable-tour-block-2,
+#charitable-tour-block-3 {
+  background-color: transparent;
+  display: block;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+#charitable-tour-block-1 {
+  top: 0;
+  height: 193px;
+}
+
+#charitable-tour-block-2 {
+  top: 193px;
+  height: 350px;
+}
+
+#charitable-tour-block-3 {
+  top: 556px;
+  height: 250px;
+}
+
+#charitable-tour-block-4 {
+  background-color: transparent;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 180px;
+  height: 145px;
+  z-index: 999999;
+}
+
+#charitable-tour-block-5 {
+  background-color: red;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 50px;
+  z-index: 999999;
+}
+
+@media (max-width: 1024px) {
+  div.tippy-popper.shepherd,
+  .shepherd-modal-overlay-container {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .shepherd-active.shepherd-modal-is-visible :not(.shepherd-target) {
+    pointer-events: all !important;
+  }
+}

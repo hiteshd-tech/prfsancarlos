@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "charitable/donation-button",
+  "version": "0.1.0",
+  "title": "Donation Button/Link",
+  "category": "widgets",
+  "icon": "feedback",
+  "description": "Display a donation button for a particular campaign.",
+  "keywords": [
+    "charitable",
+    "campaign",
+    "donation"
+  ],
+  "attributes": {
+    "campaignID": {
+      "type": "string"
+    },
+    "customCSS": {
+      "type": "string"
+    },
+    "itemLabel": {
+      "type": "string"
+    },
+    "newTab": {
+      "type": "boolean"
+    },
+    "buttonType": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "center",
+      "left",
+      "right",
+      "wide"
+    ]
+  },
+  "textdomain": "charitable",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

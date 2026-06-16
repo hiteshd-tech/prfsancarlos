@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "charitable/campaigns-block",
+  "version": "0.1.0",
+  "title": "Campaigns",
+  "category": "widgets",
+  "icon": "feedback",
+  "description": "Display multiple Charitable campaigns in a grid.",
+  "keywords": [
+    "charitable",
+    "campaign",
+    "donation"
+  ],
+  "attributes": {
+    "numberCampaigns": {
+      "type": "number"
+    },
+    "columns": {
+      "type": "number"
+    },
+    "orderby": {
+      "type": "string"
+    },
+    "order": {
+      "type": "string"
+    },
+    "includeInactive": {
+      "type": "boolean"
+    },
+    "showDonateButton": {
+      "type": "string"
+    },
+    "descriptionLimit": {
+      "type": "number"
+    },
+    "creatorId": {
+      "type": "string"
+    },
+    "excludeCampaignIds": {
+      "type": "string"
+    },
+    "showChampaignIds": {
+      "type": "string"
+    },
+    "responsiveLayout": {
+      "type": "boolean"
+    },
+    "masonryLayout": {
+      "type": "boolean"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "center",
+      "left",
+      "right",
+      "wide"
+    ]
+  },
+  "textdomain": "charitable",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

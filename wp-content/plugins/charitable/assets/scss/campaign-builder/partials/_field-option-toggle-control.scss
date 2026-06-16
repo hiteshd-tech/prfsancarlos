@@ -1,0 +1,120 @@
+// Campaign Builder styles.
+//
+// Field options and settings.
+// Toggle control.
+//
+// @since 1.8.0
+
+.charitable-toggle-control {
+	display: block;
+	margin: 6px 1px 5px 0px;
+
+	input[type=checkbox] {
+		display: none;
+		height: 0;
+		width: 0;
+
+		&:checked {
+			& + label.charitable-toggle-control-icon {
+				background-color: $color_blue;
+
+				&:after {
+					left: calc( 100% - #{$option_toggle_width} - 2px );
+				}
+			}
+		}
+	}
+
+	span, label {
+		display: inline-block;
+		margin-bottom: 0;
+		margin-left: 5px;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	.charitable-toggle-control-label {
+		margin: 0 0 0 #{ $spacing_s - 4px };
+		max-width: calc( 100% - 65px );
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.charitable-toggle-control-status {
+		color: $color_fields_secondary_text;
+		font-size: $font_size_xs;
+		line-height: $font_size_s;
+		margin: 2px $spacing_xs;
+	}
+
+	.charitable-toggle-control-icon {
+		background-color: $color_hint;
+		border-radius: 8.5px;
+		cursor: pointer;
+		display: inline-block;
+		height: 17px;
+		margin: 0 1px;
+		position: relative;
+		text-indent: -9999px;
+		width: 32px;
+
+		&:after {
+			background: $color_white;
+			border-radius: 50%;
+			content: "";
+			height: 15px;
+			left: 2px;
+			position: absolute;
+			// top: 2px;
+			top: 1px;
+			width: $option_toggle_width;
+
+			@include transition( all, $transition_slow, ease-out );
+		}
+	}
+
+	&:hover {
+		input:checked + label.charitable-toggle-control-icon {
+			background-color: $color_dark_blue;
+		}
+
+		.charitable-toggle-control-icon {
+			background-color: $color_secondary_text;
+		}
+	}
+}
+
+.charitable-group.charitable-layout-options-tab-group {
+
+	.charitable-toggle-control-icon {
+		margin: -4px 1px;
+	}
+}
+
+.charitable-panel-sidebar {
+	.charitable-toggle-control {
+		.charitable-toggle-control-icon {
+			background-color: $color_fields_border;
+		}
+
+		&:hover {
+			.charitable-toggle-control-icon {
+				background-color: $color_fields_secondary_text;
+			}
+		}
+
+		&.charitable-field-option-in-label-right {
+			.charitable-toggle-control-label {
+				color: $color_fields_secondary_text;
+				font-size: $font_size_xs;
+				line-height: $font_size_s;
+				margin: 2px $spacing_xs;
+				max-width: initial;
+			}
+		}
+	}
+}

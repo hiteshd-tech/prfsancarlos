@@ -1,0 +1,746 @@
+
+
+body {
+    font-family: "Inter", sans-serif !important;
+}
+
+.charitable-overview-report {
+    width: 100%;
+}
+
+.tablenav {
+    font-family: "Inter", sans-serif !important;
+    width: 100%;
+
+    form {
+        display: block;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    select {
+        font-size: 13px;
+        line-height: 29px;
+        font-weight: 500;
+        max-width: none;
+        padding-right: 30px;
+        background-color: #F9F9FA;
+        color: #52545F;
+        border-color: #E4E4E7;
+    }
+
+    a.button,
+    input.button {
+        background-color: #F9F9FA;
+        color: #52545F;
+        border-color: #E4E4E7;
+    }
+
+    &.with-margin {
+        margin-bottom: 20px;
+    }
+
+}
+
+table.wp-list-table {
+    width: 100%;
+    margin: 0 auto;
+    th {
+        text-align: left;
+    }
+    border: 0;
+}
+
+.charitable-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: table;
+
+    .alignleft,
+    .alignright {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    &.no-bottom {
+        margin-bottom: 0;
+        .alignleft,
+        .alignright {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.charitable-container {
+    border-radius: 5px;
+    color: #757781;
+    background-color: #FFF;
+}
+
+.charitable-datepicker-container {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.charitable-headline-graph-container {
+    padding: 20px 30px;
+}
+
+.charitable-section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+
+    &.one-third {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &.charitable-section-grid-column-flexible {
+        align-items: flex-start;
+    }
+    &.charitable-section-grid-column-single {
+        columns: 1;
+        column-gap: none;
+        display: block;
+    }
+}
+
+.charitable-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-gap: 20px;
+
+    .charitable-card {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-weight: 500px;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: #474A57;
+            font-weight: bold;
+            font-size: 42px;
+            line-height: 44px;
+        }
+    }
+
+}
+
+.donations-breakdown {
+
+    tr th {
+        color: #6A6C77;
+    }
+
+    td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #8C8E96;
+        &.negative {
+            color: #F99E36;
+        }
+        &.positive {
+            color: #5AA152;
+        }
+    }
+
+    tr th:first-child,
+    td:first-child {
+        padding-left: 30px;
+    }
+
+    td.column-date {
+        font-weight: bold;
+        font-family: "Inter", sans-serif !important;
+    }
+
+}
+
+.charitable-report-card {
+    .header {
+        margin: 20px 0 0 0;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-bottom: 1px solid #EFEFF1;
+
+        h4 {
+            color: #303442;
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 22px;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            float: right;
+            font-size: 23px;
+            line-height: 23px;
+        }
+    }
+
+    .the-list {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        max-height: 550px;
+        overflow: scroll;
+
+        ul {
+            li {
+                color: #474A57;
+                display: flex;
+                border-bottom: 1px solid #EFEFF1;
+                padding-bottom: 15px;
+                padding-top: 15px;
+
+                .avatar,
+                .icon {
+                    width: 25px;
+                    text-align: center;
+
+                    img {
+                        margin: 5px auto;
+                    }
+                }
+
+                .avatar {
+                    width: 55px;
+
+                    img {
+                        width: 55px;
+                    }
+                }
+
+                .info {
+                    flex-grow: 1;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    font-size: 14px;
+                    line-height: 23px;
+
+                    p {
+                        font-size: 14px;
+                        line-height: 23px;
+                        margin: 0;
+                        font-weight: 700;
+
+                        &.name {
+                            margin: 10px 0 0 0;
+                            line-height: 14px;
+                        }
+
+                        &.amount {
+                            margin: 10px 0 0 0;
+                            font-weight: 500;
+                            color: #8C8E96;
+                        }
+
+                        &.email {
+                            margin: 10px 0 0 0;
+                            font-weight: 500;
+                            color: #8C8E96;
+                            line-height: 14px;
+                        }
+                    }
+
+                    .badge {
+                        font-weight: 200;
+                        display: inline-block;
+                        margin-left: 10px;
+                    }
+                }
+
+                .time-ago {
+                    color: #8C8E96;
+                }
+
+                .donor-donation-info {
+                    font-size: 14px;
+                    line-height: 14px;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    p:first-of-type {
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                    }
+
+                    .badge {
+                        font-weight: 200;
+                        display: block;
+                    }
+                }
+            }
+
+            li:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.charitable-activity-report {
+    .charitable-tablenav-activity {
+        width: 100%;
+        h2 {
+            line-height: 30px;
+            font-size: 18px;
+        }
+    }
+    .charitable-activity-list-container {
+        background-color: #FFF;
+    }
+}
+
+.charitable-the-list-container {
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 550px;
+    overflow: scroll;
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        li {
+            color: #474A57;
+            display: flex;
+            border-bottom: 1px solid #EFEFF1;
+            padding-bottom: 15px;
+            padding-top: 15px;
+
+            .avatar,
+            .icon {
+                width: 25px;
+                text-align: center;
+
+                img {
+                    margin: 5px auto;
+                }
+            }
+
+            .avatar {
+                width: 55px;
+
+                img {
+                    width: 55px;
+                }
+            }
+
+            .info {
+                flex-grow: 1;
+                margin-left: 15px;
+                margin-right: 15px;
+                font-size: 14px;
+                line-height: 23px;
+
+                p {
+                    font-size: 14px;
+                    line-height: 23px;
+                    margin: 0;
+                    font-weight: 700;
+
+                    &.name {
+                        margin: 10px 0 0 0;
+                        line-height: 14px;
+                    }
+
+                    &.amount {
+                        margin: 10px 0 0 0;
+                        font-weight: 500;
+                        color: #8C8E96;
+                    }
+
+                    &.email {
+                        margin: 10px 0 0 0;
+                        font-weight: 500;
+                        color: #8C8E96;
+                        line-height: 14px;
+                    }
+                }
+
+                .badge {
+                    font-weight: 200;
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+
+            .time-ago {
+                color: #8C8E96;
+            }
+
+            .donor-donation-info {
+                font-size: 14px;
+                line-height: 14px;
+
+                p {
+                    margin: 0;
+                }
+
+                p:first-of-type {
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                }
+
+                .badge {
+                    font-weight: 200;
+                    display: block;
+                }
+            }
+        }
+
+        li:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.charitable-top-campaigns-report {
+    width: 100%;
+    a {
+        color: #494E5A;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.charitable-top-donors-report {
+    .avatar {
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+.charitable-payment-methods-report {
+    width: auto;
+    margin: 0;
+
+    .the-legend {
+        margin: 20px auto;
+        li {
+            display: flex;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .icon {
+            span {
+                display: block;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        li.stripe .icon span {
+            background-color: #5AA152;
+        }
+        li.paypal .icon span {
+            background-color: #2B66D1;
+        }
+        li.manual .icon span,
+        li.offline .icon span {
+            background-color: #F99E36;
+        }
+        li.none .icon span {
+            background-color: #d21561;
+        }
+        .info {
+            margin-left: 10px;
+            flex-grow: 1;
+            font-size: 14px;
+            line-height: 14px;
+            color: #474A57;
+            font-weight: bold;
+            text-align: left;
+
+        }
+        .total {
+            font-size: 14px;
+            line-height: 14px;
+            color: #868890;
+            font-weight: 400;
+            text-align: right;
+        }
+    }
+}
+
+.charitable-top-campaigns-report {
+
+    .the-list {
+
+        ul li {
+            display: block;
+            .main {
+                display: flex;
+            }
+            .info {
+                margin-left: 0;
+                .info-summary {
+                    font-weight: 400;
+                    color: #9899A0;
+
+                    p {
+                        display: inline-block;
+                        margin-right: 20px;
+
+                        strong {
+                            color: #494E5A;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            .progress-bar {
+                margin: 10px auto;
+                width: 100%;
+            }
+        }
+
+    }
+
+
+}
+
+.charitable-title-card {
+    padding: 20px 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+
+    h1 {
+        color: #303442;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 22px;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        display: block;
+        float: right;
+        font-size: 23px;
+        line-height: 23px;
+    }
+
+    button.dismiss {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #666;
+        font-size: 16px;
+    }
+
+    .charitable-title-card-content {
+
+    }
+
+}
+
+select#report-donor-type-filter,
+select#report-advanced-type-filter {
+    float: none !important;
+    margin-left: 10px;
+}
+
+.charitable-advanced-report {
+    .tablenav {
+        width: 100%;
+    }
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: #F5F5F5;
+    border-radius: 0;
+    border: 0;
+
+    .progress {
+        height: 4px;
+        background-color: #5AA152;
+    }
+}
+
+.charitable-toggle:hover,
+.charitable-toggle:focus,
+.charitable-toggle:focus-visible,
+.charitable-toggle:active,
+.charitable-toggle i:focus,
+.charitable-toggle i:focus-visible {
+    text-decoration: none;
+    border: 0;
+    box-shadow: none;
+}
+.charitable-toggle .charitable-angle-right {
+    rotate: -90deg;
+}
+
+.badge {
+
+    &.completed {
+        color: #50A66A;
+    }
+    &.pending {
+        color: #E38632;
+    }
+    &.active {
+        color: #50A66A;
+    }
+    &.recurring {
+        color: #50A66A;
+    }
+    &.one-time {
+        color: #EAA465;
+    }
+    &.paid,
+    &.charitable-completed {
+        color: #50A66A;
+    }
+    &.cancelled {
+        color: #CE3E4E;
+    }
+    &.draft {
+        color: #ccc;
+    }
+
+}
+
+.charitable-report-card .header {
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+#charitable-activity-list,
+#charitable-top-campaigns-list,
+#charitable-top-donors-list {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    .badge {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif !important;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    li {
+        width: 100%;
+        margin: 5px 5px;
+        padding: 0;
+        font-family: "Inter", sans-serif !important;
+        clear: both;
+        display: table;
+        border-top: 0;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .time-ago,
+    .donor-donation-info {
+        float: right;
+        font-family: "Inter", sans-serif !important;
+    }
+    .donor-donation-info {
+        p {
+            margin: 5px 0;
+        }
+    }
+    .info {
+        float: left;
+        font-weight: bold;
+        margin: 5px 0 0 0;
+        padding-top: 10px;
+        font-family: "Inter", sans-serif !important;
+        p.email {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: "Inter", sans-serif !important;
+            .badge {
+                margin-top: 5px;
+            }
+        }
+        p.amount {
+            font-weight: bold;
+            font-family: "Inter", sans-serif !important;
+        }
+    }
+    .main {
+        display: block;
+        clear: both;
+        width: 100%;
+        .info {
+            float: left;
+        }
+        .status {
+            float: right;
+        }
+    }
+
+    .progress-bar {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+}
+#charitable-top-campaigns-list {
+    li {
+        border: 0;
+    }
+}
+#charitable-payment-methods-list {
+    margin: 0px;
+    padding: 0;
+    width: 90%;
+
+    .icon {
+        display: none;
+    }
+    .info {
+        float: left;
+        width: 50%;
+        text-align: left;
+    }
+    .total {
+        float: right;
+        width: 50%;
+    }
+}
+.the-list,
+.the-legend {
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+.clear {
+    clear: both;
+    display: block;
+}

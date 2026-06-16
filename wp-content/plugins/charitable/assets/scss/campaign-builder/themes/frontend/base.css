@@ -1,0 +1,913 @@
+:root {
+  --charitable_campaign_theme_primary: #000;
+  --charitable_campaign_theme_secondary: #CCC;
+  --charitable_campaign_theme_tertiary: #999;
+  --charitable_campaign_theme_accent: #000;
+  --charitable_campaign_theme_button: #0caf60;
+}
+
+/* Table of Contents */
+/* 1.0 - Fonts, Sizes */
+/* 2.0 - Rows / Columns */
+.charitable-campaign-wrap .charitable-campaign-container {
+  /* Rows */
+  /* Columns */
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-row.no-padding {
+  padding: 0;
+  background-color: transparent;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-column {
+  flex: 1;
+  border: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* 3.0 - Headlines */
+.charitable-campaign-wrap .charitable-campaign-container h1:empty,
+.charitable-campaign-wrap .charitable-campaign-container h2:empty,
+.charitable-campaign-wrap .charitable-campaign-container h3:empty,
+.charitable-campaign-wrap .charitable-campaign-container h4:empty,
+.charitable-campaign-wrap .charitable-campaign-container h5:empty,
+.charitable-campaign-wrap .charitable-campaign-container h6:empty {
+  display: none;
+}
+.charitable-campaign-wrap .charitable-campaign-container h5.charitable-field-template-headline,
+.charitable-campaign-wrap .charitable-campaign-container .charitable-field-template-headline {
+  color: #000;
+  font-size: 27px;
+  line-height: 29px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* 4.0 - Containers */
+.charitable-campaign-field {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+}
+.charitable-campaign-field.donate-button {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 5.0 - Tabs  */
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article {
+  margin: 0;
+  padding: 0;
+  /* styles */
+  /* sizes */
+  /* tab content */
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav {
+  border: 1px solid transparent;
+  background-color: transparent;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav > ul {
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav li {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  background-color: transparent;
+  margin: 0 10px 0 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav li a {
+  color: black;
+  display: block;
+  text-transform: none;
+  text-decoration: none;
+  padding: 10px;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav li.active {
+  background-color: var(--charitable_campaign_theme_primary);
+  color: white;
+  text-decoration: none;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav li.active a {
+  color: white;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav li:hover {
+  background-color: var(--charitable_campaign_theme_primary);
+  color: white;
+  text-decoration: none;
+  filter: brightness(90%);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-campaign-nav li:hover a {
+  color: white;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-boxed li {
+  background-color: var(--charitable_campaign_theme_primary);
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-boxed li a {
+  color: var(--charitable_campaign_theme_secondary);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-boxed li:hover {
+  background-color: var(--charitable_campaign_theme_tertiary);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-boxed li.active {
+  background-color: var(--charitable_campaign_theme_tertiary);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-rounded li {
+  background-color: var(--charitable_campaign_theme_primary);
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 35px;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-rounded li a {
+  color: var(--charitable_campaign_theme_secondary);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-rounded li:hover {
+  background-color: var(--charitable_campaign_theme_tertiary);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-rounded li.active {
+  background-color: var(--charitable_campaign_theme_tertiary);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-minimum li {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-minimum li a {
+  color: var(--charitable_campaign_theme_primary);
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-minimum li.active {
+  background-color: transparent;
+  border-bottom: 1px solid var(--charitable_campaign_theme_tertiary);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-minimum li.active a {
+  color: var(--charitable_campaign_theme_primary);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-minimum li:hover {
+  border-bottom: 1px solid var(--charitable_campaign_theme_tertiary);
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-style-minimum li:hover a {
+  opacity: 0.35;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-size-small li a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 18px;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-size-medium li a {
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 21px;
+  padding: 23px;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article nav.charitable-tab-size-large li a {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 32px;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article .tab-content > * {
+  color: black;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article .tab-content ul.charitable-tabs {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article .tab-content ul.charitable-tabs > li {
+  margin: 0;
+  padding: 10px 10px;
+  display: none;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article .tab-content ul.charitable-tabs > li.active {
+  display: block;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article .tab-content ul.charitable-tabs > li ul li {
+  display: block;
+}
+.charitable-campaign-wrap .charitable-campaign-container .section[data-section-type=tabs] article .tab-content img {
+  max-width: 100%;
+}
+
+/* 6.0 - Fields/Blocks  */
+/* 6.1 - Campaign Description */
+.charitable-campaign-field.charitable-campaign-field-campaign-description .charitable-campaign-builder-placeholder-template-text {
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  font-size: 14px;
+  line-height: 24px;
+}
+.charitable-campaign-field.charitable-campaign-field-campaign-description .charitable-campaign-builder-no-description-preview div {
+  margin: 0;
+  float: none;
+}
+
+/* 6.1 - Campaign Title */
+.charitable-campaign-field.charitable-campaign-field-campaign-title h1 {
+  margin: 0 auto;
+  font-size: 72px;
+  line-height: 84px;
+  font-weight: 600;
+}
+
+/* 6.3 - Campaign Summary */
+.charitable-campaign-field.charitable-campaign-field-campaign-summary .charitable-field-template-campaign-summary {
+  padding-left: 0;
+  padding-right: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-campaign-summary .charitable-field-template-campaign-summary div.campaign-summary-item {
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  text-transform: capitalize;
+  float: left;
+  width: 49%;
+  margin-bottom: 10px;
+}
+.charitable-campaign-field.charitable-campaign-field-campaign-summary .charitable-field-template-campaign-summary div.campaign-summary-item span {
+  color: #CCC;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: left;
+  text-transform: capitalize;
+  display: block;
+}
+
+/* 6.4 - Donation Button */
+.charitable-campaign-field.charitable-campaign-field-donate-button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-button button.charitable-button {
+  background-color: var(--charitable_campaign_theme_button);
+  border-color: var(--charitable_campaign_theme_button);
+  text-transform: none;
+  border-radius: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-button button.charitable-button:hover {
+  text-decoration: none;
+  filter: brightness(150%);
+}
+
+/* 6.5 - Progress Bar */
+.charitable-campaign-field.charitable-campaign-field-progress-bar .progress {
+  border: 0;
+  padding: 0;
+  background-color: #E0E0E0;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.charitable-campaign-field.charitable-campaign-field-progress-bar .progress-bar {
+  background-color: #CCC;
+  height: 8px !important;
+  border-radius: 5px;
+  text-align: right;
+  opacity: 1;
+}
+.charitable-campaign-field.charitable-campaign-field-progress-bar .progress-bar span {
+  display: inline-block;
+  border-radius: 25px;
+  width: 25px;
+  height: 25px;
+  margin-right: -15px;
+  margin-top: -10px;
+}
+.charitable-campaign-field.charitable-campaign-field-progress-bar .progress-bar-info-row {
+  display: table;
+  width: 100%;
+  font-size: 14px;
+  line-height: 21px;
+}
+.charitable-campaign-field.charitable-campaign-field-progress-bar .progress-bar-info-row div.campaign-goal {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  width: 40%;
+  float: right;
+  text-align: right;
+}
+.charitable-campaign-field.charitable-campaign-field-progress-bar .progress-bar-info-row div.campaign-percent-raised {
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  width: 40%;
+  float: left;
+  text-align: left;
+}
+
+@media screen and (max-width: 680px) {
+  .charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-row .charitable-campaign-field.charitable-campaign-progress-bar {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+/* 6.6 - Photo */
+.charitable-campaign-field.charitable-campaign-field-photo .charitable-campaign-primary-image {
+  border: transparent;
+  border-radius: 0px;
+}
+.charitable-campaign-field.charitable-campaign-field-photo .charitable-campaign-primary-image img {
+  max-width: 100%;
+}
+.charitable-campaign-field.charitable-campaign-field-photo.charitable-campaign-align-center .primary-image-container {
+  text-align: center;
+}
+.charitable-campaign-field.charitable-campaign-field-photo.charitable-campaign-align-left .primary-image-container {
+  text-align: left;
+}
+.charitable-campaign-field.charitable-campaign-field-photo.charitable-campaign-align-right .primary-image-container {
+  text-align: right;
+}
+
+/* 6.7 - Organizer */
+.charitable-campaign-field.charitable-campaign-field-organizer {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer .charitable-organizer-image-column {
+  display: table-cell;
+  vertical-align: middle;
+  width: 90px;
+  text-align: center;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer .charitable-organizer-image-column .charitable-organizer-image {
+  border-radius: 50%;
+  background-color: black;
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer .charitable-organizer-info {
+  display: table-cell;
+  vertical-align: middle;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer .charitable-organizer-info .placeholder {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer .charitable-organizer-info .charitable-organizer-title,
+.charitable-campaign-field.charitable-campaign-field-organizer .charitable-organizer-info .charitable-organizer-title h5.charitable-field-template-headline {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer .charitable-organizer-info .charitable-organizer-name {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 31px;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer p,
+.charitable-campaign-field.charitable-campaign-field-organizer h1,
+.charitable-campaign-field.charitable-campaign-field-organizer h2,
+.charitable-campaign-field.charitable-campaign-field-organizer h3,
+.charitable-campaign-field.charitable-campaign-field-organizer h4,
+.charitable-campaign-field.charitable-campaign-field-organizer h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-organizer h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 680px) {
+  .charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-row .charitable-campaign-field.charitable-campaign-field-organizer {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+/* 6.8 - Donate Amount */
+.charitable-campaign-field.charitable-campaign-field-donate-amount {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options {
+  margin: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount {
+  color: #000;
+  flex: 0 0 25%;
+  background-color: transparent;
+  padding: 5px;
+  text-align: center;
+  display: table;
+  min-height: 75px;
+  margin: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount input[type=radio] {
+  display: none;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount .amount {
+  font-weight: 400;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount.selected {
+  color: #000;
+  border: 10px solid #000;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount > label {
+  display: table-cell;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 0;
+  min-height: 75px;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount.custom-donation-amount {
+  flex-basis: 100%;
+  min-height: auto;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount.custom-donation-amount label {
+  display: none;
+}
+.charitable-campaign-field.charitable-campaign-field-donate-amount .charitable-template-donation-options ul.charitable-template-donation-amounts .charitable-template-donation-amount.custom-donation-amount input[type=text] {
+  background: transparent;
+  width: 100%;
+  border: 0;
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* DIVI */
+body.et_divi_theme #left-area .charitable-campaign-field.charitable-campaign-field-donate-amount ul.charitable-template-donation-amounts,
+body.et_divi_theme .entry-content .charitable-campaign-field.charitable-campaign-field-donate-amount ul.charitable-template-donation-amounts,
+body.et_divi_theme .et-l--body .charitable-campaign-field.charitable-campaign-field-donate-amount ul.charitable-template-donation-amounts,
+body.et_divi_theme .et-l--footer .charitable-campaign-field.charitable-campaign-field-donate-amount ul.charitable-template-donation-amounts,
+body.et_divi_theme .et-l--header .charitable-campaign-field.charitable-campaign-field-donate-amount ul.charitable-template-donation-amounts {
+  margin: 0;
+  padding: 0;
+}
+
+/* 6.9 - Social Linking */
+.charitable-campaign-field.charitable-campaign-field-social-links {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking-headline-container {
+  display: block;
+  float: left;
+  padding: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-row {
+  display: block;
+  float: left;
+  width: auto;
+  margin: 0 0 0 0;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-placeholder {
+  padding: 10px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking {
+  display: table;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking .charitable-field-row p {
+  display: none;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking h5.charitable-field-template-headline {
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 300;
+  margin: 0 20px 0 0;
+  padding: 0;
+  color: #000;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking .charitable-field-row .charitable-social-field-column {
+  float: left;
+  margin-right: 20px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link {
+  margin-top: 5px;
+  min-height: 20px !important;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link a {
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: relative;
+}
+.charitable-campaign-field.charitable-campaign-field-social-links .charitable-field-template-social-linking .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link a:hover {
+  opacity: 0.65;
+}
+
+/* echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-linking-preview-twitter .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-twitter .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/twitter-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-linking-preview-facebook .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-facebook .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/facebook-dark.svg');
+}
+
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-linking-preview-linkedin .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-linkedin .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/linkedin-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-linking-preview-instagram .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-instagram .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/instagram-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-linking-preview-pinterest .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-pinterest .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/pinterest-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-linking-preview-tiktok charitable-.placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-tiktok .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/tiktok-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-linking-preview-mastodon .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-mastodon .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/mastodon-dark.svg');
+} */
+/* 6.10 - Social Sharing */
+.charitable-campaign-field.charitable-campaign-field-social-sharing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing-headline-container {
+  display: block;
+  float: left;
+  padding: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-row {
+  display: block;
+  float: left;
+  width: auto;
+  margin: 0 0 0 0;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-placeholder {
+  padding: 10px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing {
+  display: table;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing .charitable-field-row p {
+  display: none;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing h5.charitable-field-template-headline {
+  font-size: 14px !important;
+  line-height: 36px !important;
+  font-weight: 300 !important;
+  margin: 0 20px 0 0;
+  padding: 0;
+  color: #000;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing .charitable-field-row .charitable-social-field-column {
+  float: left;
+  margin-right: 20px;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link {
+  margin-top: 5px;
+  min-height: 20px !important;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link a {
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: relative;
+}
+.charitable-campaign-field.charitable-campaign-field-social-sharing .charitable-field-template-social-sharing .charitable-field-row .charitable-social-field-column .charitable-campaign-social-link a:hover {
+  opacity: 0.65;
+}
+
+/* echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-twitter .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-twitter .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/twitter-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-facebook .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-facebook .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/facebook-dark.svg');
+}
+
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-linkedin .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-linkedin .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/linkedin-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-instagram .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-instagram .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/instagram-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-pinterest .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-pinterest .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/pinterest-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-tiktok charitable-.placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-tiktok .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/tiktok-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-mastodon .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-mastodon .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/mastodon-dark.svg');
+} */
+/* 6.11 - Social Wall */
+.charitable-campaign-field.charitable-campaign-field-donation-wall {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-wall .donors-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: auto;
+  display: inline;
+  margin-right: auto;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-wall h5.charitable-field-template-headline {
+  color: #000;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-wall .charitable-campaign-field.charitable-campaign-field_donation-wall {
+  margin: 0;
+}
+
+/* 6.12 - Donation Form */
+.charitable-campaign-field.charitable-campaign-field-donation-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-form form {
+  padding: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-form .charitable-form-field.charitable-submit-field button {
+  background-color: #0caf60;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-form ul.donation-amounts li.selected {
+  background-color: #000;
+  background-color: #CCC;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-form .charitable-form-placeholder {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f6f6f6;
+  height: auto;
+  max-height: auto;
+  min-height: 200px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline-block;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-form .charitable-donor-details {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-form .charitable-form-fields ul li {
+  display: inline-block !important;
+}
+.charitable-campaign-field.charitable-campaign-field-donation-form ul.charitable-notice-errors {
+  padding: 20px;
+}
+
+.is-charitable-preview .charitable-campaign-field.charitable-campaign-field-donation-form input[type=submit], .is-charitable-preview .charitable-campaign-field.charitable-campaign-field-donation-form button {
+  pointer-events: none;
+}
+
+/* 6.13 - Text */
+.charitable-campaign-field.charitable-campaign-field-text {
+  margin-bottom: 0px;
+  padding: 0;
+  color: #000000;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* 6.14 - Shortcode */
+.charitable-campaign-field.charitable-campaign-shortcode .shortcode-preview {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* 7.0 Alignment */
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-center .charitable-campaign-field-inner {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-center.charitable-campaign-field-photo .charitable-campaign-primary-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-center.charitable-campaign-field-donation-wall .charitable-campaign-field {
+  text-align: center;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-center.charitable-campaign-field-campaign-title .charitable-campaign-field-inner {
+  text-align: center;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-center.charitable-campaign-field-organizer .charitable-organizer-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-left .charitable-campaign-field-inner {
+  margin-left: 0;
+  margin-right: auto;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-left.charitable-campaign-field-photo .charitable-campaign-primary-image {
+  margin-left: 0;
+  margin-right: auto;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-left.charitable-campaign-field-donation-wall .charitable-campaign-field {
+  text-align: left;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-left.charitable-campaign-field-campaign-title .charitable-campaign-field-inner {
+  text-align: left;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-left.charitable-campaign-field-organizer .charitable-organizer-container {
+  margin-left: 0;
+  margin-right: auto;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-right .charitable-campaign-field-inner {
+  margin-left: auto;
+  margin-right: 0;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-right.charitable-campaign-field-photo .charitable-campaign-primary-image {
+  margin-left: auto;
+  margin-right: 0;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-right.charitable-campaign-field-donation-wall .charitable-campaign-field {
+  text-align: right;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-right.charitable-campaign-field-campaign-title .charitable-campaign-field-inner {
+  text-align: right;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-field.charitable-campaign-align-right.charitable-campaign-field-organizer .charitable-organizer-container {
+  margin-left: auto;
+  margin-right: 0;
+  display: table;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-row.charitable-campaign-row-type-header .charitable-campaign-field.charitable-campaign-align-center .charitable-campaign-field-inner {
+  text-align: center;
+}
+
+/* 8.0 Mobile / Responsive */
+/* mobile or narrow widths */
+.charitable-campaign-wrap .charitable-campaign-container {
+  container-type: inline-size;
+  container-name: campaign-area;
+}
+@container campaign-area (max-width: 700px) {
+  .charitable-campaign-wrap .charitable-campaign-column,
+  .charitable-campaign-wrap .charitable-campaign-column:nth-child(even),
+  .charitable-campaign-wrap .charitable-campaign-column:nth-child(odd) {
+    flex: 0 0 100% !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-row {
+    display: block;
+  }
+  .charitable-campaign-wrap .charitable-campaign-container .charitable-campaign-row .charitable-campaign-field {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+/* 9.0 Misc */
+.charitable-preview-messages {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.charitable-preview-messages .charitable-preview-alert {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.charitable-campaign-wrap {
+  width: 100% !important;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-notice {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #fff;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-notice-errors {
+  margin: 0;
+  padding: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-notice-errors li {
+  padding: 0;
+  margin: 0;
+}
+.charitable-campaign-wrap .charitable-campaign-container .charitable-notice.charitable-notice-error {
+  border-left: 4px solid #dc3232;
+}

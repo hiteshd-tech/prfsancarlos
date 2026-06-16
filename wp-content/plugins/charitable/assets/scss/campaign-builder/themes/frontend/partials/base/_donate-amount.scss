@@ -1,0 +1,90 @@
+.charitable-campaign-field.charitable-campaign-field-donate-amount {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .charitable-template-donation-options {
+        margin: 0;
+
+       ul.charitable-template-donation-amounts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 0 0 -4px;
+            padding: 0;
+            flex-direction: row;
+            width: calc(100% + 8px);
+
+            .charitable-template-donation-amount {
+                color: $color_theme_base_primary;
+                background-color: transparent;
+                text-align: center;
+                display: table;
+                min-height: 75px;
+                margin: 0;
+                flex: 0 0 25%;
+                box-sizing: border-box;
+                padding: 5px;
+
+                input[type="radio"] {
+                    display: none;
+                }
+                .amount {
+                    font-weight: 400;
+                }
+
+                &.selected {
+                    color: $color_theme_base_primary;
+                    border: 10px solid $color_theme_base_primary;
+                }
+            }
+            .charitable-template-donation-amount > label {
+                display: table-cell;
+                width: 100%;
+                border: 1px solid #ddd;
+                padding: 0;
+                min-height: 75px;
+                vertical-align: middle;
+                margin: 0;
+                font-size: 14px;
+                cursor: pointer;
+                font-weight: 400;
+            }
+            .charitable-template-donation-amount.custom-donation-amount {
+                flex-basis: 100%;
+                min-height: auto;
+                label {
+                    display: none;
+                }
+                input[type="text"] {
+                    background: transparent;
+                    width: 100%;
+                    border: 0;
+                    color: $color_theme_base_primary;
+                    border: 1px solid $color_theme_base_primary;
+
+                }
+            }
+        }
+
+    }
+
+
+}
+
+/* DIVI */
+
+body.et_divi_theme {
+    #left-area,
+    .entry-content,
+    .et-l--body,
+    .et-l--footer,
+    .et-l--header {
+        .charitable-campaign-field.charitable-campaign-field-donate-amount {
+            ul.charitable-template-donation-amounts {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

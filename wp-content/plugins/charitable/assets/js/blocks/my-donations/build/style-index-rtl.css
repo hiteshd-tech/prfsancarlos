@@ -1,0 +1,34 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-charitable-my-donations {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.wp-block-charitable-my-donations h5 {
+  margin: 0 auto;
+  margin-top: 0 !important;
+  margin-bottom: 0px !important;
+}
+
+.wp-block-charitable-my-donations p {
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: 400;
+  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif !important;
+}
+
+.wp-block-charitable-my-donations .charitable-logo {
+  margin-right: auto;
+  margin-left: auto;
+  display: table;
+}

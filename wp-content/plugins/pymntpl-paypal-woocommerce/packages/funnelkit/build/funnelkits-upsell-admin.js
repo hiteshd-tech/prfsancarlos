@@ -1,0 +1,2 @@
+(()=>{"use strict";var e={n:t=>{var o=t&&t.__esModule?()=>t.default:()=>t;return e.d(o,{a:o}),o},d:(t,o)=>{for(var r in o)e.o(o,r)&&!e.o(t,r)&&Object.defineProperty(t,r,{enumerable:!0,get:o[r]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)};const t=window.wfocuBuilderCommons;e.n(t)().addFilter("wfocu_global_settings_gateway_fields",e=>!0),(this.wcPPCP=this.wcPPCP||{})["funnelkits-upsell-admin"]={}})();
+//# sourceMappingURL=funnelkits-upsell-admin.js.map

@@ -1,0 +1,25 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-charitable-controls-a9cfe0 {
+  color: #8b0000;
+  background: #fcc;
+  border: 2px solid #c99;
+  padding: 20px;
+  font-family: sans-serif;
+}
+.wp-block-charitable-controls-a9cfe0.controls-a9cfe0-align-left {
+  text-align: right;
+}
+.wp-block-charitable-controls-a9cfe0.controls-a9cfe0-align-center {
+  text-align: center;
+}
+.wp-block-charitable-controls-a9cfe0.controls-a9cfe0-align-right {
+  text-align: left;
+}

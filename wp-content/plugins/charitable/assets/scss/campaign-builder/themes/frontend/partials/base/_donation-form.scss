@@ -1,0 +1,59 @@
+.charitable-campaign-field.charitable-campaign-field-donation-form {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    form {
+        padding: 0;
+    }
+
+    .charitable-form-field.charitable-submit-field {
+        button {
+            background-color: $color_button_base_bg;
+        }
+    }
+
+    ul.donation-amounts {
+        li.selected {
+            background-color: $color_theme_base_primary;
+            background-color: $color_theme_base_secondary;
+        }
+    }
+
+    .charitable-form-placeholder {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #f6f6f6;
+        height: auto;
+        max-height: auto;
+        min-height: 200px;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: inline-block;
+    }
+
+    .charitable-donor-details {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .charitable-form-fields {
+        ul {
+            li {
+                display: inline-block !important;
+            }
+        }
+    }
+
+    ul.charitable-notice-errors {
+        padding: 20px;
+    }
+
+}
+
+.is-charitable-preview .charitable-campaign-field.charitable-campaign-field-donation-form {
+    input[type="submit"], button {
+        pointer-events: none;
+    }
+}

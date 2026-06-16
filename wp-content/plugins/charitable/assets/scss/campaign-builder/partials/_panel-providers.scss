@@ -1,0 +1,442 @@
+// Form Builder styles.
+//
+// Providers panel.
+//
+// @since 1.8.0
+
+.charitable-builder-provider {
+	.charitable-builder-provider-title-spinner {
+		color: $color_secondary_text;
+		display: none;
+		font-size: $font_size_ll;
+		line-height: $font_size_ll;
+	}
+
+	.charitable-builder-provider-connections {
+		& > :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.charitable-builder-provider-connection {
+		border: $border_std;
+		margin: 0 0 $spacing_m 0;
+
+		> :last-child {
+			margin-bottom: $spacing_m;
+		}
+	}
+
+	.charitable-builder-provider-connection-title {
+		background-color: $color_light_background;
+		border-bottom: $border_std;
+		font-size: $font_size_m;
+		font-weight: 600;
+		line-height: $font_size_ll;
+		margin: 0 0 -1px 0;
+		padding: $spacing_ms $spacing_m #{ $spacing_ms - 1 } $spacing_m;
+	}
+
+	.charitable-builder-provider-connection-delete {
+		background-color: transparent;
+		border: none;
+		color: $color_red;
+		cursor: pointer;
+		float: right;
+		font-size: $font_size_m;
+		line-height: 1;
+		margin-top: -2px;
+
+		@include reset_appearance();
+	}
+
+	.charitable-builder-provider-connection-block {
+		margin: $spacing_m 0 0 0;
+		padding: 0 $spacing_m;
+
+		h4 {
+			font-size: $font_size_m;
+			font-weight: 600;
+			line-height: $font_size_m + 4;
+			margin: 0 0 $spacing_s 1px;
+			padding: 0;
+		}
+
+		p.description {
+			color: $color_secondary_text;
+			font-size: $font_size_ss;
+			line-height: $font_size_l;
+			margin: $spacing_xs 0 0 0;
+			max-width: 450px;
+
+			&.before {
+				margin: 0 0 $spacing_s 0;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: $spacing_m;
+		}
+	}
+
+	input[type=text],
+	input[type=url],
+	select,
+	textarea {
+		max-width: 450px;
+		width: 100%;
+	}
+
+	input[type=checkbox] + label,
+	input[type=radio] + label {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.charitable-builder-provider-connection-setting {
+		margin: $spacing_m 0 0 0;
+		max-width: 450px;
+		padding: 0;
+
+		label {
+			display: block;
+			font-size: $font_size_s;
+			font-weight: 400;
+			line-height: $font_size_s + 3;
+			margin: 0 0 $spacing_s 1px;
+			padding: 0;
+		}
+
+		.text-btn-inlined {
+			display: table;
+
+			& > .text-btn-inlined-text {
+				display: table-cell;
+				padding-right: $spacing_s;
+				vertical-align: middle;
+			}
+
+			& > .text-btn-inlined-btn {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+
+		.charitable-panel-field {
+			&:only-child {
+				margin-bottom: $spacing_m !important;
+			}
+		}
+
+		.choices {
+			margin-bottom: 0;
+		}
+
+		.choices[data-type*="select-multiple"] .choices__input:focus {
+			border: none !important;
+			box-shadow: none !important;
+		}
+	}
+
+	.charitable-builder-provider-connection-fields-table {
+		border: $border_std;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+
+		thead {
+			background-color: $color_light_background;
+			color: $color_secondary_text;
+			font-size: $font_size_s;
+
+			th {
+				font-weight: 400;
+				padding: $spacing_ss $spacing_s;
+				text-align: left;
+			}
+		}
+
+		td {
+			width: 50%;
+
+			&.add,
+			&.delete {
+				button {
+					background: none;
+					border: none;
+					box-shadow: none;
+					color: $color_blue;
+					height: auto;
+					line-height: 1;
+					margin: 0;
+					padding: 0;
+
+					i {
+						font-size: $font_size_m;
+					}
+
+					&:hover {
+						color: $color_dark_blue;
+					}
+				}
+			}
+
+			&.delete {
+				button {
+					color: $color_red;
+
+					&:hover {
+						color: $color_dark_red;
+					}
+				}
+			}
+		}
+
+		tbody {
+			td {
+				border-top: $border_std;
+				padding: $spacing_s 0 $spacing_s $spacing_s;
+
+				&:last-of-type {
+					padding-right: $spacing_s;
+				}
+			}
+		}
+	}
+
+	.required {
+		color: $color_red;
+		font-weight: 700;
+		margin-left: $spacing_xs;
+	}
+
+	.charitable-conditional-block {
+		margin: $spacing_m 0 0 0;
+		padding: 0 $spacing_m;
+	}
+
+	.charitable-builder-provider-connections-error {
+		color: $color_red;
+		font-size: $font_size_m;
+	}
+
+	&.loading {
+		.charitable-builder-provider-title {
+			.charitable-builder-provider-title-spinner {
+				display: inline;
+			}
+		}
+
+		.charitable-builder-provider-connections {
+			opacity: .5;
+			pointer-events: none;
+		}
+	}
+}
+
+.charitable-builder-provider-connections-default {
+	padding: $spacing_l $spacing_xxl $spacing_xxl $spacing_xxl;
+	position: relative;
+	text-align: center;
+
+	&::before {
+		background: url( "../../images/campaign-builder/default-arrow.svg" ) no-repeat 0 0;
+		background-size: 97px 81px;
+		content: "";
+		height: 83px;
+		position: absolute;
+		right: 60px;
+		top: $spacing_m;
+		transform: rotate( 90deg );
+		width: 97px;
+	}
+
+	img {
+		border: $border_std;
+		border-radius: $border_radius_s;
+		height: 140px;
+		margin: 0 0 $spacing_l 0;
+		width: 140px;
+	}
+
+	h2:first-child {
+		margin-top: 0;
+	}
+
+	p {
+		font-size: $font_size_m;
+		line-height: $font_size_xl;
+		max-width: 615px;
+		margin: 0 auto $spacing_m;
+	}
+}
+
+// Legacy part.
+// These styles used in core (Constant Contact) and in several addons (Aweber, Campaign Monitor).
+.charitable-provider-connections {
+	& > :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.charitable-provider-connections-header {
+	background-color: $color_light_background;
+	padding: $spacing_s $spacing_m;
+
+	h5 {
+		float: left;
+		font-size: $font_size_l;
+		margin: 0;
+		padding: $spacing_xs 0 0 0;
+	}
+}
+
+.charitable-provider-connection {
+	border: $border_std;
+	margin: 0 0 $spacing_m 0;
+
+	.charitable-provider-connection-header {
+		background-color: $color_light_background;
+		border-bottom: $border_std;
+		font-size: $font_size_m;
+		font-weight: 600;
+		line-height: $font_size_m + 4;
+		margin: 0 0 -1px 0;
+		padding: $spacing_ms $spacing_m #{ $spacing_ms - 1 } $spacing_m;
+	}
+
+	.charitable-provider-connection-delete {
+		background-color: transparent;
+		border: none;
+		color: $color_red;
+		cursor: pointer;
+		float: right;
+		font-size: $font_size_m;
+		line-height: 1;
+		margin-top: -2px;
+
+		@include reset_appearance();
+	}
+
+	.charitable-provider-account-add {
+		input[type=text] {
+			margin: 0 0 $spacing_s 0;
+			display: block;
+		}
+
+		button {
+			@include charitable_btn();
+			@include charitable_btn_sm();
+			@include charitable_btn_blue();
+
+			display: block;
+		}
+	}
+
+	input[type=text],
+	select {
+		max-width: 450px;
+		width: 100%;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.charitable-connection-block {
+		margin: $spacing_m 0 0 0;
+		padding: 0 $spacing_m;
+
+		h4 {
+			font-size: $font_size_m;
+			font-weight: 600;
+			line-height: $font_size_m + 4;
+			margin: 0 0 $spacing_s 1px;
+			padding: 0;
+		}
+
+		&:last-child {
+			margin-bottom: $spacing_m;
+		}
+	}
+
+	.charitable-provider-groups-list {
+		p {
+			font-size: $font_size_xs;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		span {
+			display: block;
+			font-size: $font_size_ss;
+			margin-bottom: 4 $spacing_xs;
+		}
+
+		input {
+			margin-right: $spacing_s;
+		}
+	}
+
+	// Provider fields table (field map).
+	.charitable-provider-fields {
+		table {
+			border: $border_std;
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 100%;
+
+			select {
+				width: 100%;
+			}
+
+			thead {
+				background-color: $color_light_background;
+				color: $color_secondary_text;
+				font-size: $font_size_s;
+
+				th {
+					font-weight: 400;
+					padding: $spacing_ss $spacing_s;
+					text-align: left;
+				}
+			}
+
+			tbody td {
+				border-top: $border_std;
+				padding: $spacing_s;
+			}
+		}
+	}
+
+	.required {
+		color: $color_red;
+		font-weight: 700;
+		margin-left: $spacing_xs;
+	}
+
+	.charitable-conditional-block {
+		margin: $spacing_m 0;
+		padding: 0 $spacing_m;
+
+		.value input:disabled,
+		.value select:disabled {
+			background-color: $color_light_grey;
+			cursor: not-allowed
+		}
+
+	}
+
+	.charitable-provider-options {
+		label.block {
+			display: block;
+			margin: 0 0 $spacing_xs 0;
+		}
+
+		input[type=text] {
+			width: 100%;
+		}
+	}
+}

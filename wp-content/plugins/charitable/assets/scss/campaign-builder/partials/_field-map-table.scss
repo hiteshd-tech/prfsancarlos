@@ -1,0 +1,72 @@
+// Form Builder styles.
+//
+// Field Map table.
+//
+// @since 1.8.0
+
+.charitable-field-map-table {
+	margin: 0 0 $spacing_s 0;
+	max-width: 1040px;
+
+	h3 {
+		color: $color_primary_text;
+		margin: 0 0 $spacing_ss 0;
+	}
+
+	table {
+		margin: 0 -2px;
+		width: 100%;
+
+		td {
+			padding: 0 $spacing_s 8px 0;
+
+			select,
+			input:not([type=checkbox]):not([type=radio]) {
+				max-width: 100%;
+				width: 100% !important;
+			}
+
+			&.key {
+				width: 50%;
+			}
+
+			&.field {
+				width: calc( 50% - 80px );
+			}
+
+			&.actions {
+				width: 40px;
+			}
+		}
+
+		tr {
+			td:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.actions {
+
+		i {
+			display: inline-block;
+			font-size: $font_size_l;
+		}
+
+		.add {
+			margin-right: $spacing_xs;
+		}
+
+		.remove {
+			color: $color_red;
+
+			&:hover {
+				color: $color_bright_red
+			}
+		}
+	}
+
+	tr:first-of-type .remove {
+		display: none;
+	}
+}

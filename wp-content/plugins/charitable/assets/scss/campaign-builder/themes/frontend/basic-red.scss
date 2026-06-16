@@ -1,0 +1,136 @@
+// Campaign Builder Preview styles.
+//
+// Basic styles.
+//
+// @since 1.8.0
+
+// Template name
+$template: 'basic-red';
+
+// Colors by name:
+$color_theme_primary:   #d21818;
+$color_theme_secondary: #d21818;
+$color_theme_tertiary:  #d21818;
+$color_theme_accent:    #d21818;
+$color_button_bg:       #fb6500;
+
+@import '../frontend/partials/template-basic';
+
+.charitable-campaign-wrap.template-basic.template-basic-red {
+
+    .charitable-campaign-container {
+
+        /* fields */
+
+        .charitable-campaign-field {
+
+            /* title */
+            // note: it's an h5 in preview, but h1 here.
+            &.charitable-campaign-field_campaign-title {
+                h1 {
+                    color: $color_theme_primary;
+                }
+            }
+
+            /* photo */
+            &.charitable-campaign-field-photo {
+
+                .charitable-campaign-primary-image {
+
+                    img {
+                        border: 5px solid $color_theme_primary;
+                    }
+
+                }
+
+            }
+
+            /* progress bar */
+            &.charitable-campaign-field_progress-bar {
+
+                h5 {
+                }
+                .campaign-progress-bar {
+
+                }
+                .progress-bar-info-row {
+                }
+
+            }
+
+            &.charitable-campaign-field_campaign-summary {
+                .campaign-summary-item {
+                    span,
+                    .amount,
+                    .donors-count {
+                        color: $color_theme_primary;
+                    }
+                }
+            }
+
+            &.charitable-campaign-field_donate-button {
+                text-align: center;
+                .donate-button.button-primary {
+                    background-color: $color_button_bg;
+                }
+            }
+
+        }
+
+        /* base tabs */
+
+        // nav.charitable-campaign-preview-nav {
+        //     margin: 20px auto;
+        //     a {
+        //         text-decoration: none;
+        //     }
+        //     ul {
+        //         list-style: none;
+        //         margin-block-end: 0;
+        //         margin-block-start: 0;
+        //         margin-inline-end: 0;
+        //         margin-inline-start: 0;
+        //         padding: 0;
+        //     }
+        //     li {
+        //         display: inline-block;
+        //         margin: 0 20px 0 0;
+        //         text-transform: uppercase;
+        //         font-weight: 500;
+        //         color: #2d2d2d;
+        //         padding-bottom: 15px;
+        //         &.active {
+        //             border-bottom: 1px solid #2d2d2d;
+        //         }
+        //     }
+
+        //     &.tab-size-medium {
+        //         li {
+        //             a {
+        //                 font-size: 14px;
+        //                 padding: 15px;
+        //             }
+        //         }
+        //     }
+
+        // }
+        // .tab-content {
+        //     ul {
+        //         list-style: none;
+        //         margin-block-end: 0;
+        //         margin-block-start: 0;
+        //         margin-inline-end: 0;
+        //         margin-inline-start: 0;
+        //         padding: 0;
+        //     }
+        //     li {
+        //         display: none;
+        //         &.active {
+        //             display: block;
+        //         }
+        //     }
+        // }
+
+    }
+
+}

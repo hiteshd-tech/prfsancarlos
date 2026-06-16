@@ -1,0 +1,52 @@
+.charitable-campaign-field_social-sharing {
+
+    max-width: 100%;
+
+    ul.charitable-campaign-social-networks {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        margin: 20px auto;
+
+        li.charitable-campaign-social-network {
+            display: flex;
+            flex: 4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 16px;
+            line-height: 21px;
+
+            img {
+                max-width: 100%;
+                max-height: 30px;
+                min-height: 30px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            p {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                display: block;
+                margin: 0 auto;
+            }
+            a:hover {
+                text-decoration: underline;
+                img, p {
+                    opacity: 0.5;
+                }
+            }
+
+        }
+
+    }
+
+}

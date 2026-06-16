@@ -1,0 +1,668 @@
+// Form Builder styles.
+//
+// Panel fields.
+// Preview form area (right side, panel content area).
+//
+// @since 1.8.0
+
+.charitable-panel-fields {
+
+	// No fields preview (empty state).
+	.charitable-no-fields-area {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+
+		.no-fields-preview {
+			align-content: center;
+			background-image: url( "../../images/campaign-builder/default-arrow.svg" );
+			background-position: $spacing_ms $spacing_s;
+			background-repeat: no-repeat;
+			background-size: 97px 83px;
+			min-height: calc( 50vh - 260px - var( --charitable-admin-bar-height ) );
+			padding-bottom: $spacing_xl;
+			padding-top: $spacing_xl;
+			text-align: center;
+			width: 100%;
+
+			@include flex_center_both_axes();
+
+			&::before {
+				background-image: url( "../../images/campaign-builder/no-fields.svg" );
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 371px 260px;
+				content: "";
+				display: block;
+				height: 275px;
+				width: 100%;
+			}
+
+			h4 {
+				color: $color_primary_text;
+				font-size: $font_size_xl;
+				font-weight: 600;
+				line-height: 29px;
+				margin: $spacing_l 0 $spacing_s;
+			}
+
+			p {
+				color: $color_secondary_text;
+				font-size: $font_size_m;
+				font-weight: 400;
+				line-height: 19px;
+				margin: 0;
+			}
+		}
+
+	}
+
+	// Form title and description.
+	.charitable-preview-top-bar {
+		border-bottom: 1px solid $color_divider;
+		margin: 0 0 $spacing_ms 0px;
+		padding-bottom: $spacing_ms;
+		width: 100%;
+		display: table;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		.charitable-form-name {
+			font-size: $font_size_xxl;
+			font-weight: 600;
+			line-height: $font_size_xxl;
+			margin: 0;
+			padding: 0;
+			word-break: break-all;
+		}
+
+		mark {
+			font-weight: 300;
+			padding: 5px 8px;
+			font-size: 14px;
+			line-height: 14px;
+			background-color: $color_lightest_grey;
+			&.charitable-builder-status-active {
+				color: $color_green;
+			}
+			&.charitable-builder-status-successful {
+				color: $color_orange;
+			}
+			&.charitable-builder-status-unsuccessful {
+				color: $color_red;
+			}
+		}
+
+		.charitable-campaign-theme-label {
+			font-weight: 300;
+			font-size: 80%;
+		}
+
+		.charitable-template-swatch {
+			width: 15px;
+			height: 15px;
+			display: inline-block;
+			border: 1px solid;
+			margin: 0 0 -3px 0;
+		}
+
+		.charitable-preview-top-bar-inner {
+			padding: 0 200px $spacing_ms 0;
+		}
+		.charitable-preview-top-bar-inner-left {
+			float: left;
+		}
+		.charitable-preview-top-bar-inner-right {
+			float: right;
+		}
+	}
+
+	// Preview fields.
+	.charitable-field-wrap {
+		// margin: $spacing_ms -$spacing_ms 0 -$spacing_ms;
+		// This fixes the inability to drop the field to the end of the form after the Layout field.
+		padding-bottom: 19px;
+		&.column {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	.charitable-field {
+		border: 2px solid transparent;
+		border-radius: 0;
+		font-size: 14px;
+		margin: $spacing_xs 0;
+		padding: $spacing_xs;
+		position: relative;
+		@include transition( border-color, $transition_slow, ease-in );
+
+		&.charitable-no-duplicate {
+			a.charitable-field-delete {
+				right: 0;
+			}
+			a.charitable-field-edit {
+				right: 30px;
+			}
+		}
+
+		&:not( .charitable-field-child-hovered ) {
+			&:hover {
+				border: 2px solid #036aab;
+				cursor: pointer;
+			}
+		}
+
+		&.active {
+			// background-color: $color_light_background;
+			background-color: rgba(248, 248, 248, 0.05);
+			border: 2px solid #036aab;
+		}
+
+		.label-title {
+			cursor: pointer;
+			display: block;
+			font-size: $font_size_m;
+			font-weight: 600;
+			line-height: $font_size_ll;
+			margin: 0 0 $spacing_ms 0;
+			padding-right: 60px;
+			text-align: left;
+			word-break: break-word;
+
+			.required {
+				color: $color_red;
+				display: none;
+			}
+
+			.hidden_text,
+			.empty_text {
+				display: none;
+			}
+		}
+
+		&.label_empty {
+			& > .label-title {
+				color: $color_primary_text;
+
+				.empty_text {
+					display: inline;
+					color: #ffb900;
+					line-height: 1;
+					padding-right: 5px;
+				}
+
+				.hidden_text {
+					display: none !important;
+				}
+			}
+		}
+
+		&.label_hide {
+			&.label_empty {
+				& > .label-title {
+					.text {
+						color: $color_primary_text;
+					}
+				}
+			}
+
+			& > .label-title {
+				color: #777777;
+
+				.hidden_text {
+					display: inline;
+					color: #777777;
+					line-height: 1;
+					padding-right: 5px;
+				}
+			}
+		}
+
+		&.sublabel_hide .charitable-sub-label {
+			display: none;
+		}
+
+		&.required .label-title .required {
+			display: inline-block;
+			font-weight: 300;
+			margin: 0 0 0 $spacing_xs;
+		}
+
+		.charitable-sub-label {
+			color: $color_lighter_text;
+			display: block;
+			font-size: $font_size_s;
+			line-height: $font_size_m + 1;
+			margin: $spacing_xs 0 0 1px;
+			word-break: break-word;
+		}
+
+		input,
+		textarea,
+		select {
+			&[readonly],
+			&[disabled] {
+				background-color: $color_white;
+				border: $border_std;
+				box-shadow: none;
+				color: $color_lighter_text;
+				cursor: pointer;
+				opacity: 1;
+			}
+		}
+
+		input[type=text],
+		input[type=range],
+		input[type=email],
+		input[type=url],
+		input[type=password],
+		input[type=file],
+		select,
+		textarea {
+			background-color: $color_white;
+			border: $border_std;
+			border-radius: $border_radius_s;
+			box-shadow: none;
+			display: block;
+			font-size: $font_size_m;
+			height: 40px;
+			max-width: none;
+			padding: 6px $spacing_s;
+			width: $field_size_medium;
+			min-width: $field_min_width;
+		}
+
+		textarea {
+			height: 110px;
+			width: $field_size_large;
+			min-width: $field_size_large;
+
+			&[readonly],
+			&[disabled] {
+				resize: none;
+			}
+		}
+
+		input[type=checkbox],
+		input[type=radio] {
+			margin-right: $spacing_s;
+		}
+
+		// Reset height for native multiple select.
+		select[multiple] {
+			height: auto;
+		}
+
+		select {
+			padding-right: 24px;
+			overflow: hidden !important;
+			text-overflow: ellipsis;
+
+			&  > option {
+				color: inherit;
+				opacity: 1;
+			}
+		}
+
+		h6.charitable-preview-field-title {
+			font-size: 14px;
+			margin: 0 0 8px 5px;
+			position: absolute;
+			z-index: 9;
+			padding: 5px;
+			top: -5px;
+			left: 0;
+			color: white !important;
+			width: auto;
+			right: 0;
+			text-align: center;
+			border-top: 1px solid black;
+			span {
+				background-color: rgba(0, 0, 0, 0.43);
+				display: table !important;
+				padding: 3px 10px !important;
+				margin: -5px auto 0 auto !important;
+				width: auto !important;
+			}
+		}
+
+		// Small, Medium, Large sizes.
+		&.size-small {
+			input[type=text],
+			input[type=range],
+			input[type=email],
+			input[type=url],
+			input[type=password],
+			select {
+				width: $field_size_small;
+			}
+
+			textarea {
+				height: 60px;
+			}
+		}
+
+		&.size-large {
+			input[type=text],
+			input[type=range],
+			input[type=email],
+			input[type=url],
+			input[type=password],
+			select {
+				width: $field_size_large;
+			}
+
+			textarea {
+				height: 300px;
+			}
+		}
+
+		// Field row (for multi-rows fields, like Address).
+		.charitable-field-row {
+			margin: 0 0 $spacing_s 0;
+			position: relative;
+
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+
+		// Duplicate and Delete field icons.
+		.charitable-field-edit,
+		.charitable-field-duplicate,
+		.charitable-field-delete {
+			background-color: $color_blue;
+			color: $color_white;
+			font-size: $font_size_m;
+			height: 30px;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			text-align: center;
+			width: 30px;
+			z-index: 10;
+			display: flex;
+			text-decoration: none;
+
+			i {
+				font-size: 14px;
+				padding: 8px;
+			}
+
+			@include transition( all, $transition_slow, ease-in );
+
+			&:hover {
+				background-color: $color_bright_blue_alt;
+				i {
+					color: $color_white;
+				}
+			}
+		}
+
+		.charitable-field-delete {
+			color: $color_white;
+			right: $spacing_l;
+			font-size: $font_size_l;
+		}
+
+		.charitable-field-edit {
+			color: $color_white;
+			right: $spacing_l * 2;
+			font-size: $font_size_l;
+		}
+
+		&:not( .charitable-field-child-hovered ) {
+			&:hover,
+			&.active {
+				& > .charitable-field-edit,
+				& > .charitable-field-duplicate,
+				& > .charitable-field-delete {
+					opacity: 1;
+				}
+			}
+		}
+
+		&.charitable-field-pagebreak {
+			.charitable-field-duplicate {
+				display: none;
+			}
+		}
+
+		&.charitable-field-missing {
+			text-align: center;
+			border: 2px solid;
+			overflow: hidden;
+			position: relative;
+
+			.charitable-field-delete {
+				right: 0;
+			}
+
+			.education-buttons {
+				margin: 10px auto;
+			}
+
+			p {
+				strong {
+					font-weight: 600;
+				}
+			}
+
+			.button-link {
+				background-color: #5AA152;
+				color: #ffffff;
+				margin-left: 4px;
+				padding: 10px 30px;
+				position: relative;
+				top: 0;
+				text-decoration: none;
+				border-radius: 5px;
+				text-shadow: none;
+				font-weight: 600;
+				font-family: "Inter";
+				font-size: 16px;
+				line-height: normal;
+				cursor: pointer;
+				display: inline-block;
+				opacity: 1.0 !important;
+			}
+			.button-link:hover {
+				color: white;
+			}
+
+			button {
+				background-color: #e27730;
+				border: 0;
+				color: #fff;
+				font-weight: 600;
+				text-transform: uppercase;
+				-webkit-transition: background .1s;
+				transition: background .1s;
+				padding: 10px 20px;
+				min-width: 83px;
+				border-radius: 5px;
+				font-size: 16px;
+				line-height: 20px;
+				outline: none;
+				cursor: pointer;
+			}
+			.charitable-missing-addon-content {
+				position: relative;
+				background-color: rgba(0,0,0,0.40);
+				padding: 10px;
+				display: table;
+				margin-left: auto;
+				margin-right: auto;
+				border: 1px solid #cccc;
+			}
+			.charitable-missing-addon-bg {
+				opacity: 0.4;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-size: contain;
+				background-repeat: repeat-x;
+				background-position: left;
+			}
+
+		}
+
+		// Field helper.
+		.charitable-field-helper {
+			background: $color_grey_background;
+			border-left: 1px dashed $color_border;
+			border-radius: 6px 0;
+			border-top: 1px dashed $color_border;
+			bottom: 0;
+			color: $color_lighter_text;
+			font-size: $font_size_2xs;
+			line-height: 14px;
+			font-weight: 500;
+			opacity: 0;
+			padding: 9px;
+			position: absolute;
+			right: 0;
+			z-index: 10;
+			display: flex;
+			justify-content: right;
+			align-items: center;
+			@include transition( all, $transition_slow, ease-in );
+
+			&-edit {
+				margin-right: $spacing_xs;
+			}
+
+			&-drag {
+				position: relative;
+				padding-left: $spacing_xs;
+				margin-right: $spacing_xs;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 1px;
+					height: calc( 100% - 6px );
+					background: $color_button_icon_light_grey;
+					left: 0;
+					top: 3px;
+				}
+			}
+
+			&-hide {
+				color: $color_button_icon_light_grey;
+				margin-left: $spacing_xs;
+				font-size: $font_size_s;
+				width: 14px;
+				height: 14px;
+				text-align: center;
+
+				&:hover {
+					color: $color_secondary_text;
+				}
+			}
+		}
+
+		&-not-draggable {
+			.charitable-field-helper-drag {
+				display: none;
+			}
+		}
+
+		&:not( .charitable-field-child-hovered ) {
+			&:hover {
+				& > .charitable-field-helper {
+					opacity: 1;
+				}
+			}
+		}
+
+		// Alerts.
+		&.charitable-field-radio,
+		&.charitable-field-checkbox,
+		&.charitable-field-payment-multiple,
+		&.charitable-field-payment-checkbox {
+			.charitable-alert-dynamic {
+				margin: $spacing_ms 0 0 0;
+			}
+		}
+
+		// Stick.
+		&.charitable-field-stick {
+			.charitable-field-delete,
+			.charitable-field-helper {
+				display: none !important;
+			}
+		}
+
+		// Description and disclaimer.
+		.description {
+			clear: both;
+			color: $color_secondary_text;
+			font-size: $font_size_s;
+			margin: $spacing_xs 0 0 0;
+			word-break: break-word;
+
+			&:empty {
+				margin: 0;
+			}
+
+			&.disclaimer {
+				background-color: $color_white;
+				border: $border_std;
+				font-size: $font_size_xs;
+				height: 125px;
+				margin-top: $spacing_ms;
+				overflow-y: scroll;
+				padding: $spacing_s $spacing_s 0 $spacing_s;
+
+				p {
+					font-size: inherit;
+					line-height: 17px;
+					margin: 0 0 $spacing_ms 0;
+				}
+			}
+		}
+	}
+
+	.ui-sortable-disabled {
+		.charitable-field {
+			.charitable-field-duplicate,
+			.charitable-field-edit,
+			.charitable-field-delete {
+				cursor: no-drop;
+			}
+		}
+	}
+
+
+
+	// Submit button.
+	.charitable-field-submit {
+		margin-bottom: 0;
+
+		input[type=submit] {
+			background: $color_preview_button_background;
+			border: none;
+			border-radius: $border_radius_s;
+			color: $color_white;
+			cursor: pointer;
+			font-size: $font_size_m + 1;
+			font-weight: 600;
+			line-height: 21px;
+			padding: $spacing_s $spacing_ms;
+
+			&:focus {
+				border: none;
+				box-shadow: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,280 @@
+.charitable-growth-block {
+    margin-bottom:17px
+  }
+  .charitable-growth-block-title {
+    padding:16px 0;
+    font-style:normal;
+    font-weight:700;
+    font-size:18px;
+    line-height:21px;
+    color:#393e4b;
+    margin:0
+  }
+  .charitable-growth-content {
+    display:flex;
+    background:#FFFFFF;
+    border:1px solid #E2E4E9;
+    padding:24px;
+    &.charitable-selected {
+        border: 5px solid #f18200;
+    }
+  }
+  @media (max-width: 450px) {
+    .charitable-growth-content {
+      flex-direction:column;
+      justify-content:center;
+      text-align:center
+    }
+  }
+  .charitable-growth-content:nth-child(n+2) {
+    border-top:none;
+    &.charitable-selected {
+        border: 5px solid #f18200;
+    }
+  }
+  .charitable-growth-content-icon_container {
+    margin-right:24px;
+  }
+  [dir=rtl] .charitable-growth-content-icon_container {
+    margin-right:0;
+    margin-left:24px;
+  }
+  @media (max-width: 450px) {
+    .charitable-growth-content-icon_container {
+      margin:0 auto 24px
+    }
+  }
+  .charitable-growth-content-icon {
+    border:1px solid #E2E4E9;
+    border-radius:5.33333px;
+    width:40px;
+    height:40px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: 30px 30px;
+    background-color: white;
+    &.icon-mi {
+        background-image:url(../../images/icons/icon-mi.svg)
+    }
+    &.icon-aioseo {
+        background-image:url(../../images/icons/icon-aioseo.svg)
+    }
+    &.icon-pushengage {
+        background-image:url(../../images/icons/icon-pushengage.svg)
+    }
+    &.icon-rafflepress {
+        background-image:url(../../images/icons/icon-rafflepress.svg)
+    }
+    &.icon-constantcontact {
+        background-image:url(../../images/icons/icon-constantcontact.svg)
+    }
+    &.icon-semrush {
+        background-image:url(../../images/icons/icon-semrush.svg)
+    }
+    &.icon-wpforms {
+        background-image:url(../../images/icons/icon-wpforms.svg)
+    }
+    &.icon-optinmonster {
+        background-image:url(../../images/icons/icon-optinmonster.svg)
+    }
+    &.icon-smashballoon {
+        background-image:url(../../images/icons/icon-smashballoon.svg)
+    }
+    &.icon-seedprod {
+        background-image:url(../../images/icons/icon-seedprod.png)
+    }
+    &.icon-easyaffiliate {
+        background-image:url(../../images/icons/icon-easyaffiliate.svg)
+    }
+    &.icon-searchwp {
+        background-image:url(../../images/icons/icon-searchwp.svg)
+    }
+    &.icon-edd {
+        background-image:url(../../images/icons/icon-edd.svg)
+    }
+    &.icon-memberpress {
+        background-image:url(../../images/icons/icon-memberpress.svg)
+    }
+    &.icon-thirstyaffiliates {
+        background-image:url(../../images/icons/icon-thirstyaffiliates.png)
+    }
+    &.icon-advancedcoupons {
+        background-image:url(../../images/icons/icon-advancedcoupons.svg)
+    }
+    &.icon-prettylinks {
+        background-image:url(../../images/icons/icon-prettylinks.svg)
+    }
+    &.icon-wp-simple-pay {
+        background-image:url(../../images/icons/icon-wp-simple-pay.png)
+    }
+    &.icon-guide {
+        background-image:url(../../images/icons/icon-guide.svg)
+    }
+    &.icon-envira {
+        background-image:url(../../images/icons/icon-envira.svg)
+    }
+    &.icon-formidableforms {
+        background-image:url(../../images/icons/icon-formidableforms.svg)
+    }
+    &.icon-wpmailsmtp {
+        background-image:url(../../images/icons/icon-wpmailsmtp.svg)
+    }
+  }
+  .charitable-growth-content-desc_container {
+    flex:1;
+    padding-right:24px
+  }
+  [dir=rtl] .charitable-growth-content-desc_container {
+    padding-right:0;
+    padding-left:24px
+  }
+  @media (max-width: 450px) {
+    .charitable-growth-content-desc_container {
+      padding-right:0
+    }
+    [dir=rtl] .charitable-growth-content-desc_container {
+      padding-right:0;
+      padding-left:0
+    }
+  }
+  .charitable-growth-desc-title {
+    font-style:normal;
+    font-weight:700;
+    font-size:16px;
+    line-height:18px;
+    color:#393f4c;
+    margin:0 0 7px
+  }
+  @media (max-width: 450px) {
+    .charitable-growth-desc-title {
+      margin-bottom:16px
+    }
+  }
+  .charitable-growth-desc-excerpt {
+    color:#586074;
+    padding:0;
+    margin:0;
+    font-style:normal;
+    font-weight:400;
+    font-size:14px;
+    line-height:16px;
+    span {
+        background-color: #46bf40;
+        color: white;
+        display: inline-block;
+        padding: 3px 4px;
+    }
+  }
+  @media (max-width: 450px) {
+    .charitable-growth-desc-excerpt {
+      margin-bottom:16px
+    }
+  }
+  .charitable-growth-content-button_container {
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center
+  }
+  @media (max-width: 767px) {
+    .charitable-growth-content-button_container {
+      flex-direction:column-reverse
+    }
+  }
+  .charitable-growth-content-button_container .charitable-button {
+    width:170px;
+    text-align:center;
+    padding:7.5px 0;
+    font-style:normal;
+    font-weight:700;
+    font-size:14px;
+    line-height:18px;
+    border-radius:5px;
+    display:inline-block;
+    text-decoration:none;
+    margin-left:24px;
+    border:0;
+    cursor:pointer;
+    transition:all .3s ease-in-out
+  }
+  [dir=rtl] .charitable-growth-content-button_container .btn {
+    margin-left:0;
+    margin-right:24px
+  }
+  @media (max-width: 767px) {
+    .charitable-growth-content-button_container .btn {
+      margin-left:0;
+      margin-bottom:24px
+    }
+    [dir=rtl] .charitable-growth-content-button_container .btn {
+      margin-left:0;
+      margin-right:0
+    }
+  }
+  .charitable-growth-content-button_container .btn-green {
+    color:#fff;
+    background-color:#46bf40
+  }
+  .charitable-growth-content-button_container .charitable-button-activate,
+  .charitable-growth-content-button_container .charitable-button-setup,
+  .charitable-growth-content-button_container .charitable-button-install {
+    color:#fff !important;
+    background-color:#338eef
+  }
+  .charitable-growth-content-button_container .charitable-button-activate:hover,
+  .charitable-growth-content-button_container .charitable-button-setup:hover,
+  .charitable-growth-content-button_container .charitable-button-install:hover,
+  .charitable-growth-content-button_container .charitable-button-activate:active,
+  .charitable-growth-content-button_container .charitable-button-setup:active,
+  .charitable-growth-content-button_container .charitable-button-install:active,
+  .charitable-growth-content-button_container .charitable-button-activate:focus,
+  .charitable-growth-content-button_container .charitable-button-setup:focus,
+  .charitable-growth-content-button_container .charitable-button-install:focus {
+    background-color:#2a73c2;
+    color:#fff !important;
+  }
+  .charitable-growth-content-button_container .charitable-button-learn-more {
+    color: black;
+    border:1px solid black;
+    background-color: #fff;
+  }
+  .charitable-growth-content-button_container .charitable-button-learn-more:hover {
+    color: black;
+    border:1px solid black;
+    background-color: #fff;
+  }
+  .charitable-growth-content-button_container .btn-guide {
+    color:#338eef;
+    border:1px solid #338EEF;
+    background-color:#fff
+  }
+  .charitable-growth-content-button_container .btn-guide:hover {
+    background-color:#efefef;
+    color:#338eef
+  }
+  .charitable-growth-content-button_container .btn-guide:active {
+    color: white !important;
+  }
+  .charitable-growth-desc-why {
+    margin: 10px 0 0 0;
+    display: inline-block;
+    border-color: #bfffbb;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 18px;
+    strong {
+        &:before {
+            content: '💖';
+            margin-right: 10px;
+        }
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+  }
+
+  .charitable-growth-coming-soon {
+    h3 {
+        margin-top: 10px;
+    }
+  }

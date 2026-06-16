@@ -1,0 +1,148 @@
+// Form Builder styles.
+//
+// Buttons mixins.
+//
+// @since 1.8.0
+
+// Charitable Button.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn() {
+
+	font-family: 'Inter', sans-serif !important;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: $border_radius_s;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	box-shadow: none;
+
+	@include transition( all, $transition_fast, ease-in );
+}
+
+// Charitable Button Small.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_sm() {
+
+	font-size: $font_size_s;
+	font-weight: 500;
+	padding: 0 $spacing_s;
+	height: 32px;
+	line-height: 30px;
+}
+
+// Charitable Button Medium.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_md() {
+
+	font-size: $font_size_s;
+	font-weight: 600;
+	line-height: $font_size_s + 3;
+	padding: $spacing_s $spacing_ms;
+}
+
+// Charitable Button Large.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_lg() {
+
+	font-size: $font_size_m;
+	font-weight: 600;
+	padding: 16px 28px;
+}
+
+// Charitable Button Blue.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_blue() {
+
+	background-color: $color_blue;
+	border-color: $color_blue;
+	color: $color_white;
+
+	&:hover {
+		background-color: $color_dark_blue;
+		border-color: $color_dark_blue;
+		color: $color_white;
+	}
+}
+
+// Charitable Button Orange.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_orange() {
+
+	background-color: $color_orange;
+	border-color: $color_orange;
+	color: $color_white;
+
+	&:hover {
+		background-color: $color_dark_orange;
+		border-color: $color_dark_orange;
+		color: $color_white;
+	}
+}
+
+// Charitable Button Green.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_green() {
+
+	background-color: #5AA152;
+	border-color: #5AA152;
+	color: $color_white;
+
+	&:hover {
+		background-color: #2c5e26;
+		border-color: #2c5e26;
+		color: $color_white;
+	}
+}
+
+// Charitable Button Grey.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_grey() {
+
+	background-color: $color_grey_background;
+	border-color: $color_border;
+	color: $color_secondary_text;
+
+	&:hover {
+		background-color: $color_grey_background_hover;
+		border-color: $color_border;
+		color: $color_primary_text;
+	}
+}
+
+// Charitable Button Light Grey.
+//
+// @since 1.8.0
+//
+@mixin charitable_btn_light_grey() {
+
+	background-color: $color_light_background;
+	border-color: $color_border;
+	color: $color_secondary_text;
+
+	&:hover {
+		background-color: $color_light_background_hover;
+		border-color: $color_border;
+		color: $color_primary_text;
+	}
+}

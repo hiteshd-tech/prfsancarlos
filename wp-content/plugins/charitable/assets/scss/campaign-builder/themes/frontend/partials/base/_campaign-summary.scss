@@ -1,0 +1,51 @@
+.charitable-campaign-field.charitable-campaign-field-campaign-summary {
+
+    .charitable-field-template-campaign-summary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+
+        .charitable-main-placeholder {
+            width: 100%;
+            h5 {
+                margin-bottom: 0;
+            }
+        }
+
+        .charitable-field-template-headline {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .campaign-summary-item {
+            color: $color_theme_base_primary;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: left;
+            text-transform: capitalize;
+            flex: 0 0 calc(50% - 10px);
+
+            &:nth-child(odd) {
+                text-align: left;
+            }
+
+            &:nth-child(even) {
+                text-align: left;
+            }
+
+            span {
+                color: $color_theme_base_secondary;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 38px;
+                text-align: left;
+                text-transform: capitalize;
+                display: block;
+            }
+        }
+    }
+
+}

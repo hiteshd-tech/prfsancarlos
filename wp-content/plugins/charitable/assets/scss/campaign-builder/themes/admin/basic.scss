@@ -1,0 +1,90 @@
+// Charitable Campaign Template Preview styles.
+//
+// This is specific CSS for the selected template in the preview area, to make the preivew area look more like the front-end template
+//
+// @since 1.8.0
+
+@import '../../partials/common';
+// @import '../themes/partials/common.scss';
+// @import '../themes/partials/field-social-sharing.scss';
+// @import '../themes/partials/field-social-links.scss';
+// @import '../themes/partials/field-info-bar.scss';
+// @import '../themes/partials/field-donation-button.scss';
+
+.charitable-preview.charitable-builder-template-basic { /* everything wraps in this */
+
+    .charitable-campaign-preview { /* this narrows things down a little to the preview area header/tabs */
+
+        .placeholder {
+
+        }
+
+        .charitable-campaign-preview-container {
+            font-family: "Helvetica Neue";
+        }
+
+        /* field items in preview area */
+        .charitable-field {
+
+            /* title */
+            &.charitable-field-campaign-title {
+                h5 {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: 800;
+                    font-size: 24px;
+                    line-height: 26px;
+
+                }
+            }
+
+            /* description */
+            &.charitable-field-campaign-description {
+
+            }
+
+            /* progress bar */
+            &.charitable-field-progress-bar .progress {
+                border: 0;
+                background-color: $color_light_grey;
+            }
+            &.charitable-field-progress-bar .progress-bar {
+                background-color: $color_orange;
+                height: 8px;
+            }
+
+            &.charitable-field-donate-button {
+                .charitable-field-preview-donate-button {
+                    div {
+                        background-color: transparent;
+                    }
+                    .placeholder.button {
+                        background-color: $color_green;
+                    }
+                }
+            }
+
+
+            &.charitable-field-photo .primary-image {
+                border: 0px;
+            }
+
+            &.charitable-field-social-sharing .placeholder,
+            &.charitable-field-social-links .placeholder {
+                background-color: transparent;
+            }
+
+            /* images */
+            img.charitable-campaign-builder-preview-photo {
+                max-width: 100%;
+            }
+
+
+        }
+
+    }
+
+
+}
+
+

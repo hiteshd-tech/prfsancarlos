@@ -1,0 +1,85 @@
+// Form Builder styles.
+//
+// Toolbar.
+//
+// @since 1.8.0
+
+@import 'partials/common';
+
+@import 'partials/toolbar';
+@import 'partials/panels-toggle';
+@import 'partials/panels';
+
+@import 'partials/panel-field';
+@import 'partials/panel-sidebar-section';
+@import 'partials/panel-content-section';
+
+@import 'partials/template_ui';
+@import 'partials/modals';
+
+.charitable-edit-campaign-title-area {
+    position: relative;
+    display: inline-block;
+    width: calc( 100% - 250px );
+    input.charitable-form-name {
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px 35px 10px 10px;
+        display: inline-block;
+        margin-right: 10px;
+        // background-image: url(../../images/icons/edit.png);
+        // background-repeat: no-repeat;
+        // background-position: right 10px center;
+        // background-size: 20px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        width: 100%;
+    }
+    input.charitable-form-name::-webkit-input-placeholder {
+        font-weight: lighter;
+    }
+    input.charitable-form-name::-moz-placeholder {
+        font-weight: lighter;
+    }
+    input.charitable-form-name::-ms-input-placeholder {
+        font-weight: lighter;
+    }
+    input.charitable-form-name[disabled] {
+        pointer-events: none;
+    }
+    input.charitable-form-name:focus {
+        border: 1px solid #036aab;
+        box-shadow: 0 0 0 1px #036aab;
+        outline: none;
+    }
+    input.charitable-form-name:hover {
+        text-decoration: none;
+    }
+    &.edit {
+        input.charitable-form-name {
+            border: none;
+            box-shadow: none;
+            margin-right: 20px;
+        }
+        input.charitable-form-name:focus {
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .charitable-edit-campaign-title-label {
+        display: none;
+    }
+    .charitable-edit-campaign-title-area {
+        width: 100%;
+        margin-top: -5px;
+    }
+}
+
+// The below has been replaced with adding charitable-hidden classes.
+
+// #charitable-panel-field-settings-campaign_description-wrap,
+// #charitable-panel-field-settings-campaign_extended_description-wrap {
+// 	display: none;
+// }

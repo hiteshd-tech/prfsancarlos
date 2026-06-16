@@ -1,0 +1,151 @@
+// Charitable Campaign Template Preview styles.
+//
+// This is specific CSS for the selected template in the preview area, to make the preivew area look more like the front-end template
+//
+// @since 1.8.0
+
+// Template name
+$template: 'basic-red';
+
+// Colors by name:
+$color_theme_primary:   #d21818;
+$color_theme_secondary: #fe535e;
+$color_theme_tertiary:  #ff87a0;
+$color_theme_accent:    #ffbce0;
+
+// Fonts
+$color_theme_primary_font: "Helvetica Neue";
+
+// Fonts
+$color_theme_primary_font: "Helvetica Neue";
+
+@import '../../partials/common';
+// @import '../themes/partials/common.scss';
+// @import '../themes/partials/field-social-sharing.scss';
+// @import '../themes/partials/field-social-links.scss';
+// @import '../themes/partials/field-info-bar.scss';
+// @import '../themes/partials/field-donation-button.scss';
+
+.charitable-preview.charitable-builder-template-basic-red { /* everything wraps in this */
+
+    .charitable-template-swatch {
+        background-color: $color_theme_primary;
+    }
+
+    .charitable-campaign-preview { /* this narrows things down a little to the preview area header/tabs */
+
+        background-color: rgba($color_theme_tertiary, 0.1);
+
+        .placeholder {
+            background-color: rgba($color_theme_primary, 0.1);
+        }
+
+        .charitable-campaign-preview-container {
+            font-family: $color_theme_primary_font;
+        }
+
+        /* field items in preview area */
+        .charitable-field {
+
+            border-color: white;
+
+            /* title */
+            &.charitable-field-campaign-title {
+                h5 {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: 800;
+                    font-size: 24px;
+                    line-height: 26px;
+                }
+            }
+
+            /* progress bar */
+            &.charitable-field-progress-bar .progress {
+                border: 0;
+                background-color: $color_theme_accent;
+            }
+            &.charitable-field-progress-bar .progress-bar {
+                background-color: $color_theme_primary;
+                height: 8px;
+            }
+
+            &.charitable-field-donate-button {
+                .charitable-field-preview-donate-button {
+                    div {
+                        background-color: transparent;
+                    }
+                    .placeholder.button {
+                        background-color: $color_theme_secondary;
+                    }
+                }
+            }
+
+            &.charitable-field-photo .primary-image {
+                border: 5px solid $color_theme_primary;
+            }
+
+            &.charitable-field-social-sharing .placeholder,
+            &.charitable-field-social-links .placeholder {
+                background-color: transparent;
+            }
+
+            &.charitable-field-campaign-summary {
+                .placeholder:first-child {
+                    padding: 0;
+                }
+                .charitable-field-preview-campaign-summary {
+                    span {
+                        color: $color_theme_primary;
+                    }
+                }
+            }
+
+            &.charitable-field-shortcode,
+            &.charitable-field-campaign-summary {
+                .placeholder {
+                    background-color: transparent;
+                    &.shortcode-preview {
+                        color: black;
+                        opacity: 0.4;
+                        font-weight: 400;
+                        font-style: italic;
+                    }
+                }
+            }
+
+            &.charitable-field-donation-form {
+                .placeholder {
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    min-height: 100px;
+                }
+                .placeholder:first-child {
+                    background-color: transparent;
+                    height: auto;
+                    max-height: auto;
+                    min-height: auto;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            &.charitable-field-html {
+                .placeholder {
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    min-height: 40px;
+                }
+            }
+
+
+        }
+
+    }
+
+
+}
+
+

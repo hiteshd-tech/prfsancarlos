@@ -1,0 +1,459 @@
+// Form Builder styles.
+//
+// Panel setup (templates).
+//
+// @since 1.8.0
+
+#charitable-panel-setup {
+	.charitable-panel-content {
+		align-items: stretch;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 0;
+	}
+}
+
+#charitable-setup-form-name {
+	align-items: center;
+	background-color: $color_light_background;
+	border-bottom: 1px solid $color_divider;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	padding: $spacing_l;
+
+	label {
+		display: inline-block;
+		font-size: $font_size_ll;
+		font-weight: 600;
+		min-width: 200px;
+		padding: 0;
+	}
+}
+
+#charitable-setup-name {
+	display: inline-block;
+	font-size: $font_size_ll;
+	height: 50px;
+	margin-left: $spacing_l;
+	padding: 13px $spacing_s;
+	width: calc( 100% - 290px );
+}
+
+.charitable-setup-title {
+	font-size: $font_size_ll;
+	font-weight: 600;
+	margin: $spacing_l $spacing_l 0 $spacing_l;
+	color: $color_primary_text;
+
+	.count {
+		color: $color_hint;
+	}
+}
+
+.charitable-setup-desc {
+	margin: $spacing_s $spacing_l $spacing_l $spacing_l;
+	color: $color_secondary_text;
+
+	a {
+		color: $color_secondary_text;
+
+		&:hover {
+			color: $color_primary_text;
+		}
+	}
+}
+
+.charitable-setup-templates {
+	align-items: stretch;
+	border-top: 1px solid $color_divider;
+	display: flex;
+	flex-grow: 2;
+	justify-content: space-between;
+	margin: 0 $spacing_l;
+	padding: 0 0 $spacing_l 0;
+}
+
+.charitable-setup-templates-sidebar {
+	border-right: 1px solid $color_divider;
+	padding: $spacing_l $spacing_l 0 0;
+	width: 199px;
+	box-sizing: content-box;
+}
+
+#charitable-setup-template-search {
+	font-size: $font_size_m;
+	font-weight: 400;
+	height: 40px;
+	line-height: $font_size_ll;
+	padding-left: 35px;
+	width: 100%;
+	color: $color_primary_text;
+	border: 1px solid $color_border;
+	border-radius: $border_radius_s;
+	box-shadow: none;
+
+	&::placeholder {
+		color: $color_hint;
+		font-weight: 400;
+	}
+
+	&:focus {
+		border-color: #036aab;
+		box-shadow: 0 0 0 1px #036aab;
+	}
+}
+
+.charitable-setup-templates-search-wrap {
+	position: relative;
+
+	i.fa {
+		color: $color_hint;
+		display: block;
+		font-size: $font_size_m;
+		left: $spacing_s + 2;
+		position: absolute;
+		top: $spacing_s + 2;
+		width: $font_size_m;
+	}
+}
+
+.charitable-setup-templates-categories {
+	margin-top: $spacing_l;
+	width: 199px;
+	box-sizing: content-box;
+
+	li {
+		border-radius: $border_radius_s;
+		color: $color_primary_text;
+		cursor: pointer;
+		font-size: $font_size_s;
+		font-weight: 600;
+		line-height: $font_size_m;
+		margin: 0;
+		padding: $spacing_s;
+
+		&.divider {
+			border-bottom: 1px solid $color_divider;
+			margin: $spacing_l 0;
+			padding: 0;
+		}
+
+		&:hover {
+			color: $color_primary_text;
+			text-decoration: underline;
+		}
+
+		&.active {
+			background: $color_fields_background;
+			color: $color_bright_blue;
+			position: relative;
+
+			span {
+				color: $color_bright_blue;
+				opacity: 1;
+				font-weight: 600;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		span {
+			float: right;
+			color: $color_secondary_text;
+			opacity: 0.5;
+			font-weight: 400;
+		}
+	}
+}
+
+#charitable-setup-templates-list {
+	margin-bottom: -$spacing_l;
+	padding-top: $spacing_l;
+	width: calc( 100% - 225px );
+
+	.list {
+
+		align-content: stretch;
+		align-items: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.charitable-template {
+		border-radius: $border_radius_m;
+		margin-bottom: $spacing_l;
+		margin-left: $spacing_l;
+		min-height: 122px;
+		padding: 20px 20px 15px;
+		position: relative;
+		width: calc( #{ 100% / 3 } - 30px );
+		box-shadow: 0 0 0 1px $color_brighter_grey;
+		transition: box-shadow $transition_normal ease-in-out;
+
+		&:hover,
+		&.active {
+			box-shadow: 0 0 0 2px $color_secondary_text, 0 3px 4px rgba(0, 0, 0, 0.15);
+			outline: none;
+
+			.charitable-template-buttons,
+			.charitable-template-favorite {
+				opacity: 1;
+			}
+
+			.charitable-template-badge {
+				display: none;
+			}
+		}
+
+		&.badge {
+
+			h3 {
+				padding-right: 45px;
+			}
+		}
+
+		h3 {
+			font-size: $font_size_m;
+			font-weight: 600;
+			line-height: $font_size_l;
+			padding-bottom: 2px;
+			margin: 0;
+			overflow: hidden;
+			position: relative;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: $color_primary_text;
+		}
+
+		.charitable-template-badge {
+			background-color: $color_hint;
+			border-radius: 9px;
+			color: $color_white;
+			display: block;
+			font-size: 8px;
+			font-weight: 700;
+			letter-spacing: .5px;
+			line-height: 8px;
+			padding: $spacing_xs $spacing_ss;
+			position: absolute;
+			right: $spacing_s;
+			text-transform: uppercase;
+			top: $spacing_s;
+
+			@include transition( all, $transition_normal, ease-out );
+		}
+
+		.charitable-template-favorite {
+			display: block;
+			position: absolute;
+			right: $spacing_s;
+			top: $spacing_s;
+			font-size: $font_size_l;
+			line-height: $font_size_l;
+			opacity: 0;
+			color: #aaaaaa;
+
+			@include transition( all, $transition_normal, ease-out );
+
+			&:hover {
+				color: #d63637;
+				cursor: pointer;
+
+				@include transition( all, $transition_fast, ease-out );
+			}
+
+			.fa-heart {
+				color: $color_red;
+			}
+		}
+
+		&.selected {
+			h3 {
+				padding-right: 60px;
+			}
+
+			.charitable-template-badge {
+				background-color: $color_orange;
+			}
+		}
+
+		&.pro {
+			h3 {
+				padding-right: 40px;
+			}
+		}
+
+		p {
+			color: $color_secondary_text;
+			font-size: $font_size_s;
+			line-height: $font_size_l;
+			margin: $spacing_s 0 0;
+			max-height: 55px;
+			overflow: hidden;
+		}
+	}
+
+	.charitable-template.active {
+		&:hover,
+		&.active {
+
+
+			.charitable-template-buttons,
+			.charitable-template-favorite {
+				opacity: 0;
+			}
+
+
+		}
+	}
+
+	.charitable-template-upgrade-banner {
+		background: rgba( 226, 119, 48, 0.08 );
+		margin-bottom: $spacing_l;
+		margin-left: $spacing_l;
+		border-radius: $border_radius_m;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: $spacing_m;
+
+		.charitable-template-content {
+			padding: $spacing_m;
+			width: 80%;
+			color: $color_primary_text;
+
+			h3 {
+				font-weight: 600;
+				font-size: $font_size_m;
+				line-height: $font_size_l;
+				margin-top: 0;
+				margin-bottom: $spacing_xs;
+			}
+
+			p {
+				font-weight: 400;
+				font-size: $font_size_s;
+				line-height: $font_size_l;
+				margin: 0;
+			}
+		}
+
+		.charitable-template-upgrade-button {
+			width: 20%;
+			text-align: right;
+
+			a {
+				min-height: $font_size_ss;
+
+				@media screen and ( max-width: 1279px ) {
+					box-sizing: border-box;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.charitable-templates-no-results {
+		display: none;
+		margin-left: $spacing_l;
+
+		p {
+			font-size: $font_size_m;
+			line-height: 40px;
+			margin: 0;
+			color: $color_primary_text;
+		}
+	}
+}
+
+.charitable-template-buttons {
+	background-color: $color_white;
+	border-radius: $border_radius_m;
+	display: flex;
+	left: 0;
+	opacity: 0;
+	padding: #{ $spacing_m + 4px } $spacing_m $spacing_s $spacing_m;
+	margin-bottom: 2px;
+	position: absolute;
+	top: 40px;
+	width: 100%;
+
+	@include transition( all, $transition_normal, ease-out );
+
+	.charitable-btn {
+		flex-grow: 1;
+		margin-left: $spacing_s;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-weight: 600;
+		font-size: $font_size_ss;
+		line-height: $font_size_m;
+		padding: 11px 15px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	.visible {
+		opacity: 1;
+	}
+}
+
+// Responsiveness.
+@media (max-width: 1439px) {
+
+	#charitable-setup-name {
+		width: calc( 100% - 250px );
+	}
+
+	#charitable-setup-templates-list .charitable-template {
+		width: calc( 50% - 30px );
+	}
+}
+
+@media (max-width: 1279px) {
+	#charitable-setup-templates-list {
+
+		.charitable-template {
+			margin-right: 0;
+			min-height: 0;
+			width: 100%;
+
+			.charitable-template-buttons {
+				left: 0;
+				margin: 10px 0 0 0;
+				opacity: 1;
+				padding: 0;
+				position: relative;
+				top: 0;
+			}
+		}
+
+		.charitable-template-upgrade-banner {
+			flex-direction: column;
+			padding: 20px;
+
+			.charitable-template-content,
+			.charitable-template-upgrade-button {
+				width: 100%;
+			}
+
+			.charitable-template-content {
+				padding: 0;
+			}
+
+			.charitable-template-upgrade-button {
+				text-align: center;
+				margin-top: 20px;
+			}
+		}
+	}
+}

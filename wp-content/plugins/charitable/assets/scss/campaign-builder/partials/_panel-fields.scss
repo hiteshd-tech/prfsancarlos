@@ -1,0 +1,94 @@
+// Form Builder styles.
+//
+// Panel fields.
+// Common styles.
+//
+// @since 1.8.0
+
+.charitable-panel-fields {
+	width: 100vw;
+	height: 100vh;
+
+	.charitable-field-row {
+		&:before {
+			content: "";
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+			content: "";
+			display: table;
+		}
+	}
+
+	#charitable-hidden {
+		display: none;
+	}
+
+	// Drag and Drop.
+	.charitable-field-dragging {
+		background-color: $color_light_grey;
+	}
+
+	.charitable-field-drag-out {
+		background: $color_blue;
+		border: none;
+		border-radius: $border_radius_s;
+		color: $color_white;
+		display: block;
+		margin: 20px 0 0 0;
+		padding: 12px $spacing_xs 12px 18px;
+		text-align: left;
+		width: 172px;
+		max-width: 172px;
+		z-index: 10000;
+
+		i {
+			color: $color_white_trans_65;
+			margin: 0 $spacing_xs 0 0;
+		}
+	}
+
+	.charitable-field-drag-over,
+	.charitable-field-drag {
+		border: 1px dashed $color_border;
+		border-radius: $border_radius_m;
+		color: $color_primary_text;
+		font-size: $font_size_s;
+		margin: 0 0 $spacing_xs 0;
+		padding: $spacing_m;
+		text-align: center;
+		width: 100%;
+	}
+
+	.charitable-field-drag-placeholder {
+		border: 1px dashed $color_border;
+		border-radius: $border_radius_m;
+		margin: 0 0 $spacing_xs 0;
+		width: 100%;
+		height: 60px;
+
+		&.charitable-field-drag-not-allowed {
+			border-color: $color_dark_red;
+		}
+	}
+
+	.charitable-field-drag-not-allowed {
+		cursor: not-allowed !important;
+	}
+
+	.charitable-field-drag-pending {
+		background-color: $color_light_background;
+		border: 1px dashed $color_border;
+		border-radius: $border_radius_m;
+		margin: 0 0 $spacing_xs 0;
+
+		i {
+			color: $color_secondary_text;
+			font-size: $font_size_l;
+			line-height: $font_size_xl;
+			margin: 0 $spacing_xs 0 $spacing_s;
+		}
+	}
+}

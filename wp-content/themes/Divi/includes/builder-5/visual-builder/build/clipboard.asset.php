@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('divi-context-library', 'divi-data', 'divi-middleware', 'divi-module-utils', 'divi-seamless-immutable-extension', 'divi-vendor-react', 'lodash'), 'version' => '24a69f4a1c5dfed9b61a');

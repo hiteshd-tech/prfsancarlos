@@ -1,0 +1,26 @@
+.charitable-campaign-wrap {
+
+    .charitable-campaign-container {
+
+        h1:empty,
+        h2:empty,
+        h3:empty,
+        h4:empty,
+        h5:empty,
+        h6:empty {
+          display: none;
+        }
+
+        h5.charitable-field-template-headline,
+        .charitable-field-template-headline {
+            color: $color_theme_base_primary;
+            font-size: 27px;
+            line-height: 29px;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+    }
+
+}

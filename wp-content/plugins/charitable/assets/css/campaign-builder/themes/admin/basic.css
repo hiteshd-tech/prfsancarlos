@@ -1,0 +1,43 @@
+.charitable-preview.charitable-builder-template-basic { /* everything wraps in this */ }
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview { /* this narrows things down a little to the preview area header/tabs */
+  /* field items in preview area */
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-campaign-preview-container {
+  font-family: "Helvetica Neue";
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field {
+  /* title */
+  /* description */
+  /* progress bar */
+  /* images */
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-campaign-title h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26px;
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-progress-bar .progress {
+  border: 0;
+  background-color: #f1f1f1;
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-progress-bar .progress-bar {
+  background-color: #e27730;
+  height: 8px;
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-donate-button .charitable-field-preview-donate-button div {
+  background-color: transparent;
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-donate-button .charitable-field-preview-donate-button .placeholder.button {
+  background-color: #00a32a;
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-photo .primary-image {
+  border: 0px;
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-social-sharing .placeholder, .charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field.charitable-field-social-links .placeholder {
+  background-color: transparent;
+}
+.charitable-preview.charitable-builder-template-basic .charitable-campaign-preview .charitable-field img.charitable-campaign-builder-preview-photo {
+  max-width: 100%;
+}

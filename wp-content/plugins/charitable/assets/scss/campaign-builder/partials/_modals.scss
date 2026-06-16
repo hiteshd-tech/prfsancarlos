@@ -1,0 +1,143 @@
+// Form Builder styles.
+//
+// Panels.
+//
+// @since 1.8.0
+
+#charitable-builder .charitable-builder-modal  {
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999991;
+    transition: opacity 0.65s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 99999; // this also makes sure the "browser too small" message stays above it.
+    }
+
+    .charitable-form {
+        margin-left: auto;
+        margin-right: auto;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        max-width: 1000px;
+        max-height: 1600px;
+        width: 100%
+    }
+    .charitable-feedback-form-required {
+        color: red;
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .charitable-templates-close-icon {
+        color: #545660;
+        padding-top: 5px;
+        padding-right: 10px;
+        font-size: 40px !important;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        opacity: .6;
+        text-align: center;
+        font-size: 27px !important;
+        line-height: 14px !important;
+        z-index: 1;
+    }
+    .button-link {
+        background-color: #5AA152;
+        text-transform: capitalize;
+        font-weight: 500;
+        padding: 15px 25px;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #ffffff !important;
+        margin-left: 4px;
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        border-radius: 5px;
+        text-shadow: none;
+        font-family: "Inter";
+        line-height: normal;
+        cursor: pointer;
+    }
+    .button-link:hover,
+    .button-link:active {
+        color: white;
+    }
+
+    .charitable-templates-preview-headline {
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    &.charitable-builder-modal-template-preview .charitable-form {
+
+        margin-left: auto;
+        margin-right: auto;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        max-width: 1000px;
+        position: absolute;
+        top: 125px;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+
+        .charitable-feedback-form-row-button {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 25px 0;
+            a {
+                margin: 0;
+                width: 75%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+        }
+
+        .charitable-form-row.charitable-feedback-form-preview-image {
+            height: calc( 100% - 160px);
+            margin-top: 0;
+            img {
+                width: auto !important;
+                max-width: 100%;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+        }
+        .charitable-templates-preview-description {
+            p {
+                margin: 10px 0;
+            }
+        }
+
+    }
+
+}

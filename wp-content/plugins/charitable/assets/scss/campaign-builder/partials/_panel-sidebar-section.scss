@@ -1,0 +1,350 @@
+// Form Builder styles.
+//
+// Panel sidebar section.
+// Settings, Marketing, Payments sidebar items.
+//
+// @since 1.8.0
+
+.charitable-panel-sidebar-section {
+	border-bottom: 1px solid $color_fields_divider;
+	color: $color_primary_text;
+	display: block;
+	font-size: $font_size_m;
+	// height: 75px;
+	line-height: $font_size_l;
+	margin: 0;
+	outline: 0;
+	padding: 17px $spacing_m 17px $spacing_m;
+	position: relative;
+	text-decoration: none;
+
+	&:hover {
+		background-color: $color_fields_background_hover;
+		color: $color_primary_text;
+	}
+
+	&.icon {
+		padding: 28px 20px 28px 79px;
+	}
+
+	&.education-modal {
+		opacity: .5;
+
+		.charitable-panel-sidebar-recommended {
+			margin-left: $spacing_xs;
+		}
+	}
+
+	&.default {
+		display: none;
+	}
+
+	&.active,
+	&.active:hover {
+		background-color: $color_blue;
+		color: $color_white;
+	}
+
+	.fa-angle-right {
+		color: $color_fields_hint;
+		float: right;
+		font-size: $font_size_m;
+		line-height: $font_size_m;
+		text-align: center;
+	}
+
+	.fa-check-circle-o {
+		color: transparent;
+		float: right;
+		font-size: $font_size_l;
+		margin: 0 $spacing_m;
+
+		&:before {
+			background-image: url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23B0B6BD'%3E%3Cdefs/%3E%3Cpath d='M8 .25a7.75 7.75 0 100 15.5A7.75 7.75 0 008 .25zm0 1.5a6.25 6.25 0 110 12.5 6.25 6.25 0 010-12.5zm4.38 4.1l-.72-.72c-.13-.16-.38-.16-.54 0L6.72 9.5 4.84 7.62a.36.36 0 00-.53 0l-.72.7c-.12.15-.12.4 0 .52l2.85 2.88c.15.15.37.15.53 0l5.4-5.35c.13-.15.13-.4 0-.53z'/%3E%3C/svg%3E" );
+			background-repeat: no-repeat;
+		}
+	}
+
+	&.active {
+		.fa-angle-right {
+			color: #7897CD;
+		}
+
+		.fa-check-circle-o {
+			&:before {
+				background-image: url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff'%3E%3Cdefs/%3E%3Cpath d='M8 .25a7.75 7.75 0 100 15.5A7.75 7.75 0 008 .25zm0 1.5a6.25 6.25 0 110 12.5 6.25 6.25 0 010-12.5zm4.38 4.1l-.72-.72c-.13-.16-.38-.16-.54 0L6.72 9.5 4.84 7.62a.36.36 0 00-.53 0l-.72.7c-.12.15-.12.4 0 .52l2.85 2.88c.15.15.37.15.53 0l5.4-5.35c.13-.15.13-.4 0-.53z'/%3E%3C/svg%3E" );
+			}
+		}
+
+		img {
+			border-color: $color_darker_blue;
+		}
+	}
+
+	img {
+		border: 1px solid $color_fields_hint;
+		border-radius: $border_radius_s;
+		left: $spacing_m;
+		position: absolute;
+		top: $spacing_ms;
+		width: 44px;
+	}
+
+	.charitable-panel-sidebar-recommended {
+		background-color: $color_green;
+		border-radius: 4px;
+		color: $color_white;
+		font-size: 10px;
+		font-weight: 700;
+		line-height: 1;
+		padding: 4px $spacing_xs;
+		margin-left: $spacing_s;
+		display: inline-block;
+		position: relative;
+		top: -2px;
+		text-transform: uppercase;
+
+		i {
+			opacity: 0.8;
+		}
+	}
+
+	.charitable-builder-sidebar-icon {
+		position: relative;
+		width: auto;
+		left: auto;
+		top: auto;
+		float: left;
+		margin-right: 20px;
+		width: 44px;
+		height: 44px;
+	}
+
+	&.marketing-request,
+	&.payment-request {
+		font-style: italic;
+		text-transform: capitalize;
+	}
+
+}
+#charitable-panel-marketing,
+#charitable-panel-payment {
+
+	.charitable-panel-sidebar {
+		/* display: table; */
+	}
+	.charitable-panel-sidebar-section {
+		display: table;
+		width: 100%;
+		vertical-align: middle;
+		line-height: 44px;
+		.fa-angle-right {
+			position: relative;
+			top: 15px;
+		}
+		.charitable-payment-recommended {
+			text-transform: uppercase;
+			font-size: 11px;
+			line-height: 20px;
+			font-weight: 600;
+			padding-left: 25px;
+			background-image: url("../../images/icons/recommended.svg");
+			background-repeat: no-repeat;
+			background-position: left;
+			height: 20px;
+			display: table;
+			float: right;
+			position: relative;
+			width: auto;
+			top: 15px;
+			padding-right: 20px;
+		}
+		&.active {
+			.charitable-payment-recommended {
+				color: white;
+			}
+		}
+	}
+
+}
+
+
+.charitable-panel-content-section-parent-marketing,
+.charitable-panel-content-section-parent-payment {
+	.charitable-panel-content-section-interior {
+		text-align: center;
+
+		.header-content {
+			h2 {
+				font-size: 21px;
+				line-height: 24px;
+				font-weight: 600;
+			}
+		}
+
+		img.charitable-builder-sidebar-icon {
+			// min-height: 178px;
+			// max-height: 178px;
+			// max-width: 600px;
+			// height: auto;
+			// height: 178px;
+			height: auto;
+			max-width: 40%;
+			max-height: 140px;
+		}
+
+		.header-content,
+		.main-content {
+			width: 75%;
+			margin-left: auto;
+			margin-right: auto;
+			h2 {
+				strong {
+					font-weight: 800;
+				}
+			}
+		}
+
+		.education-images {
+			clear: both;
+			display: table;
+			margin: 25px auto;
+			text-align: center;
+			width: 75%;
+			img {
+				width: 40%;
+				max-width: 600px;
+			}
+			&.type-custom img {
+				width: auto;
+				max-width: 600px;
+			}
+			.charitable-marketing-image,
+			.charitable-payment-image {
+				margin-left: 10px;
+				margin-right: 10px;
+				border: 1px solid #DDD;
+				padding: 5px;
+			}
+			.charitable-marketing-image-1 {
+				// float: left;
+			}
+			.charitable-marketing-image-2 {
+				// float: right;
+			}
+		}
+
+		.main-content {
+			text-align: center;
+			ul {
+				li {
+					background-image: url('../../images/icons/bullet_check.svg');
+					background-repeat: no-repeat;
+					background-position: 0 5px;
+					padding-left: 25px;
+					width: 45%;
+					display: inline-table;
+					margin: 15px;
+					text-align: left;
+				}
+			}
+		}
+
+		.education-buttons {
+			margin: 40px auto;
+			h2 {
+				margin-bottom: 25px;
+			}
+			&.top {
+				margin-top: 20px;
+			}
+		}
+
+		.button-link {
+			background-color: #5AA152;
+			color: #ffffff;
+			margin-left: 4px;
+			padding: 10px 30px;
+			position: relative;
+			top: 0;
+			text-decoration: none;
+			border-radius: 5px;
+			text-shadow: none;
+			font-weight: 600;
+			font-family: "Inter";
+			font-size: 16px;
+			line-height: normal;
+			cursor: pointer;
+		}
+		.button-link:hover {
+			color: white;
+		}
+
+		button {
+			background-color: #e27730;
+			border: 0;
+			color: #fff;
+			font-weight: 600;
+			text-transform: uppercase;
+			-webkit-transition: background .1s;
+			transition: background .1s;
+			padding: 10px 20px;
+			min-width: 83px;
+ 		    border-radius: 5px;
+			font-size: 16px;
+			line-height: 20px;
+			outline: none;
+			cursor: pointer;
+		}
+
+		.charitable-form-confirmation {
+			border: 1px solid #DDD;
+			padding: 10px;
+			margin: 50px auto !important;
+			text-align: center;
+			h2 {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+	}
+
+
+}
+
+.charitable-feedback-form-interior-confirmation {
+	padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1600px) {
+
+	.charitable-panel-content-section-parent-marketing,
+	.charitable-panel-content-section-parent-payment {
+		.charitable-panel-content-section-interior {
+
+			.header-content,
+			.main-content {
+				width: 90%;
+			}
+
+			.main-content {
+				text-align: center;
+				ul {
+					width: 90%;
+					margin-left: auto;
+					margin-right: auto;
+					li {
+
+						width: 95%;
+						display: inline-table;
+
+					}
+				}
+			}
+
+		}
+	}
+
+}

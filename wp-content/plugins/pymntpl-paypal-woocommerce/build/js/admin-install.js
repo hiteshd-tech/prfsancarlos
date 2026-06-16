@@ -1,0 +1,2 @@
+(()=>{"use strict";var e={n:t=>{var a=t&&t.__esModule?()=>t.default:()=>t;return e.d(a,{a}),a},d:(t,a)=>{for(var o in a)e.o(a,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:a[o]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)};const t=window.jQuery;var a=e.n(t);a()(()=>{a()(document.body).WCBackboneModal({template:"wc-ppcp-activation"})}),(this.wcPPCP=this.wcPPCP||{})["admin-install"]={}})();
+//# sourceMappingURL=admin-install.js.map

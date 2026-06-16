@@ -1,0 +1,40 @@
+.charitable-campaign-field.charitable-campaign-field-photo {
+
+    .charitable-campaign-primary-image {
+        border: transparent;
+        border-radius: 0px;
+
+
+        img {
+            max-width: 100%;
+        }
+      }
+
+
+
+      &.charitable-campaign-align-center {
+
+        .primary-image-container {
+            text-align: center;
+        }
+
+      }
+      &.charitable-campaign-align-left {
+
+        .primary-image-container {
+            text-align: left;
+        }
+
+      }
+      &.charitable-campaign-align-right {
+
+        .primary-image-container {
+            text-align: right;
+        }
+
+      }
+
+
+
+}
+

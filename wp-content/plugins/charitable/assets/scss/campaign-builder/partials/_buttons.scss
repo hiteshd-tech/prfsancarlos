@@ -1,0 +1,122 @@
+// Form Builder styles.
+//
+// Buttons styles.
+//
+// @since 1.8.0
+
+.charitable-admin-page {
+	.charitable-btn {
+		@include charitable_btn();
+
+		&.inactive {
+			background-color: $color_grey_background_hover;
+			border-color: $color_border;
+			color: $color_primary_text;
+			cursor: no-drop;
+		}
+
+		// Icon inside button.
+		.charitable-button-icon,
+		i {
+			margin: 0 $spacing_s 0 0 !important;
+		}
+	}
+
+	.charitable-btn-block {
+		display: block;
+		width: 100%;
+	}
+
+	.charitable-btn-sm {
+		@include charitable_btn_sm();
+	}
+
+	.charitable-btn-md {
+		@include charitable_btn_md();
+	}
+
+	.charitable-btn-lg {
+		@include charitable_btn_lg();
+	}
+
+	.charitable-btn-orange {
+		@include charitable_btn_orange();
+	}
+
+	.charitable-btn-green {
+		@include charitable_btn_green();
+	}
+
+	.charitable-btn-blue {
+		@include charitable_btn_blue();
+
+		&.charitable-settings-keyword-filter-save-changes {
+			font-weight: 400;
+			margin-right: 8px;
+
+			.charitable-loading-spinner {
+				margin-left: 0;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.charitable-btn-grey {
+		@include charitable_btn_grey();
+	}
+
+	.charitable-btn-light-grey {
+		@include charitable_btn_light_grey();
+	}
+
+	.charitable-btn-light-grey-blue-borders {
+		background-color: #f8f8f8;
+		border-color: currentColor;
+		color: $color_blue;
+		font-weight: 400;
+
+		&:hover {
+			background-color: $color_light_background_hover;
+			color: $color_dark_blue;
+		}
+	}
+
+	// Dismiss button.
+	.charitable-dismiss-button {
+		background: none;
+		border: none;
+		color: $color_hint;
+		cursor: pointer;
+		padding: 3px;
+
+		&:hover {
+			color: $color_secondary_text;
+		}
+
+		&:before {
+			background: 0 0;
+			content: "\f153";
+			display: block;
+			font: normal #{ $font_size_m }/#{ $font_size_m } dashicons, sans-serif;
+			height: 16px;
+			speak: none;
+			text-align: center;
+			width: 16px;
+
+			@include font_smoothing();
+		}
+	}
+
+	.charitable-disabled {
+		cursor: default;
+		opacity: .5;
+		pointer-events: none;
+	}
+
+	.charitable-disabled.charitable-disabled-modal,
+	.charitable-disabled.charitable-disabled-same_page {
+		cursor: pointer;
+		opacity: .5;
+		pointer-events: all;
+	}
+}

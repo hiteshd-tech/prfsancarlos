@@ -1,0 +1,204 @@
+body.charitable_page_charitable-settings {
+
+    .charitable-square-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: 14px;
+        margin: 0;
+        padding: 8px 12px;
+        gap: 10px;
+        text-decoration: none;
+        width: fit-content;
+        &.charitable-square-live-btn {
+            background-color: #383f49;
+            color: #fff;
+        }
+        &.charitable-square-sandbox-btn {
+            background-color: #fff;
+            color: #383f49;
+            border: 1px solid #383f49;
+        }
+        svg {
+            width: 32px;
+            height: 32px;
+            margin-left: -2px;
+        }
+    }
+
+    .charitable-square-btn + p.desc {
+        margin-top: 10px !important;
+    }
+
+    .charitable-square-settings-actions-message {
+        background-color: #fff;
+        color: #383f49;
+        border: 1px solid #a2a2a2;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .charitable-square-settings-actions-title-testmode-sandbox {
+        /* green */
+        color: #008000;
+    }
+
+    .charitable-square-settings-actions-title-testmode-live {
+        /* red */
+        color: #ff0000;
+    }
+
+    .charitable-success-icon {
+        background-image: url("../../images/icons/check-circle.svg");
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background-size: contain;
+        position: relative;
+        top: 4px;
+        margin-right: 10px;
+    }
+
+    .charitable-square-connected {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        // Style the first paragraph (connection status) to be inline with the icon
+        > p:first-of-type {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            width: 100%;
+
+            strong {
+                margin-left: 5px;
+            }
+
+            // Add the success icon before the text
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background-image: url("../../images/icons/check-circle.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+        }
+
+        // Hide the original success icon span since we're using ::before
+        > span.charitable-success-icon {
+            display: none;
+        }
+
+        // Handle error states - when there's an error icon followed by text
+        > span.charitable-error-icon + * {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            width: 100%;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background-image: url("../../images/icons/exclamation-circle.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+        }
+
+        // Hide the original error icon span since we're using ::before
+        > span.charitable-error-icon {
+            display: none;
+        }
+
+        // Style the disconnect button paragraph
+        > p.charitable-square-disconnect-btn {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        // Handle cases where there's just error text without a paragraph wrapper
+        > span.charitable-error-icon + :not(p) {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            width: 100%;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background-image: url("../../images/icons/exclamation-circle.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .charitable-square-disconnect-btn {
+        margin-top: 20px !important;
+        a.charitable-btn-md {
+            min-height: auto !important;
+            border-radius: 0 !important;
+        }
+    }
+
+    .charitable-square-connnected {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .charitable-square-connnected p.charitable-square-disconnect-btn {
+        width: 100% !important;
+    }
+
+    .charitable-square-refresh-btn {
+        border-radius: 0 !important;
+        margin-right: 10px !important;
+    }
+
+    .charitable-error-icon {
+        background-image: url("../../images/icons/exclamation-circle.svg");
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background-size: contain;
+        position: relative;
+        top: 4px;
+        margin-right: 10px;
+    }
+
+    .charitable-btn-connect-webhooks {
+        border-radius: 0 !important;
+        background-color: #E89940 !important;
+        margin-bottom: 10px !important;
+        border: 0 !important;
+        color: #fff !important;
+    }
+}
+
+body.charitable-pro.charitable_page_charitable-settings {
+    .square-connection-status td,
+    .square-enable-webhooks td {
+        padding-top: 10px !important;
+    }
+}
+
+body.charitable_page_charitable-settings:not(.charitable-pro) {
+    .square-enable-webhooks td {
+        padding-top: 10px !important;
+    }
+}

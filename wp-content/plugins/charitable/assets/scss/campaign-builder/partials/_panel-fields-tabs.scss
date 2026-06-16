@@ -1,0 +1,107 @@
+// Form Builder styles.
+//
+// Panel fields.
+// Add fields / Field options tabs.
+//
+// @since 1.8.0
+
+#charitable-panel-design .charitable-tabs {
+	background: $color_fields_tabs;
+	border-bottom: 1px solid $color_fields_divider;
+	display: flex;
+	flex-wrap: nowrap;
+	left: $panels_toggle_width;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: calc( #{ $toolbar_height } + var( --charitable-admin-bar-height ) );
+	width: $sidebar_width;
+	z-index: 1;
+
+	@include transition( "top, width, left", "#{ $transition_slow }, #{ $transition_normal }, #{ $transition_normal }", ease-out );
+
+	.active {
+		background: $color_fields_background;
+	}
+
+	li {
+		margin: 0;
+		width: 50%;
+		position: relative;
+
+		&:last-of-type {
+			border-left: 1px solid $color_fields_divider;
+		}
+	}
+
+	a {
+		color: $color_primary_text;
+		display: block;
+		font-size: $font_size_m;
+		font-weight: 400;
+		line-height: $font_size_ll;
+		overflow: hidden;
+		padding: 14px;
+		text-align: center;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		&:hover {
+			color: $color_secondary_text;
+			text-decoration: none;
+		}
+
+		&:focus {
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		i {
+			color: $color_fields_secondary_text;
+			font-size: $font_size_m;
+			margin-right: $spacing_s;
+		}
+
+		&.active {
+			pointer-events: none;
+		}
+
+		&.active,
+		&.active:hover {
+			color: $color_primary_text;
+			font-weight: 600;
+			text-decoration: none;
+		}
+	}
+}
+
+// Tab content.
+#charitable-panel-design .charitable-tab-content {
+	display: none;
+	margin: $spacing_xl 0 0 0;
+	position: relative;
+	height: calc( 100% - 40px );
+	overflow: auto;
+
+	&.charitable-add-fields {
+		display: block;
+		margin-top: 0;
+		padding: $spacing_m;
+		height: 100%;
+	}
+
+	&.charitable-hide-options-groups {
+		margin-top: 0;
+		height: 100%;
+
+		&:before {
+			display: none !important;
+		}
+
+		.charitable-field-option-group-toggle,
+		.charitable-group-toggle  {
+			display: none !important;
+		}
+	}
+}

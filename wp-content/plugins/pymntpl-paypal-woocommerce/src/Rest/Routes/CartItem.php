@@ -1,0 +1,146 @@
+<?php
+
+
+namespace PaymentPlugins\WooCommerce\PPCP\Rest\Routes;
+
+
+use PaymentPlugins\WooCommerce\PPCP\Assets\PayPalDataTransformer;
+use PaymentPlugins\WooCommerce\PPCP\Constants;
+use PaymentPlugins\WooCommerce\PPCP\ContextHandler;
+use PaymentPlugins\WooCommerce\PPCP\PaymentMethodRegistry;
+use PaymentPlugins\WooCommerce\PPCP\ProductSettings;
+
+/**
+ * Route that handles PayPal product page one-click checkout.
+ */
+class CartItem extends AbstractCart {
+
+	public function get_path() {
+		return 'cart/item';
+	}
+
+	public function get_routes() {
+		return [
+			[
+				'methods'  => \WP_REST_Server::EDITABLE,
+				'callback' => [ $this, 'handle_request' ],
+				'args'     => [
+					'payment_method' => [
+						'required'          => true,
+						'validate_callback' => [ $this->validator, 'validate_payment_method' ]
+					]
+				]
+			],
+			[
+				'methods'  => \WP_REST_Server::DELETABLE,
+				'callback' => [ $this, 'handle_request' ],
+				'args'     => [
+					'key' => [
+						'required' => true
+					]
+				]
+			]
+		];
+	}
+
+	/**
+	 * Add item to the shopping cart
+	 *
+	 * @param $request
+	 */
+	public function handle_post_request( \WP_REST_Request $request ) {
+		wc_maybe_define_constant( 'WOOCOMMERCE_CART', true );
+		$this->populate_post_data( $request );
+		list( $product_id, $qty, $variation_id, $variation ) = $cart_params = $this->get_add_to_cart_params( $request );
+		// remove item before adding, ensuring qty's are accurate
+		WC()->cart->remove_cart_item( WC()->cart->generate_cart_id( $product_id, $variation_id, $variation ) );
+
+		try {
+			$payment_method = $this->get_payment_method_from_request( $request );
+
+			if ( ! $payment_method ) {
+				throw new \Exception( __( 'Invalid payment method provided.', 'pymntpl-paypal-woocommerce' ) );
+			}
+
+			$cart_item_key = WC()->cart->add_to_cart( ...$cart_params );
+			// add item to the cart
+			if ( $cart_item_key === false ) {
+				throw new \Exception( $this->get_wc_notice( 'error', __( 'Error adding product to cart.', 'pymntpl-paypal-woocommerce' ) ) );
+			}
+
+			if ( $request->get_param( 'needs_setup_token' ) === true ) {
+				return [
+					'code' => null
+				];
+			}
+
+			$setting = new ProductSettings( $product_id );
+			$order   = $this->get_order_from_cart( $request );
+			$order->setIntent( $setting->get_option( 'intent' ) );
+
+			$this->logger->info(
+				sprintf( 'Creating PayPal order via %s. Args: %s', __METHOD__, print_r( $order->toArray(), true ) ),
+				'payment'
+			);
+
+			$result = $this->client->orders->create( $order );
+			if ( is_wp_error( $result ) ) {
+				throw new \Exception( $result->get_error_message() );
+			}
+
+			$this->logger->info( sprintf( 'PayPal order %s created via %s', $result->id, __METHOD__ ), 'payment' );
+
+			$this->cache->set( sprintf( '%s_%s', $payment_method->id, Constants::PAYPAL_ORDER_ID ), $result->id );
+
+			$data_transformer = new PayPalDataTransformer();
+
+			return [
+				'order_id'      => $result->id,
+				'cart'          => $data_transformer->transform_cart( WC()->cart ),
+				'cart_item_key' => $cart_item_key,
+			];
+		} catch ( \Exception $e ) {
+			$this->logger->info( sprintf( 'Error adding product to cart. Reason: %s. Cart args: %s', $e->getMessage(), print_r( $cart_params, true ) ) );
+
+			return new \WP_Error( 'add-to-cart-error', $e->getMessage(), [ 'status' => 200 ] );
+		}
+	}
+
+	/**
+	 * @param \WP_REST_Request $request
+	 *
+	 * @return array
+	 * @throws \Exception
+	 */
+	public function handle_delete_request( \WP_REST_Request $request ) {
+		$cart          = WC()->cart;
+		$cart_item_key = $request->get_param( 'key' );
+		$result        = $cart->remove_cart_item( $cart_item_key );
+
+		if ( ! $result ) {
+			$this->logger->info( sprintf( 'Cart item %s was not removed.', $cart_item_key ) );
+		}
+
+		$data_transformer = new PayPalDataTransformer();
+
+		return [
+			'cart'          => $data_transformer->transform_cart( $cart ),
+			'cart_item_key' => $cart_item_key
+		];
+	}
+
+	private function get_add_to_cart_params( \WP_REST_Request $request ) {
+		$args = [
+			'product_id'   => $request->get_param( 'product_id' ),
+			'qty'          => $request->get_param( 'qty' ),
+			'variation_id' => $request->get_param( 'variation_id' ) == null ? 0 : $request->get_param( 'variation_id' ),
+			'variation'    => $request->get_param( 'variation' )
+		];
+		if ( ! $args['variation'] ) {
+			$args['variation'] = [];
+		}
+
+		return array_values( $args );
+	}
+
+}

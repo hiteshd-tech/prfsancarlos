@@ -1,0 +1,28 @@
+// Form Builder styles.
+//
+// Smart Tags.
+//
+// @since 1.8.0
+
+.smart-tags-list,
+.smart-tags-list-display {
+	background-color: $color_white;
+	border: 1px solid $color_fields_border;
+	border-radius: $border_radius_s;
+
+	max-height: 175px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 0;
+
+	li.heading {
+		padding: $spacing_s !important;
+	}
+}
+
+.charitable-panel-content {
+	.smart-tags-list,
+	.smart-tags-list-display {
+		border-color: $color_border;
+	}
+}

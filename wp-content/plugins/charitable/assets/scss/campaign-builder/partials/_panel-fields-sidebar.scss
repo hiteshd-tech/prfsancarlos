@@ -1,0 +1,92 @@
+// Form Builder styles.
+//
+// Panel fields.
+// Sidebar (left side, field buttons/options).
+//
+// @since 1.8.0
+
+#charitable-panel-design .charitable-panel-sidebar {
+	position: absolute;
+	top: calc( 124px + var( --charitable-admin-bar-height ) );
+	bottom: 0;
+	left: $panels_toggle_width;
+	overflow: hidden;
+
+	@include transition( "top, width, left", "#{ $transition_slow }, #{ $transition_normal }, #{ $transition_normal }", "ease-out, ease-out, ease-in-out" );
+
+	.no-gap {
+		margin-bottom: 0;
+	}
+
+	.sub-label {
+		color: $color_fields_secondary_text;
+		font-size: $font_size_xs;
+		line-height: $font_size_s;
+		margin: $spacing_ss 0 0 1px;
+	}
+
+	.charitable-field-options-columns {
+		align-items: baseline;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		margin-bottom: $spacing_m;
+
+		& + .charitable-field-options-columns {
+			margin-top: -10px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		& > .charitable-field-options-column:first-child {
+			margin-left: 1px;
+		}
+
+		& > .charitable-field-options-column {
+			flex-grow: 1;
+		}
+
+		&.charitable-field-options-columns-2 > .charitable-field-options-column {
+			max-width: calc( #{ 100% / 2 } - 6px );
+		}
+
+		&.charitable-field-options-columns-3 > .charitable-field-options-column {
+			max-width: calc( #{ 100% / 3 } - 9px );
+		}
+
+		&.charitable-field-options-columns-4 > .charitable-field-options-column {
+			max-width: calc( #{ 100% / 4 } - 10px );
+		}
+
+		&.charitable-field-options-columns-5 > .charitable-field-options-column {
+			max-width: calc( #{ 100% / 5 } - 10px );
+		}
+
+		&.charitable-field-options-columns-6 > .charitable-field-options-column {
+			max-width: calc( #{ 100% / 6 } - 10px );
+		}
+
+		&.charitable-field-options-columns-7 > .charitable-field-options-column {
+			max-width: calc( #{ 100% / 7 } - 11px );
+			text-align: center;
+		}
+
+		&.checkboxes-row {
+			& > label {
+				margin-top: 0;
+				max-width: 24px;
+
+				input {
+					margin: 1px 0 $spacing_xs 0;
+				}
+			}
+		}
+
+		select {
+			display: block;
+		}
+	}
+}

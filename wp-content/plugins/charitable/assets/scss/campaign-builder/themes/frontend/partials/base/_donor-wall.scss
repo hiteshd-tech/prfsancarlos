@@ -1,0 +1,26 @@
+.charitable-campaign-field.charitable-campaign-field-donation-wall {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 24px;
+
+    .donors-list {
+        list-style: none;
+        padding-left: 0;
+        margin-left: auto;
+        display: inline;
+        margin-right: auto;
+    }
+
+    h5.charitable-field-template-headline {
+
+        color: $color_theme_base_primary;
+    }
+
+    .charitable-campaign-field.charitable-campaign-field_donation-wall {
+        margin: 0;
+    }
+
+}
+

@@ -1,0 +1,104 @@
+// Form Builder styles.
+//
+// Overlay.
+//
+// @since 1.8.0
+
+#charitable-builder-underlay {
+	background: radial-gradient( 50% 50% at 50% 50%, $color_black 37.5%, $color_black 100% );
+	cursor: default;
+	height: 100%;
+	min-width: 0;
+	overflow: hidden;
+	position: fixed;
+	z-index: 999999; // Inside (related to) the main builder container #charitable-builder.
+	opacity: 0.8;
+
+	@include inset_0();
+	@include transition( opacity, $transition_slowest, ease-out );
+	@include flex_center_both_axes();
+
+	&.fade-out {
+		opacity: 0;
+	}
+}
+
+#charitable-builder-overlay {
+	background: radial-gradient( 50% 50% at 50% 50%, $color_lightest_grey 37.5%, $color_brightest_grey 100% );
+	cursor: default;
+	height: 100%;
+	min-width: 0;
+	overflow: hidden;
+	position: fixed;
+	z-index: 100; // Inside (related to) the main builder container #charitable-builder.
+
+	@include inset_0();
+	@include transition( opacity, $transition_slowest, ease-out );
+	@include flex_center_both_axes();
+
+	&.fade-out {
+		opacity: 0;
+	}
+}
+
+@keyframes spinner {
+	0% {
+	  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+	}
+	100% {
+	  transform: translate3d(-50%, -50%, 0) rotate(360deg);
+	}
+  }
+
+.charitable-builder-overlay-content {
+	text-align: center;
+	position: relative;
+	height: 100px;
+	width: 100px;
+
+	i {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		&.spinner::before {
+			animation: 1.5s linear infinite spinner;
+			animation-play-state: running;
+		  animation-play-state: inherit;
+		  border: solid 5px #cfd0d1;
+		  border-bottom-color: #F99E36;
+		  border-radius: 50%;
+		  content: "";
+		  height: 90px;
+		  width: 90px;
+		  position: absolute;
+		  top: 50px;
+		  left: 50px;
+		  transform: translate3d(-50%, -50%, 0);
+		  will-change: transform;
+		  }
+
+		&.avatar {
+			background-color: $color_white;
+			background-image: url('../../../assets/images/charitable-logo.svg');
+			border-radius: 50%;
+			box-shadow: 0 2px 5px rgba( 0, 0, 0, .15 );
+			height: 80px;
+			margin: $spacing_s;
+			width: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+		}
+	}
+}
+
+@keyframes charitable-spinner-rotation {
+	from {
+		transform: rotate( 0deg );
+	}
+	to {
+		transform: rotate( 360deg );
+	}
+}

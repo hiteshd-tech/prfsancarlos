@@ -1,0 +1,718 @@
+0000.002 (0) Opened log file at time: Wed, 09 Jul 2025 00:01:34 +0000 on https://prfsancarlos.org
+0000.013 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.12.18.22 WP: 6.8.1 PHP: 7.4.33 (Linux 1064641.cloudwaysapps.com 5.10.0-31-cloud-amd64 #1 SMP Debian 5.10.221-1 (2024-07-14) x86_64) MySQL: 5.5.5 WPLANG: en_US Server: Apache/2.4.62 (Debian) safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 166.7M | 192M) multisite: N openssl: OpenSSL 1.1.1w  11 Sep 2023 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.022 (0) Free space on disk containing Updraft's temporary directory: 27302.7 MB
+0000.046 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.055 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.088 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1751932987, seconds_ago=86307)
+0000.103 (0) Set semaphore last lock (fd) time to 2025-07-09 00:01:34
+0000.115 (0) Semaphore lock (fd) complete
+0000.140 (0) Backup run: resumption=0, nonce=9cee7061ea88, begun at=1752019294 (0s ago), job type=backup
+0000.168 (0) Scheduling a resumption (1) after 300 seconds (1752019594) in case this run gets aborted
+0000.210 (0) Checking if we have a zip executable available
+0000.235 (0) Creation of backups of directories: beginning
+0000.265 (0) No backup of plugins: excluded by user's options
+0000.281 (0) No backup of themes: excluded by user's options
+0000.293 (0) No backup of uploads: excluded by user's options
+0000.311 (0) No backup of wpcore: excluded by user's options
+0000.327 (0) No backup of others: excluded by user's options
+0000.334 (0) No backup of more: excluded by user's options
+0000.365 (0) Saving backup status to database (elements: 0)
+0000.382 (0) Beginning creation of database dump (WordPress DB)
+0000.463 (0) PHP event: code E_DEPRECATED: Function create_function() is deprecated (line 1394, wp-content/plugins/updraftplus/backup.php)
+0000.475 (0) PHP event: code E_DEPRECATED: Function create_function() is deprecated (line 1408, wp-content/plugins/updraftplus/backup.php)
+0000.511 (0) Table wp_q5j83c_options: Total expected rows (approximate): 844
+0000.729 (0) Table wp_q5j83c_options: Total rows added: 855 in 0.20 seconds
+0000.742 (0) Table wp_q5j83c_options: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_options.table.gz - 302.3 KB)
+0000.801 (0) Table wp_q5j83c_users: Total expected rows (approximate): 3
+0000.811 (0) Table wp_q5j83c_users: Total rows added: 3 in 0.00 seconds
+0000.824 (0) Table wp_q5j83c_users: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_users.table.gz - 0.8 KB)
+0000.848 (0) Table wp_q5j83c_usermeta: Total expected rows (approximate): 156
+0000.860 (0) Table wp_q5j83c_usermeta: Total rows added: 156 in 0.00 seconds
+0000.869 (0) Table wp_q5j83c_usermeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_usermeta.table.gz - 8.5 KB)
+0000.896 (0) Table wp_q5j83c_actionscheduler_actions: Total expected rows (approximate): 297
+0000.914 (0) Table wp_q5j83c_actionscheduler_actions: Total rows added: 297 in 0.01 seconds
+0000.924 (0) Table wp_q5j83c_actionscheduler_actions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_actions.table.gz - 9.9 KB)
+0000.959 (0) Table wp_q5j83c_actionscheduler_claims: Total expected rows (approximate): 1
+0000.972 (0) Table wp_q5j83c_actionscheduler_claims: Total rows added: 1 in 0.00 seconds
+0000.991 (0) Table wp_q5j83c_actionscheduler_claims: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_claims.table.gz - 0.4 KB)
+0001.028 (0) Table wp_q5j83c_actionscheduler_groups: Total expected rows (approximate): 9
+0001.070 (0) Table wp_q5j83c_actionscheduler_groups: Total rows added: 9 in 0.00 seconds
+0001.080 (0) Table wp_q5j83c_actionscheduler_groups: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_groups.table.gz - 0.5 KB)
+0001.121 (0) Table wp_q5j83c_actionscheduler_logs: Total expected rows (approximate): 867
+0001.152 (0) Table wp_q5j83c_actionscheduler_logs: Total rows added: 867 in 0.02 seconds
+0001.165 (0) Table wp_q5j83c_actionscheduler_logs: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_logs.table.gz - 8.2 KB)
+0001.207 (0) Table wp_q5j83c_commentmeta: Total expected rows (approximate): 262
+0001.224 (0) Table wp_q5j83c_commentmeta: Total rows added: 262 in 0.01 seconds
+0001.238 (0) Table wp_q5j83c_commentmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_commentmeta.table.gz - 1.8 KB)
+0001.281 (0) Table wp_q5j83c_comments: Total expected rows (approximate): 262
+0001.345 (0) Table wp_q5j83c_comments: Total rows added: 270 in 0.05 seconds
+0001.356 (0) Table wp_q5j83c_comments: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_comments.table.gz - 113.7 KB)
+0001.384 (0) Table wp_q5j83c_links: Total expected rows (approximate): 0
+0001.405 (0) Table wp_q5j83c_links: Total rows added: 0 in 0.00 seconds
+0001.432 (0) Table wp_q5j83c_links: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_links.table.gz - 0.5 KB)
+0001.469 (0) Table wp_q5j83c_postmeta: Total expected rows (approximate): 12234
+0001.833 (0) Table wp_q5j83c_postmeta: Total rows added: 13356 in 0.35 seconds
+0001.841 (0) Table wp_q5j83c_postmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_postmeta.table.gz - 292.5 KB)
+0001.881 (0) Table wp_q5j83c_posts: Total expected rows (approximate): 900
+0002.103 (0) Table wp_q5j83c_posts: Total rows added: 912 in 0.21 seconds
+0002.111 (0) Table wp_q5j83c_posts: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_posts.table.gz - 372.1 KB)
+0002.149 (0) Table wp_q5j83c_term_relationships: Total expected rows (approximate): 476
+0002.166 (0) Table wp_q5j83c_term_relationships: Total rows added: 476 in 0.01 seconds
+0002.177 (0) Table wp_q5j83c_term_relationships: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_term_relationships.table.gz - 1.5 KB)
+0002.206 (0) Table wp_q5j83c_term_taxonomy: Total expected rows (approximate): 40
+0002.219 (0) Table wp_q5j83c_term_taxonomy: Total rows added: 40 in 0.00 seconds
+0002.228 (0) Table wp_q5j83c_term_taxonomy: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_term_taxonomy.table.gz - 0.8 KB)
+0002.266 (0) Table wp_q5j83c_termmeta: Total expected rows (approximate): 55
+0002.279 (0) Table wp_q5j83c_termmeta: Total rows added: 55 in 0.00 seconds
+0002.289 (0) Table wp_q5j83c_termmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_termmeta.table.gz - 0.7 KB)
+0002.327 (0) Table wp_q5j83c_terms: Total expected rows (approximate): 40
+0002.340 (0) Table wp_q5j83c_terms: Total rows added: 40 in 0.00 seconds
+0002.350 (0) Table wp_q5j83c_terms: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_terms.table.gz - 0.9 KB)
+0002.377 (0) Table wp_q5j83c_wc_category_lookup: Total expected rows (approximate): 36
+0002.390 (0) Table wp_q5j83c_wc_category_lookup: Total rows added: 36 in 0.00 seconds
+0002.399 (0) Table wp_q5j83c_wc_category_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_category_lookup.table.gz - 0.4 KB)
+0002.426 (0) Table wp_q5j83c_wc_product_meta_lookup: Total expected rows (approximate): 99
+0002.441 (0) Table wp_q5j83c_wc_product_meta_lookup: Total rows added: 99 in 0.01 seconds
+0002.450 (0) Table wp_q5j83c_wc_product_meta_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_product_meta_lookup.table.gz - 1.6 KB)
+0002.476 (0) Table wp_q5j83c_wc_reserved_stock: Total expected rows (approximate): 0
+0002.487 (0) Table wp_q5j83c_wc_reserved_stock: Total rows added: 0 in 0.00 seconds
+0002.496 (0) Table wp_q5j83c_wc_reserved_stock: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_reserved_stock.table.gz - 0.4 KB)
+0002.542 (0) Table wp_q5j83c_wc_tax_rate_classes: Total expected rows (approximate): 2
+0002.569 (0) Table wp_q5j83c_wc_tax_rate_classes: Total rows added: 2 in 0.01 seconds
+0002.578 (0) Table wp_q5j83c_wc_tax_rate_classes: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_tax_rate_classes.table.gz - 0.4 KB)
+0002.609 (0) Table wp_q5j83c_woocommerce_order_itemmeta: Total expected rows (approximate): 1143
+0002.638 (0) Table wp_q5j83c_woocommerce_order_itemmeta: Total rows added: 1143 in 0.02 seconds
+0002.647 (0) Table wp_q5j83c_woocommerce_order_itemmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_order_itemmeta.table.gz - 11 KB)
+0002.686 (0) Table wp_q5j83c_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0002.702 (0) Table wp_q5j83c_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.00 seconds
+0002.711 (0) Table wp_q5j83c_woocommerce_payment_tokenmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0002.735 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_bv_fw_requests
+0002.749 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_bv_ip_store
+0002.758 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_bv_lp_requests
+0002.766 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_commentmeta
+0002.775 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_comments
+0002.784 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_links
+0002.796 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_options
+0002.805 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_postmeta
+0002.816 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_posts
+0002.834 (0) Table wp_q5j83c_aioseo_cache: Total expected rows (approximate): 15
+0002.847 (0) Table wp_q5j83c_aioseo_cache: Total rows added: 16 in 0.00 seconds
+0002.861 (0) Table wp_q5j83c_aioseo_cache: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_cache.table.gz - 8.4 KB)
+0002.897 (0) Table wp_q5j83c_aioseo_crawl_cleanup_blocked_args: Total expected rows (approximate): 0
+0002.910 (0) Table wp_q5j83c_aioseo_crawl_cleanup_blocked_args: Total rows added: 0 in 0.00 seconds
+0002.921 (0) Table wp_q5j83c_aioseo_crawl_cleanup_blocked_args: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_crawl_cleanup_blocked_args.table.gz - 0.4 KB)
+0002.948 (0) Table wp_q5j83c_aioseo_crawl_cleanup_logs: Total expected rows (approximate): 0
+0002.963 (0) Table wp_q5j83c_aioseo_crawl_cleanup_logs: Total rows added: 0 in 0.00 seconds
+0002.973 (0) Table wp_q5j83c_aioseo_crawl_cleanup_logs: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_crawl_cleanup_logs.table.gz - 0.4 KB)
+0003.005 (0) Table wp_q5j83c_aioseo_notifications: Total expected rows (approximate): 77
+0003.040 (0) Table wp_q5j83c_aioseo_notifications: Total rows added: 84 in 0.03 seconds
+0003.049 (0) Table wp_q5j83c_aioseo_notifications: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_notifications.table.gz - 254.1 KB)
+0003.074 (0) Table wp_q5j83c_aioseo_posts: Total expected rows (approximate): 377
+0003.118 (0) Table wp_q5j83c_aioseo_posts: Total rows added: 422 in 0.03 seconds
+0003.126 (0) Table wp_q5j83c_aioseo_posts: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_posts.table.gz - 22.8 KB)
+0003.147 (0) Table wp_q5j83c_aioseo_seo_analyzer_results: Total expected rows (approximate): 0
+0003.157 (0) Table wp_q5j83c_aioseo_seo_analyzer_results: Total rows added: 0 in 0.00 seconds
+0003.167 (0) Table wp_q5j83c_aioseo_seo_analyzer_results: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_seo_analyzer_results.table.gz - 0.4 KB)
+0003.190 (0) Table wp_q5j83c_aioseo_writing_assistant_keywords: Total expected rows (approximate): 0
+0003.200 (0) Table wp_q5j83c_aioseo_writing_assistant_keywords: Total rows added: 0 in 0.00 seconds
+0003.209 (0) Table wp_q5j83c_aioseo_writing_assistant_keywords: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_writing_assistant_keywords.table.gz - 0.5 KB)
+0003.242 (0) Table wp_q5j83c_aioseo_writing_assistant_posts: Total expected rows (approximate): 0
+0003.257 (0) Table wp_q5j83c_aioseo_writing_assistant_posts: Total rows added: 0 in 0.00 seconds
+0003.269 (0) Table wp_q5j83c_aioseo_writing_assistant_posts: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_writing_assistant_posts.table.gz - 0.4 KB)
+0003.299 (0) Table wp_q5j83c_charitable_campaign_activities: Total expected rows (approximate): 4
+0003.314 (0) Table wp_q5j83c_charitable_campaign_activities: Total rows added: 4 in 0.00 seconds
+0003.325 (0) Table wp_q5j83c_charitable_campaign_activities: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_campaign_activities.table.gz - 0.5 KB)
+0003.350 (0) Table wp_q5j83c_charitable_campaign_donations: Total expected rows (approximate): 80
+0003.363 (0) Table wp_q5j83c_charitable_campaign_donations: Total rows added: 80 in 0.01 seconds
+0003.372 (0) Table wp_q5j83c_charitable_campaign_donations: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_campaign_donations.table.gz - 1.1 KB)
+0003.410 (0) Table wp_q5j83c_charitable_donation_activities: Total expected rows (approximate): 16
+0003.420 (0) Table wp_q5j83c_charitable_donation_activities: Total rows added: 16 in 0.00 seconds
+0003.428 (0) Table wp_q5j83c_charitable_donation_activities: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_donation_activities.table.gz - 0.8 KB)
+0003.451 (0) Table wp_q5j83c_charitable_donormeta: Total expected rows (approximate): 0
+0003.460 (0) Table wp_q5j83c_charitable_donormeta: Total rows added: 0 in 0.00 seconds
+0003.467 (0) Table wp_q5j83c_charitable_donormeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_donormeta.table.gz - 0.4 KB)
+0003.490 (0) Table wp_q5j83c_charitable_donors: Total expected rows (approximate): 47
+0003.501 (0) Table wp_q5j83c_charitable_donors: Total rows added: 47 in 0.00 seconds
+0003.509 (0) Table wp_q5j83c_charitable_donors: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_donors.table.gz - 2 KB)
+0003.535 (0) Table wp_q5j83c_ebzxsi_actionscheduler_actions: Total expected rows (approximate): 8
+0003.549 (0) Table wp_q5j83c_ebzxsi_actionscheduler_actions: Total rows added: 8 in 0.01 seconds
+0003.557 (0) Table wp_q5j83c_ebzxsi_actionscheduler_actions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_actions.table.gz - 1.1 KB)
+0003.584 (0) Table wp_q5j83c_ebzxsi_actionscheduler_claims: Total expected rows (approximate): 0
+0003.595 (0) Table wp_q5j83c_ebzxsi_actionscheduler_claims: Total rows added: 0 in 0.00 seconds
+0003.604 (0) Table wp_q5j83c_ebzxsi_actionscheduler_claims: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_claims.table.gz - 0.4 KB)
+0003.645 (0) Table wp_q5j83c_ebzxsi_actionscheduler_groups: Total expected rows (approximate): 3
+0003.658 (0) Table wp_q5j83c_ebzxsi_actionscheduler_groups: Total rows added: 3 in 0.00 seconds
+0003.667 (0) Table wp_q5j83c_ebzxsi_actionscheduler_groups: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_groups.table.gz - 0.4 KB)
+0003.696 (0) Table wp_q5j83c_ebzxsi_actionscheduler_logs: Total expected rows (approximate): 648
+0003.718 (0) Table wp_q5j83c_ebzxsi_actionscheduler_logs: Total rows added: 648 in 0.01 seconds
+0003.729 (0) Table wp_q5j83c_ebzxsi_actionscheduler_logs: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_logs.table.gz - 7 KB)
+0003.756 (0) Table wp_q5j83c_ebzxsi_aioseo_notifications: Total expected rows (approximate): 1
+0003.770 (0) Table wp_q5j83c_ebzxsi_aioseo_notifications: Total rows added: 1 in 0.00 seconds
+0003.782 (0) Table wp_q5j83c_ebzxsi_aioseo_notifications: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_aioseo_notifications.table.gz - 0.8 KB)
+0003.811 (0) Table wp_q5j83c_ebzxsi_aioseo_posts: Total expected rows (approximate): 44
+0003.831 (0) Table wp_q5j83c_ebzxsi_aioseo_posts: Total rows added: 44 in 0.01 seconds
+0003.840 (0) Table wp_q5j83c_ebzxsi_aioseo_posts: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_aioseo_posts.table.gz - 4.7 KB)
+0003.867 (0) Table wp_q5j83c_ebzxsi_charitable_campaign_donations: Total expected rows (approximate): 2
+0003.877 (0) Table wp_q5j83c_ebzxsi_charitable_campaign_donations: Total rows added: 2 in 0.00 seconds
+0003.888 (0) Table wp_q5j83c_ebzxsi_charitable_campaign_donations: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_charitable_campaign_donations.table.gz - 0.5 KB)
+0003.919 (0) Table wp_q5j83c_ebzxsi_charitable_donormeta: Total expected rows (approximate): 0
+0003.933 (0) Table wp_q5j83c_ebzxsi_charitable_donormeta: Total rows added: 0 in 0.00 seconds
+0003.940 (0) Table wp_q5j83c_ebzxsi_charitable_donormeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_charitable_donormeta.table.gz - 0.4 KB)
+0003.966 (0) Table wp_q5j83c_ebzxsi_charitable_donors: Total expected rows (approximate): 2
+0003.980 (0) Table wp_q5j83c_ebzxsi_charitable_donors: Total rows added: 2 in 0.01 seconds
+0003.990 (0) Table wp_q5j83c_ebzxsi_charitable_donors: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_charitable_donors.table.gz - 0.6 KB)
+0004.018 (0) Table wp_q5j83c_ebzxsi_commentmeta: Total expected rows (approximate): 0
+0004.028 (0) Table wp_q5j83c_ebzxsi_commentmeta: Total rows added: 0 in 0.00 seconds
+0004.037 (0) Table wp_q5j83c_ebzxsi_commentmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_commentmeta.table.gz - 0.4 KB)
+0004.061 (0) Table wp_q5j83c_ebzxsi_comments: Total expected rows (approximate): 1
+0004.072 (0) Table wp_q5j83c_ebzxsi_comments: Total rows added: 1 in 0.00 seconds
+0004.080 (0) Table wp_q5j83c_ebzxsi_comments: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_comments.table.gz - 0.8 KB)
+0004.112 (0) Table wp_q5j83c_ebzxsi_ff_scheduled_actions: Total expected rows (approximate): 0
+0004.124 (0) Table wp_q5j83c_ebzxsi_ff_scheduled_actions: Total rows added: 0 in 0.00 seconds
+0004.132 (0) Table wp_q5j83c_ebzxsi_ff_scheduled_actions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_ff_scheduled_actions.table.gz - 0.4 KB)
+0004.158 (0) Table wp_q5j83c_ebzxsi_fluentform_entry_details: Total expected rows (approximate): 0
+0004.167 (0) Table wp_q5j83c_ebzxsi_fluentform_entry_details: Total rows added: 0 in 0.00 seconds
+0004.175 (0) Table wp_q5j83c_ebzxsi_fluentform_entry_details: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_entry_details.table.gz - 0.4 KB)
+0004.197 (0) Table wp_q5j83c_ebzxsi_fluentform_form_analytics: Total expected rows (approximate): 101
+0004.209 (0) Table wp_q5j83c_ebzxsi_fluentform_form_analytics: Total rows added: 101 in 0.01 seconds
+0004.217 (0) Table wp_q5j83c_ebzxsi_fluentform_form_analytics: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_form_analytics.table.gz - 2.9 KB)
+0004.242 (0) Table wp_q5j83c_ebzxsi_fluentform_form_meta: Total expected rows (approximate): 6
+0004.253 (0) Table wp_q5j83c_ebzxsi_fluentform_form_meta: Total rows added: 6 in 0.00 seconds
+0004.262 (0) Table wp_q5j83c_ebzxsi_fluentform_form_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_form_meta.table.gz - 1.1 KB)
+0004.303 (0) Table wp_q5j83c_ebzxsi_fluentform_forms: Total expected rows (approximate): 2
+0004.332 (0) Table wp_q5j83c_ebzxsi_fluentform_forms: Total rows added: 2 in 0.01 seconds
+0004.343 (0) Table wp_q5j83c_ebzxsi_fluentform_forms: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_forms.table.gz - 2.3 KB)
+0004.389 (0) Table wp_q5j83c_ebzxsi_fluentform_logs: Total expected rows (approximate): 0
+0004.403 (0) Table wp_q5j83c_ebzxsi_fluentform_logs: Total rows added: 0 in 0.00 seconds
+0004.417 (0) Table wp_q5j83c_ebzxsi_fluentform_logs: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_logs.table.gz - 0.4 KB)
+0004.457 (0) Table wp_q5j83c_ebzxsi_fluentform_submission_meta: Total expected rows (approximate): 0
+0004.476 (0) Table wp_q5j83c_ebzxsi_fluentform_submission_meta: Total rows added: 0 in 0.00 seconds
+0004.491 (0) Table wp_q5j83c_ebzxsi_fluentform_submission_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_submission_meta.table.gz - 0.4 KB)
+0004.522 (0) Table wp_q5j83c_ebzxsi_fluentform_submissions: Total expected rows (approximate): 0
+0004.532 (0) Table wp_q5j83c_ebzxsi_fluentform_submissions: Total rows added: 0 in 0.00 seconds
+0004.540 (0) Table wp_q5j83c_ebzxsi_fluentform_submissions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_submissions.table.gz - 0.6 KB)
+0004.564 (0) Table wp_q5j83c_ebzxsi_links: Total expected rows (approximate): 0
+0004.585 (0) Table wp_q5j83c_ebzxsi_links: Total rows added: 0 in 0.00 seconds
+0004.593 (0) Table wp_q5j83c_ebzxsi_links: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_links.table.gz - 0.5 KB)
+0004.631 (0) Table wp_q5j83c_ebzxsi_nm_personalized: Total expected rows (approximate): 4
+0004.643 (0) Table wp_q5j83c_ebzxsi_nm_personalized: Total rows added: 4 in 0.00 seconds
+0004.651 (0) Table wp_q5j83c_ebzxsi_nm_personalized: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_nm_personalized.table.gz - 2.5 KB)
+0004.675 (0) Table wp_q5j83c_ebzxsi_options: Total expected rows (approximate): 395
+0004.794 (0) Table wp_q5j83c_ebzxsi_options: Total rows added: 400 in 0.11 seconds
+0004.807 (0) Table wp_q5j83c_ebzxsi_options: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_options.table.gz - 177.9 KB)
+0004.851 (0) Table wp_q5j83c_ebzxsi_postmeta: Total expected rows (approximate): 2154
+0004.926 (0) Table wp_q5j83c_ebzxsi_postmeta: Total rows added: 2152 in 0.06 seconds
+0004.936 (0) Table wp_q5j83c_ebzxsi_postmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_postmeta.table.gz - 31.8 KB)
+0004.977 (0) Table wp_q5j83c_ebzxsi_posts: Total expected rows (approximate): 194
+0005.047 (0) Table wp_q5j83c_ebzxsi_posts: Total rows added: 207 in 0.06 seconds
+0005.063 (0) Table wp_q5j83c_ebzxsi_posts: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_posts.table.gz - 47.1 KB)
+0005.093 (0) Table wp_q5j83c_ebzxsi_term_relationships: Total expected rows (approximate): 122
+0005.118 (0) Table wp_q5j83c_ebzxsi_term_relationships: Total rows added: 122 in 0.01 seconds
+0005.126 (0) Table wp_q5j83c_ebzxsi_term_relationships: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_term_relationships.table.gz - 0.7 KB)
+0005.173 (0) Table wp_q5j83c_ebzxsi_term_taxonomy: Total expected rows (approximate): 24
+0005.202 (0) Table wp_q5j83c_ebzxsi_term_taxonomy: Total rows added: 24 in 0.00 seconds
+0005.214 (0) Table wp_q5j83c_ebzxsi_term_taxonomy: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_term_taxonomy.table.gz - 0.6 KB)
+0005.249 (0) Table wp_q5j83c_ebzxsi_termmeta: Total expected rows (approximate): 15
+0005.261 (0) Table wp_q5j83c_ebzxsi_termmeta: Total rows added: 15 in 0.00 seconds
+0005.269 (0) Table wp_q5j83c_ebzxsi_termmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_termmeta.table.gz - 0.5 KB)
+0005.289 (0) Table wp_q5j83c_ebzxsi_terms: Total expected rows (approximate): 24
+0005.299 (0) Table wp_q5j83c_ebzxsi_terms: Total rows added: 24 in 0.00 seconds
+0005.308 (0) Table wp_q5j83c_ebzxsi_terms: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_terms.table.gz - 0.7 KB)
+0005.329 (0) Table wp_q5j83c_ebzxsi_usermeta: Total expected rows (approximate): 36
+0005.339 (0) Table wp_q5j83c_ebzxsi_usermeta: Total rows added: 36 in 0.00 seconds
+0005.347 (0) Table wp_q5j83c_ebzxsi_usermeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_usermeta.table.gz - 2.1 KB)
+0005.368 (0) Table wp_q5j83c_ebzxsi_users: Total expected rows (approximate): 1
+0005.378 (0) Table wp_q5j83c_ebzxsi_users: Total rows added: 1 in 0.00 seconds
+0005.385 (0) Table wp_q5j83c_ebzxsi_users: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_users.table.gz - 0.6 KB)
+0005.406 (0) Table wp_q5j83c_ebzxsi_wc_admin_note_actions: Total expected rows (approximate): 35
+0005.420 (0) Table wp_q5j83c_ebzxsi_wc_admin_note_actions: Total rows added: 35 in 0.01 seconds
+0005.432 (0) Table wp_q5j83c_ebzxsi_wc_admin_note_actions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_admin_note_actions.table.gz - 1.7 KB)
+0005.459 (0) Table wp_q5j83c_ebzxsi_wc_admin_notes: Total expected rows (approximate): 33
+0005.471 (0) Table wp_q5j83c_ebzxsi_wc_admin_notes: Total rows added: 33 in 0.01 seconds
+0005.479 (0) Table wp_q5j83c_ebzxsi_wc_admin_notes: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_admin_notes.table.gz - 4.5 KB)
+0005.503 (0) Table wp_q5j83c_ebzxsi_wc_category_lookup: Total expected rows (approximate): 3
+0005.515 (0) Table wp_q5j83c_ebzxsi_wc_category_lookup: Total rows added: 3 in 0.00 seconds
+0005.522 (0) Table wp_q5j83c_ebzxsi_wc_category_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_category_lookup.table.gz - 0.4 KB)
+0005.546 (0) Table wp_q5j83c_ebzxsi_wc_customer_lookup: Total expected rows (approximate): 0
+0005.557 (0) Table wp_q5j83c_ebzxsi_wc_customer_lookup: Total rows added: 0 in 0.00 seconds
+0005.565 (0) Table wp_q5j83c_ebzxsi_wc_customer_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_customer_lookup.table.gz - 0.5 KB)
+0005.588 (0) Table wp_q5j83c_ebzxsi_wc_download_log: Total expected rows (approximate): 0
+0005.598 (0) Table wp_q5j83c_ebzxsi_wc_download_log: Total rows added: 0 in 0.00 seconds
+0005.607 (0) Table wp_q5j83c_ebzxsi_wc_download_log: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_download_log.table.gz - 0.4 KB)
+0005.631 (0) Table wp_q5j83c_ebzxsi_wc_order_coupon_lookup: Total expected rows (approximate): 0
+0005.642 (0) Table wp_q5j83c_ebzxsi_wc_order_coupon_lookup: Total rows added: 0 in 0.00 seconds
+0005.652 (0) Table wp_q5j83c_ebzxsi_wc_order_coupon_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_coupon_lookup.table.gz - 0.4 KB)
+0005.682 (0) Table wp_q5j83c_ebzxsi_wc_order_product_lookup: Total expected rows (approximate): 0
+0005.692 (0) Table wp_q5j83c_ebzxsi_wc_order_product_lookup: Total rows added: 0 in 0.00 seconds
+0005.700 (0) Table wp_q5j83c_ebzxsi_wc_order_product_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_product_lookup.table.gz - 0.5 KB)
+0005.726 (0) Table wp_q5j83c_ebzxsi_wc_order_stats: Total expected rows (approximate): 0
+0005.735 (0) Table wp_q5j83c_ebzxsi_wc_order_stats: Total rows added: 0 in 0.00 seconds
+0005.747 (0) Table wp_q5j83c_ebzxsi_wc_order_stats: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_stats.table.gz - 0.5 KB)
+0005.771 (0) Table wp_q5j83c_ebzxsi_wc_order_tax_lookup: Total expected rows (approximate): 0
+0005.780 (0) Table wp_q5j83c_ebzxsi_wc_order_tax_lookup: Total rows added: 0 in 0.00 seconds
+0005.787 (0) Table wp_q5j83c_ebzxsi_wc_order_tax_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_tax_lookup.table.gz - 0.4 KB)
+0005.813 (0) Table wp_q5j83c_ebzxsi_wc_product_meta_lookup: Total expected rows (approximate): 28
+0005.826 (0) Table wp_q5j83c_ebzxsi_wc_product_meta_lookup: Total rows added: 28 in 0.00 seconds
+0005.833 (0) Table wp_q5j83c_ebzxsi_wc_product_meta_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_product_meta_lookup.table.gz - 0.9 KB)
+0005.857 (0) Table wp_q5j83c_ebzxsi_wc_reserved_stock: Total expected rows (approximate): 0
+0005.866 (0) Table wp_q5j83c_ebzxsi_wc_reserved_stock: Total rows added: 0 in 0.00 seconds
+0005.874 (0) Table wp_q5j83c_ebzxsi_wc_reserved_stock: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_reserved_stock.table.gz - 0.4 KB)
+0005.896 (0) Table wp_q5j83c_ebzxsi_wc_tax_rate_classes: Total expected rows (approximate): 2
+0005.906 (0) Table wp_q5j83c_ebzxsi_wc_tax_rate_classes: Total rows added: 2 in 0.00 seconds
+0005.912 (0) Table wp_q5j83c_ebzxsi_wc_tax_rate_classes: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_tax_rate_classes.table.gz - 0.4 KB)
+0005.936 (0) Table wp_q5j83c_ebzxsi_wc_webhooks: Total expected rows (approximate): 0
+0005.947 (0) Table wp_q5j83c_ebzxsi_wc_webhooks: Total rows added: 0 in 0.00 seconds
+0005.958 (0) Table wp_q5j83c_ebzxsi_wc_webhooks: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_webhooks.table.gz - 0.5 KB)
+0005.988 (0) Table wp_q5j83c_ebzxsi_woocommerce_api_keys: Total expected rows (approximate): 0
+0005.997 (0) Table wp_q5j83c_ebzxsi_woocommerce_api_keys: Total rows added: 0 in 0.00 seconds
+0006.006 (0) Table wp_q5j83c_ebzxsi_woocommerce_api_keys: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_api_keys.table.gz - 0.5 KB)
+0006.034 (0) Table wp_q5j83c_ebzxsi_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0006.043 (0) Table wp_q5j83c_ebzxsi_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.00 seconds
+0006.050 (0) Table wp_q5j83c_ebzxsi_woocommerce_attribute_taxonomies: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0006.072 (0) Table wp_q5j83c_ebzxsi_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0006.081 (0) Table wp_q5j83c_ebzxsi_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.00 seconds
+0006.088 (0) Table wp_q5j83c_ebzxsi_woocommerce_downloadable_product_permissions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0006.107 (0) Table wp_q5j83c_ebzxsi_woocommerce_log: Total expected rows (approximate): 0
+0006.117 (0) Table wp_q5j83c_ebzxsi_woocommerce_log: Total rows added: 0 in 0.00 seconds
+0006.126 (0) Table wp_q5j83c_ebzxsi_woocommerce_log: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_log.table.gz - 0.4 KB)
+0006.150 (0) Table wp_q5j83c_ebzxsi_woocommerce_order_itemmeta: Total expected rows (approximate): 0
+0006.160 (0) Table wp_q5j83c_ebzxsi_woocommerce_order_itemmeta: Total rows added: 0 in 0.00 seconds
+0006.169 (0) Table wp_q5j83c_ebzxsi_woocommerce_order_itemmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_order_itemmeta.table.gz - 0.4 KB)
+0006.201 (0) Table wp_q5j83c_ebzxsi_woocommerce_order_items: Total expected rows (approximate): 0
+0006.212 (0) Table wp_q5j83c_ebzxsi_woocommerce_order_items: Total rows added: 0 in 0.00 seconds
+0006.223 (0) Table wp_q5j83c_ebzxsi_woocommerce_order_items: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_order_items.table.gz - 0.4 KB)
+0006.247 (0) Table wp_q5j83c_ebzxsi_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0006.258 (0) Table wp_q5j83c_ebzxsi_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.00 seconds
+0006.267 (0) Table wp_q5j83c_ebzxsi_woocommerce_payment_tokenmeta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0006.295 (0) Table wp_q5j83c_ebzxsi_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0006.306 (0) Table wp_q5j83c_ebzxsi_woocommerce_payment_tokens: Total rows added: 0 in 0.00 seconds
+0006.316 (0) Table wp_q5j83c_ebzxsi_woocommerce_payment_tokens: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0006.341 (0) Table wp_q5j83c_ebzxsi_woocommerce_sessions: Total expected rows (approximate): 1
+0006.353 (0) Table wp_q5j83c_ebzxsi_woocommerce_sessions: Total rows added: 1 in 0.00 seconds
+0006.363 (0) Table wp_q5j83c_ebzxsi_woocommerce_sessions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_sessions.table.gz - 0.8 KB)
+0006.387 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zone_locations: Total expected rows (approximate): 0
+0006.397 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zone_locations: Total rows added: 0 in 0.00 seconds
+0006.405 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zone_locations: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0006.430 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zone_methods: Total expected rows (approximate): 0
+0006.440 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0006.446 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zone_methods: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0006.469 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zones: Total expected rows (approximate): 0
+0006.480 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zones: Total rows added: 0 in 0.00 seconds
+0006.487 (0) Table wp_q5j83c_ebzxsi_woocommerce_shipping_zones: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_shipping_zones.table.gz - 0.4 KB)
+0006.509 (0) Table wp_q5j83c_ebzxsi_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0006.519 (0) Table wp_q5j83c_ebzxsi_woocommerce_tax_rate_locations: Total rows added: 0 in 0.00 seconds
+0006.528 (0) Table wp_q5j83c_ebzxsi_woocommerce_tax_rate_locations: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0006.550 (0) Table wp_q5j83c_ebzxsi_woocommerce_tax_rates: Total expected rows (approximate): 0
+0006.561 (0) Table wp_q5j83c_ebzxsi_woocommerce_tax_rates: Total rows added: 0 in 0.00 seconds
+0006.569 (0) Table wp_q5j83c_ebzxsi_woocommerce_tax_rates: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_tax_rates.table.gz - 0.5 KB)
+0006.593 (0) Table wp_q5j83c_ff_scheduled_actions: Total expected rows (approximate): 0
+0006.603 (0) Table wp_q5j83c_ff_scheduled_actions: Total rows added: 0 in 0.00 seconds
+0006.613 (0) Table wp_q5j83c_ff_scheduled_actions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ff_scheduled_actions.table.gz - 0.4 KB)
+0006.637 (0) Table wp_q5j83c_fluentform_entry_details: Total expected rows (approximate): 2272
+0006.686 (0) Table wp_q5j83c_fluentform_entry_details: Total rows added: 2272 in 0.04 seconds
+0006.695 (0) Table wp_q5j83c_fluentform_entry_details: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_entry_details.table.gz - 55.7 KB)
+0006.721 (0) Table wp_q5j83c_fluentform_form_analytics: Total expected rows (approximate): 0
+0006.733 (0) Table wp_q5j83c_fluentform_form_analytics: Total rows added: 0 in 0.00 seconds
+0006.741 (0) Table wp_q5j83c_fluentform_form_analytics: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_form_analytics.table.gz - 0.4 KB)
+0006.765 (0) Table wp_q5j83c_fluentform_form_meta: Total expected rows (approximate): 12
+0006.775 (0) Table wp_q5j83c_fluentform_form_meta: Total rows added: 12 in 0.00 seconds
+0006.783 (0) Table wp_q5j83c_fluentform_form_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_form_meta.table.gz - 1.5 KB)
+0006.806 (0) Table wp_q5j83c_fluentform_forms: Total expected rows (approximate): 3
+0006.820 (0) Table wp_q5j83c_fluentform_forms: Total rows added: 3 in 0.01 seconds
+0006.828 (0) Table wp_q5j83c_fluentform_forms: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_forms.table.gz - 3.2 KB)
+0006.852 (0) Table wp_q5j83c_fluentform_logs: Total expected rows (approximate): 1199
+0006.892 (0) Table wp_q5j83c_fluentform_logs: Total rows added: 1199 in 0.03 seconds
+0006.900 (0) Table wp_q5j83c_fluentform_logs: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_logs.table.gz - 18.8 KB)
+0006.923 (0) Table wp_q5j83c_fluentform_submission_meta: Total expected rows (approximate): 2402
+0006.991 (0) Table wp_q5j83c_fluentform_submission_meta: Total rows added: 2402 in 0.06 seconds
+0007.000 (0) Table wp_q5j83c_fluentform_submission_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_submission_meta.table.gz - 53.7 KB)
+0007.032 (0) Table wp_q5j83c_fluentform_submissions: Total expected rows (approximate): 1171
+0007.105 (0) Table wp_q5j83c_fluentform_submissions: Total rows added: 1201 in 0.06 seconds
+0007.115 (0) Table wp_q5j83c_fluentform_submissions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_submissions.table.gz - 145.9 KB)
+0007.142 (0) Table wp_q5j83c_nm_personalized: Total expected rows (approximate): 6
+0007.153 (0) Table wp_q5j83c_nm_personalized: Total rows added: 6 in 0.00 seconds
+0007.162 (0) Table wp_q5j83c_nm_personalized: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_nm_personalized.table.gz - 3 KB)
+0007.184 (0) Table wp_q5j83c_redirects: Total expected rows (approximate): 1
+0007.197 (0) Table wp_q5j83c_redirects: Total rows added: 1 in 0.00 seconds
+0007.205 (0) Table wp_q5j83c_redirects: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_redirects.table.gz - 0.4 KB)
+0007.229 (0) Table wp_q5j83c_wc_admin_note_actions: Total expected rows (approximate): 272
+0007.246 (0) Table wp_q5j83c_wc_admin_note_actions: Total rows added: 272 in 0.01 seconds
+0007.256 (0) Table wp_q5j83c_wc_admin_note_actions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_admin_note_actions.table.gz - 9.6 KB)
+0007.284 (0) Table wp_q5j83c_wc_admin_notes: Total expected rows (approximate): 230
+0007.307 (0) Table wp_q5j83c_wc_admin_notes: Total rows added: 230 in 0.02 seconds
+0007.317 (0) Table wp_q5j83c_wc_admin_notes: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_admin_notes.table.gz - 23.9 KB)
+0007.343 (0) Table wp_q5j83c_wc_customer_lookup: Total expected rows (approximate): 47
+0007.358 (0) Table wp_q5j83c_wc_customer_lookup: Total rows added: 47 in 0.01 seconds
+0007.373 (0) Table wp_q5j83c_wc_customer_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_customer_lookup.table.gz - 2.2 KB)
+0007.398 (0) Table wp_q5j83c_wc_download_log: Total expected rows (approximate): 0
+0007.409 (0) Table wp_q5j83c_wc_download_log: Total rows added: 0 in 0.00 seconds
+0007.417 (0) Table wp_q5j83c_wc_download_log: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_download_log.table.gz - 0.4 KB)
+0007.445 (0) Table wp_q5j83c_wc_order_addresses: Total expected rows (approximate): 0
+0007.457 (0) Table wp_q5j83c_wc_order_addresses: Total rows added: 0 in 0.00 seconds
+0007.465 (0) Table wp_q5j83c_wc_order_addresses: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_addresses.table.gz - 0.4 KB)
+0007.489 (0) Table wp_q5j83c_wc_order_coupon_lookup: Total expected rows (approximate): 4
+0007.498 (0) Table wp_q5j83c_wc_order_coupon_lookup: Total rows added: 4 in 0.00 seconds
+0007.507 (0) Table wp_q5j83c_wc_order_coupon_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_coupon_lookup.table.gz - 0.5 KB)
+0007.533 (0) Table wp_q5j83c_wc_order_operational_data: Total expected rows (approximate): 0
+0007.545 (0) Table wp_q5j83c_wc_order_operational_data: Total rows added: 0 in 0.00 seconds
+0007.555 (0) Table wp_q5j83c_wc_order_operational_data: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_operational_data.table.gz - 0.6 KB)
+0007.580 (0) Table wp_q5j83c_wc_order_product_lookup: Total expected rows (approximate): 66
+0007.593 (0) Table wp_q5j83c_wc_order_product_lookup: Total rows added: 66 in 0.00 seconds
+0007.600 (0) Table wp_q5j83c_wc_order_product_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_product_lookup.table.gz - 1.7 KB)
+0007.623 (0) Table wp_q5j83c_wc_order_stats: Total expected rows (approximate): 71
+0007.637 (0) Table wp_q5j83c_wc_order_stats: Total rows added: 71 in 0.01 seconds
+0007.645 (0) Table wp_q5j83c_wc_order_stats: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_stats.table.gz - 2 KB)
+0007.669 (0) Table wp_q5j83c_wc_order_tax_lookup: Total expected rows (approximate): 0
+0007.680 (0) Table wp_q5j83c_wc_order_tax_lookup: Total rows added: 0 in 0.00 seconds
+0007.690 (0) Table wp_q5j83c_wc_order_tax_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_tax_lookup.table.gz - 0.4 KB)
+0007.716 (0) Table wp_q5j83c_wc_orders: Total expected rows (approximate): 0
+0007.727 (0) Table wp_q5j83c_wc_orders: Total rows added: 0 in 0.00 seconds
+0007.736 (0) Table wp_q5j83c_wc_orders: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_orders.table.gz - 0.5 KB)
+0007.774 (0) Table wp_q5j83c_wc_orders_meta: Total expected rows (approximate): 0
+0007.787 (0) Table wp_q5j83c_wc_orders_meta: Total rows added: 0 in 0.00 seconds
+0007.797 (0) Table wp_q5j83c_wc_orders_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_orders_meta.table.gz - 0.4 KB)
+0007.822 (0) Table wp_q5j83c_wc_product_attributes_lookup: Total expected rows (approximate): 0
+0007.832 (0) Table wp_q5j83c_wc_product_attributes_lookup: Total rows added: 0 in 0.00 seconds
+0007.841 (0) Table wp_q5j83c_wc_product_attributes_lookup: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_product_attributes_lookup.table.gz - 0.4 KB)
+0007.868 (0) Table wp_q5j83c_wc_product_download_directories: Total expected rows (approximate): 2
+0007.879 (0) Table wp_q5j83c_wc_product_download_directories: Total rows added: 2 in 0.00 seconds
+0007.889 (0) Table wp_q5j83c_wc_product_download_directories: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_product_download_directories.table.gz - 0.5 KB)
+0007.913 (0) Table wp_q5j83c_wc_rate_limits: Total expected rows (approximate): 0
+0007.924 (0) Table wp_q5j83c_wc_rate_limits: Total rows added: 0 in 0.00 seconds
+0007.933 (0) Table wp_q5j83c_wc_rate_limits: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_rate_limits.table.gz - 0.4 KB)
+0007.959 (0) Table wp_q5j83c_wc_webhooks: Total expected rows (approximate): 0
+0007.973 (0) Table wp_q5j83c_wc_webhooks: Total rows added: 0 in 0.00 seconds
+0007.982 (0) Table wp_q5j83c_wc_webhooks: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_webhooks.table.gz - 0.5 KB)
+0008.007 (0) Table wp_q5j83c_wfauditevents: Total expected rows (approximate): 0
+0008.017 (0) Table wp_q5j83c_wfauditevents: Total rows added: 0 in 0.00 seconds
+0008.027 (0) Table wp_q5j83c_wfauditevents: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfauditevents.table.gz - 0.4 KB)
+0008.062 (0) Table wp_q5j83c_wfblockediplog: Total expected rows (approximate): 0
+0008.074 (0) Table wp_q5j83c_wfblockediplog: Total rows added: 0 in 0.00 seconds
+0008.082 (0) Table wp_q5j83c_wfblockediplog: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfblockediplog.table.gz - 0.4 KB)
+0008.111 (0) Table wp_q5j83c_wfblocks7: Total expected rows (approximate): 0
+0008.124 (0) Table wp_q5j83c_wfblocks7: Total rows added: 0 in 0.01 seconds
+0008.134 (0) Table wp_q5j83c_wfblocks7: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfblocks7.table.gz - 0.4 KB)
+0008.161 (0) Table wp_q5j83c_wfconfig: Total expected rows (approximate): 288
+0008.206 (0) Table wp_q5j83c_wfconfig: Total rows added: 292 in 0.04 seconds
+0008.215 (0) Table wp_q5j83c_wfconfig: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfconfig.table.gz - 424.7 KB)
+0008.247 (0) Table wp_q5j83c_wfcrawlers: Total expected rows (approximate): 1
+0008.257 (0) Table wp_q5j83c_wfcrawlers: Total rows added: 1 in 0.00 seconds
+0008.263 (0) Table wp_q5j83c_wfcrawlers: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfcrawlers.table.gz - 0.5 KB)
+0008.287 (0) Table wp_q5j83c_wffilechanges: Total expected rows (approximate): 0
+0008.298 (0) Table wp_q5j83c_wffilechanges: Total rows added: 0 in 0.00 seconds
+0008.307 (0) Table wp_q5j83c_wffilechanges: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wffilechanges.table.gz - 0.3 KB)
+0008.334 (0) Table wp_q5j83c_wffilemods: Total expected rows (approximate): 26338
+0009.715 (0) Table wp_q5j83c_wffilemods: Total rows added: 27394 in 1.37 seconds
+0009.724 (0) Table wp_q5j83c_wffilemods: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wffilemods.table.gz - 2716.2 KB)
+0009.749 (0) Table wp_q5j83c_wfhits: Total expected rows (approximate): 8
+0009.760 (0) Table wp_q5j83c_wfhits: Total rows added: 8 in 0.00 seconds
+0009.768 (0) Table wp_q5j83c_wfhits: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfhits.table.gz - 1.3 KB)
+0009.793 (0) Table wp_q5j83c_wfhoover: Total expected rows (approximate): 0
+0009.805 (0) Table wp_q5j83c_wfhoover: Total rows added: 0 in 0.00 seconds
+0009.811 (0) Table wp_q5j83c_wfhoover: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfhoover.table.gz - 0.3 KB)
+0009.834 (0) Table wp_q5j83c_wfissues: Total expected rows (approximate): 19
+0009.845 (0) Table wp_q5j83c_wfissues: Total rows added: 19 in 0.00 seconds
+0009.853 (0) Table wp_q5j83c_wfissues: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfissues.table.gz - 5.3 KB)
+0009.875 (0) Table wp_q5j83c_wfknownfilelist: Total expected rows (approximate): 27039
+0010.481 (0) Table wp_q5j83c_wfknownfilelist: Total rows added: 27395 in 0.60 seconds
+0010.489 (0) Table wp_q5j83c_wfknownfilelist: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfknownfilelist.table.gz - 397.1 KB)
+0010.512 (0) Table wp_q5j83c_wflivetraffichuman: Total expected rows (approximate): 0
+0010.523 (0) Table wp_q5j83c_wflivetraffichuman: Total rows added: 0 in 0.00 seconds
+0010.531 (0) Table wp_q5j83c_wflivetraffichuman: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wflivetraffichuman.table.gz - 0.4 KB)
+0010.561 (0) Table wp_q5j83c_wflocs: Total expected rows (approximate): 0
+0010.572 (0) Table wp_q5j83c_wflocs: Total rows added: 0 in 0.00 seconds
+0010.579 (0) Table wp_q5j83c_wflocs: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wflocs.table.gz - 0.4 KB)
+0010.603 (0) Table wp_q5j83c_wflogins: Total expected rows (approximate): 1522
+0010.647 (0) Table wp_q5j83c_wflogins: Total rows added: 1522 in 0.03 seconds
+0010.657 (0) Table wp_q5j83c_wflogins: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wflogins.table.gz - 35.9 KB)
+0010.682 (0) Table wp_q5j83c_wfls_2fa_secrets: Total expected rows (approximate): 0
+0010.692 (0) Table wp_q5j83c_wfls_2fa_secrets: Total rows added: 0 in 0.00 seconds
+0010.700 (0) Table wp_q5j83c_wfls_2fa_secrets: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfls_2fa_secrets.table.gz - 0.4 KB)
+0010.723 (0) Table wp_q5j83c_wfls_role_counts: Total expected rows (approximate): 0
+0010.732 (0) Table wp_q5j83c_wfls_role_counts: Total rows added: 0 in 0.00 seconds
+0010.741 (0) Table wp_q5j83c_wfls_role_counts: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfls_role_counts.table.gz - 0.3 KB)
+0010.774 (0) Table wp_q5j83c_wfls_settings: Total expected rows (approximate): 30
+0010.793 (0) Table wp_q5j83c_wfls_settings: Total rows added: 30 in 0.00 seconds
+0010.800 (0) Table wp_q5j83c_wfls_settings: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfls_settings.table.gz - 0.9 KB)
+0010.824 (0) Table wp_q5j83c_wfnotifications: Total expected rows (approximate): 3
+0010.834 (0) Table wp_q5j83c_wfnotifications: Total rows added: 3 in 0.00 seconds
+0010.841 (0) Table wp_q5j83c_wfnotifications: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfnotifications.table.gz - 0.8 KB)
+0010.865 (0) Table wp_q5j83c_wfpendingissues: Total expected rows (approximate): 0
+0010.874 (0) Table wp_q5j83c_wfpendingissues: Total rows added: 0 in 0.00 seconds
+0010.883 (0) Table wp_q5j83c_wfpendingissues: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfpendingissues.table.gz - 0.4 KB)
+0010.908 (0) Table wp_q5j83c_wfreversecache: Total expected rows (approximate): 0
+0010.918 (0) Table wp_q5j83c_wfreversecache: Total rows added: 0 in 0.00 seconds
+0010.927 (0) Table wp_q5j83c_wfreversecache: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfreversecache.table.gz - 0.3 KB)
+0010.952 (0) Table wp_q5j83c_wfsecurityevents: Total expected rows (approximate): 0
+0010.963 (0) Table wp_q5j83c_wfsecurityevents: Total rows added: 0 in 0.00 seconds
+0010.973 (0) Table wp_q5j83c_wfsecurityevents: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfsecurityevents.table.gz - 0.4 KB)
+0011.010 (0) Table wp_q5j83c_wfsnipcache: Total expected rows (approximate): 0
+0011.022 (0) Table wp_q5j83c_wfsnipcache: Total rows added: 0 in 0.00 seconds
+0011.032 (0) Table wp_q5j83c_wfsnipcache: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfsnipcache.table.gz - 0.4 KB)
+0011.057 (0) Table wp_q5j83c_wfstatus: Total expected rows (approximate): 943
+0011.098 (0) Table wp_q5j83c_wfstatus: Total rows added: 943 in 0.03 seconds
+0011.112 (0) Table wp_q5j83c_wfstatus: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfstatus.table.gz - 16.4 KB)
+0011.141 (0) Table wp_q5j83c_wftrafficrates: Total expected rows (approximate): 0
+0011.155 (0) Table wp_q5j83c_wftrafficrates: Total rows added: 0 in 0.00 seconds
+0011.164 (0) Table wp_q5j83c_wftrafficrates: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wftrafficrates.table.gz - 0.4 KB)
+0011.195 (0) Table wp_q5j83c_wfwaffailures: Total expected rows (approximate): 0
+0011.207 (0) Table wp_q5j83c_wfwaffailures: Total rows added: 0 in 0.00 seconds
+0011.219 (0) Table wp_q5j83c_wfwaffailures: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfwaffailures.table.gz - 0.3 KB)
+0011.247 (0) Table wp_q5j83c_woocommerce_api_keys: Total expected rows (approximate): 0
+0011.261 (0) Table wp_q5j83c_woocommerce_api_keys: Total rows added: 0 in 0.00 seconds
+0011.271 (0) Table wp_q5j83c_woocommerce_api_keys: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_api_keys.table.gz - 0.4 KB)
+0011.301 (0) Table wp_q5j83c_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0011.313 (0) Table wp_q5j83c_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.00 seconds
+0011.325 (0) Table wp_q5j83c_woocommerce_attribute_taxonomies: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0011.353 (0) Table wp_q5j83c_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0011.364 (0) Table wp_q5j83c_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.00 seconds
+0011.375 (0) Table wp_q5j83c_woocommerce_downloadable_product_permissions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0011.401 (0) Table wp_q5j83c_woocommerce_log: Total expected rows (approximate): 0
+0011.413 (0) Table wp_q5j83c_woocommerce_log: Total rows added: 0 in 0.00 seconds
+0011.423 (0) Table wp_q5j83c_woocommerce_log: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_log.table.gz - 0.4 KB)
+0011.458 (0) Table wp_q5j83c_woocommerce_order_items: Total expected rows (approximate): 70
+0011.471 (0) Table wp_q5j83c_woocommerce_order_items: Total rows added: 70 in 0.00 seconds
+0011.480 (0) Table wp_q5j83c_woocommerce_order_items: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_order_items.table.gz - 1.1 KB)
+0011.507 (0) Table wp_q5j83c_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0011.517 (0) Table wp_q5j83c_woocommerce_payment_tokens: Total rows added: 0 in 0.00 seconds
+0011.527 (0) Table wp_q5j83c_woocommerce_payment_tokens: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0011.553 (0) Table wp_q5j83c_woocommerce_sessions: Total expected rows (approximate): 0
+0011.564 (0) Table wp_q5j83c_woocommerce_sessions: Total rows added: 0 in 0.00 seconds
+0011.574 (0) Table wp_q5j83c_woocommerce_sessions: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_sessions.table.gz - 0.4 KB)
+0011.599 (0) Table wp_q5j83c_woocommerce_shipping_zone_locations: Total expected rows (approximate): 0
+0011.608 (0) Table wp_q5j83c_woocommerce_shipping_zone_locations: Total rows added: 0 in 0.00 seconds
+0011.616 (0) Table wp_q5j83c_woocommerce_shipping_zone_locations: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0011.645 (0) Table wp_q5j83c_woocommerce_shipping_zone_methods: Total expected rows (approximate): 0
+0011.656 (0) Table wp_q5j83c_woocommerce_shipping_zone_methods: Total rows added: 0 in 0.00 seconds
+0011.664 (0) Table wp_q5j83c_woocommerce_shipping_zone_methods: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0011.693 (0) Table wp_q5j83c_woocommerce_shipping_zones: Total expected rows (approximate): 0
+0011.703 (0) Table wp_q5j83c_woocommerce_shipping_zones: Total rows added: 0 in 0.00 seconds
+0011.710 (0) Table wp_q5j83c_woocommerce_shipping_zones: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_shipping_zones.table.gz - 0.3 KB)
+0011.738 (0) Table wp_q5j83c_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0011.747 (0) Table wp_q5j83c_woocommerce_tax_rate_locations: Total rows added: 0 in 0.00 seconds
+0011.757 (0) Table wp_q5j83c_woocommerce_tax_rate_locations: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0011.786 (0) Table wp_q5j83c_woocommerce_tax_rates: Total expected rows (approximate): 0
+0011.797 (0) Table wp_q5j83c_woocommerce_tax_rates: Total rows added: 0 in 0.00 seconds
+0011.805 (0) Table wp_q5j83c_woocommerce_tax_rates: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_tax_rates.table.gz - 0.4 KB)
+0011.833 (0) Table wp_q5j83c_wpforms_logs: Total expected rows (approximate): 11
+0011.846 (0) Table wp_q5j83c_wpforms_logs: Total rows added: 11 in 0.00 seconds
+0011.855 (0) Table wp_q5j83c_wpforms_logs: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_logs.table.gz - 0.6 KB)
+0011.883 (0) Table wp_q5j83c_wpforms_payment_meta: Total expected rows (approximate): 0
+0011.896 (0) Table wp_q5j83c_wpforms_payment_meta: Total rows added: 0 in 0.00 seconds
+0011.905 (0) Table wp_q5j83c_wpforms_payment_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_payment_meta.table.gz - 0.4 KB)
+0011.934 (0) Table wp_q5j83c_wpforms_payments: Total expected rows (approximate): 0
+0011.949 (0) Table wp_q5j83c_wpforms_payments: Total rows added: 0 in 0.00 seconds
+0011.959 (0) Table wp_q5j83c_wpforms_payments: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_payments.table.gz - 0.6 KB)
+0011.990 (0) Table wp_q5j83c_wpforms_tasks_meta: Total expected rows (approximate): 2
+0012.008 (0) Table wp_q5j83c_wpforms_tasks_meta: Total rows added: 2 in 0.01 seconds
+0012.017 (0) Table wp_q5j83c_wpforms_tasks_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_tasks_meta.table.gz - 0.4 KB)
+0012.045 (0) Table wp_q5j83c_wpmailsmtp_debug_events: Total expected rows (approximate): 1
+0012.058 (0) Table wp_q5j83c_wpmailsmtp_debug_events: Total rows added: 1 in 0.00 seconds
+0012.076 (0) Table wp_q5j83c_wpmailsmtp_debug_events: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpmailsmtp_debug_events.table.gz - 2.6 KB)
+0012.105 (0) Table wp_q5j83c_wpmailsmtp_tasks_meta: Total expected rows (approximate): 1
+0012.117 (0) Table wp_q5j83c_wpmailsmtp_tasks_meta: Total rows added: 1 in 0.00 seconds
+0012.126 (0) Table wp_q5j83c_wpmailsmtp_tasks_meta: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpmailsmtp_tasks_meta.table.gz - 0.4 KB)
+0012.154 (0) Table wp_q5j83c_wpsr_caches: Total expected rows (approximate): 3
+0012.165 (0) Table wp_q5j83c_wpsr_caches: Total rows added: 3 in 0.00 seconds
+0012.173 (0) Table wp_q5j83c_wpsr_caches: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpsr_caches.table.gz - 0.6 KB)
+0012.199 (0) Table wp_q5j83c_wpsr_reviews: Total expected rows (approximate): 0
+0012.210 (0) Table wp_q5j83c_wpsr_reviews: Total rows added: 0 in 0.00 seconds
+0012.219 (0) Table wp_q5j83c_wpsr_reviews: finishing file (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpsr_reviews.table.gz - 0.4 KB)
+0012.236 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_term_relationships
+0012.244 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_term_taxonomy
+0012.252 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_termmeta
+0012.261 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_terms
+0012.272 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_usermeta
+0012.279 (0) Skipping table (lacks our prefix (wp_q5j83c_)): wp_users
+0012.295 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_options.table.gz (1/178): adding to final database dump
+0012.375 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_users.table.gz (2/178): adding to final database dump
+0012.384 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_usermeta.table.gz (3/178): adding to final database dump
+0012.394 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_actions.table.gz (4/178): adding to final database dump
+0012.405 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_claims.table.gz (5/178): adding to final database dump
+0012.413 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_groups.table.gz (6/178): adding to final database dump
+0012.421 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_actionscheduler_logs.table.gz (7/178): adding to final database dump
+0012.433 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_commentmeta.table.gz (8/178): adding to final database dump
+0012.445 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_comments.table.gz (9/178): adding to final database dump
+0012.475 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_links.table.gz (10/178): adding to final database dump
+0012.482 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_postmeta.table.gz (11/178): adding to final database dump
+0012.580 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_posts.table.gz (12/178): adding to final database dump
+0012.688 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_term_relationships.table.gz (13/178): adding to final database dump
+0012.696 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_term_taxonomy.table.gz (14/178): adding to final database dump
+0012.703 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_termmeta.table.gz (15/178): adding to final database dump
+0012.710 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_terms.table.gz (16/178): adding to final database dump
+0012.718 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_category_lookup.table.gz (17/178): adding to final database dump
+0012.725 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_product_meta_lookup.table.gz (18/178): adding to final database dump
+0012.733 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_reserved_stock.table.gz (19/178): adding to final database dump
+0012.742 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_tax_rate_classes.table.gz (20/178): adding to final database dump
+0012.752 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_order_itemmeta.table.gz (21/178): adding to final database dump
+0012.763 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_payment_tokenmeta.table.gz (22/178): adding to final database dump
+0012.770 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_cache.table.gz (23/178): adding to final database dump
+0012.778 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_crawl_cleanup_blocked_args.table.gz (24/178): adding to final database dump
+0012.785 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_crawl_cleanup_logs.table.gz (25/178): adding to final database dump
+0012.793 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_notifications.table.gz (26/178): adding to final database dump
+0012.823 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_posts.table.gz (27/178): adding to final database dump
+0012.840 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_seo_analyzer_results.table.gz (28/178): adding to final database dump
+0012.849 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_writing_assistant_keywords.table.gz (29/178): adding to final database dump
+0012.856 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_aioseo_writing_assistant_posts.table.gz (30/178): adding to final database dump
+0012.863 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_campaign_activities.table.gz (31/178): adding to final database dump
+0012.870 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_campaign_donations.table.gz (32/178): adding to final database dump
+0012.877 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_donation_activities.table.gz (33/178): adding to final database dump
+0012.883 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_donormeta.table.gz (34/178): adding to final database dump
+0012.890 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_charitable_donors.table.gz (35/178): adding to final database dump
+0012.896 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_actions.table.gz (36/178): adding to final database dump
+0012.904 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_claims.table.gz (37/178): adding to final database dump
+0012.912 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_groups.table.gz (38/178): adding to final database dump
+0012.920 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_actionscheduler_logs.table.gz (39/178): adding to final database dump
+0012.931 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_aioseo_notifications.table.gz (40/178): adding to final database dump
+0012.938 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_aioseo_posts.table.gz (41/178): adding to final database dump
+0012.947 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_charitable_campaign_donations.table.gz (42/178): adding to final database dump
+0012.956 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_charitable_donormeta.table.gz (43/178): adding to final database dump
+0012.963 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_charitable_donors.table.gz (44/178): adding to final database dump
+0012.969 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_commentmeta.table.gz (45/178): adding to final database dump
+0012.976 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_comments.table.gz (46/178): adding to final database dump
+0012.983 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_ff_scheduled_actions.table.gz (47/178): adding to final database dump
+0012.990 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_entry_details.table.gz (48/178): adding to final database dump
+0012.998 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_form_analytics.table.gz (49/178): adding to final database dump
+0013.006 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_form_meta.table.gz (50/178): adding to final database dump
+0013.013 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_forms.table.gz (51/178): adding to final database dump
+0013.020 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_logs.table.gz (52/178): adding to final database dump
+0013.028 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_submission_meta.table.gz (53/178): adding to final database dump
+0013.035 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_fluentform_submissions.table.gz (54/178): adding to final database dump
+0013.042 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_links.table.gz (55/178): adding to final database dump
+0013.049 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_nm_personalized.table.gz (56/178): adding to final database dump
+0013.058 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_options.table.gz (57/178): adding to final database dump
+0013.104 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_postmeta.table.gz (58/178): adding to final database dump
+0013.120 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_posts.table.gz (59/178): adding to final database dump
+0013.148 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_term_relationships.table.gz (60/178): adding to final database dump
+0013.156 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_term_taxonomy.table.gz (61/178): adding to final database dump
+0013.165 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_termmeta.table.gz (62/178): adding to final database dump
+0013.175 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_terms.table.gz (63/178): adding to final database dump
+0013.182 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_usermeta.table.gz (64/178): adding to final database dump
+0013.191 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_users.table.gz (65/178): adding to final database dump
+0013.199 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_admin_note_actions.table.gz (66/178): adding to final database dump
+0013.208 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_admin_notes.table.gz (67/178): adding to final database dump
+0013.216 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_category_lookup.table.gz (68/178): adding to final database dump
+0013.225 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_customer_lookup.table.gz (69/178): adding to final database dump
+0013.234 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_download_log.table.gz (70/178): adding to final database dump
+0013.245 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_coupon_lookup.table.gz (71/178): adding to final database dump
+0013.253 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_product_lookup.table.gz (72/178): adding to final database dump
+0013.263 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_stats.table.gz (73/178): adding to final database dump
+0013.271 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_order_tax_lookup.table.gz (74/178): adding to final database dump
+0013.280 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_product_meta_lookup.table.gz (75/178): adding to final database dump
+0013.288 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_reserved_stock.table.gz (76/178): adding to final database dump
+0013.296 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_tax_rate_classes.table.gz (77/178): adding to final database dump
+0013.303 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_wc_webhooks.table.gz (78/178): adding to final database dump
+0013.310 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_api_keys.table.gz (79/178): adding to final database dump
+0013.317 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_attribute_taxonomies.table.gz (80/178): adding to final database dump
+0013.325 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_downloadable_product_permissions.table.gz (81/178): adding to final database dump
+0013.333 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_log.table.gz (82/178): adding to final database dump
+0013.341 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_order_itemmeta.table.gz (83/178): adding to final database dump
+0013.350 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_order_items.table.gz (84/178): adding to final database dump
+0013.360 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_payment_tokenmeta.table.gz (85/178): adding to final database dump
+0013.371 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_payment_tokens.table.gz (86/178): adding to final database dump
+0013.379 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_sessions.table.gz (87/178): adding to final database dump
+0013.387 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_shipping_zone_locations.table.gz (88/178): adding to final database dump
+0013.395 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_shipping_zone_methods.table.gz (89/178): adding to final database dump
+0013.404 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_shipping_zones.table.gz (90/178): adding to final database dump
+0013.413 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_tax_rate_locations.table.gz (91/178): adding to final database dump
+0013.422 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ebzxsi_woocommerce_tax_rates.table.gz (92/178): adding to final database dump
+0013.431 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_ff_scheduled_actions.table.gz (93/178): adding to final database dump
+0013.440 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_entry_details.table.gz (94/178): adding to final database dump
+0013.463 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_form_analytics.table.gz (95/178): adding to final database dump
+0013.473 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_form_meta.table.gz (96/178): adding to final database dump
+0013.481 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_forms.table.gz (97/178): adding to final database dump
+0013.491 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_logs.table.gz (98/178): adding to final database dump
+0013.505 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_submission_meta.table.gz (99/178): adding to final database dump
+0013.534 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_fluentform_submissions.table.gz (100/178): adding to final database dump
+0013.566 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_nm_personalized.table.gz (101/178): adding to final database dump
+0013.576 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_redirects.table.gz (102/178): adding to final database dump
+0013.584 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_admin_note_actions.table.gz (103/178): adding to final database dump
+0013.596 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_admin_notes.table.gz (104/178): adding to final database dump
+0013.611 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_customer_lookup.table.gz (105/178): adding to final database dump
+0013.621 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_download_log.table.gz (106/178): adding to final database dump
+0013.629 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_addresses.table.gz (107/178): adding to final database dump
+0013.641 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_coupon_lookup.table.gz (108/178): adding to final database dump
+0013.649 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_operational_data.table.gz (109/178): adding to final database dump
+0013.656 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_product_lookup.table.gz (110/178): adding to final database dump
+0013.666 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_stats.table.gz (111/178): adding to final database dump
+0013.676 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_order_tax_lookup.table.gz (112/178): adding to final database dump
+0013.683 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_orders.table.gz (113/178): adding to final database dump
+0013.691 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_orders_meta.table.gz (114/178): adding to final database dump
+0013.699 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_product_attributes_lookup.table.gz (115/178): adding to final database dump
+0013.709 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_product_download_directories.table.gz (116/178): adding to final database dump
+0013.717 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_rate_limits.table.gz (117/178): adding to final database dump
+0013.725 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wc_webhooks.table.gz (118/178): adding to final database dump
+0013.733 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfauditevents.table.gz (119/178): adding to final database dump
+0013.742 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfblockediplog.table.gz (120/178): adding to final database dump
+0013.750 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfblocks7.table.gz (121/178): adding to final database dump
+0013.759 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfconfig.table.gz (122/178): adding to final database dump
+0013.803 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfcrawlers.table.gz (123/178): adding to final database dump
+0013.812 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wffilechanges.table.gz (124/178): adding to final database dump
+0013.821 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wffilemods.table.gz (125/178): adding to final database dump
+0014.249 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfhits.table.gz (126/178): adding to final database dump
+0014.258 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfhoover.table.gz (127/178): adding to final database dump
+0014.266 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfissues.table.gz (128/178): adding to final database dump
+0014.277 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfknownfilelist.table.gz (129/178): adding to final database dump
+0014.443 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wflivetraffichuman.table.gz (130/178): adding to final database dump
+0014.453 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wflocs.table.gz (131/178): adding to final database dump
+0014.461 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wflogins.table.gz (132/178): adding to final database dump
+0014.481 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfls_2fa_secrets.table.gz (133/178): adding to final database dump
+0014.492 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfls_role_counts.table.gz (134/178): adding to final database dump
+0014.501 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfls_settings.table.gz (135/178): adding to final database dump
+0014.509 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfnotifications.table.gz (136/178): adding to final database dump
+0014.531 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfpendingissues.table.gz (137/178): adding to final database dump
+0014.546 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfreversecache.table.gz (138/178): adding to final database dump
+0014.556 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfsecurityevents.table.gz (139/178): adding to final database dump
+0014.565 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfsnipcache.table.gz (140/178): adding to final database dump
+0014.591 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfstatus.table.gz (141/178): adding to final database dump
+0014.602 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wftrafficrates.table.gz (142/178): adding to final database dump
+0014.611 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wfwaffailures.table.gz (143/178): adding to final database dump
+0014.619 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_api_keys.table.gz (144/178): adding to final database dump
+0014.627 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_attribute_taxonomies.table.gz (145/178): adding to final database dump
+0014.636 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_downloadable_product_permissions.table.gz (146/178): adding to final database dump
+0014.644 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_log.table.gz (147/178): adding to final database dump
+0014.652 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_order_items.table.gz (148/178): adding to final database dump
+0014.661 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_payment_tokens.table.gz (149/178): adding to final database dump
+0014.670 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_sessions.table.gz (150/178): adding to final database dump
+0014.681 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_shipping_zone_locations.table.gz (151/178): adding to final database dump
+0014.692 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_shipping_zone_methods.table.gz (152/178): adding to final database dump
+0014.702 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_shipping_zones.table.gz (153/178): adding to final database dump
+0014.711 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_tax_rate_locations.table.gz (154/178): adding to final database dump
+0014.721 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_woocommerce_tax_rates.table.gz (155/178): adding to final database dump
+0014.730 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_logs.table.gz (156/178): adding to final database dump
+0014.741 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_payment_meta.table.gz (157/178): adding to final database dump
+0014.751 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_payments.table.gz (158/178): adding to final database dump
+0014.762 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpforms_tasks_meta.table.gz (159/178): adding to final database dump
+0014.772 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpmailsmtp_debug_events.table.gz (160/178): adding to final database dump
+0014.781 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpmailsmtp_tasks_meta.table.gz (161/178): adding to final database dump
+0014.791 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpsr_caches.table.gz (162/178): adding to final database dump
+0014.804 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db-table-wp_q5j83c_wpsr_reviews.table.gz (163/178): adding to final database dump
+0014.813 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db.gz: finished writing out complete database file (5624 KB)
+0014.889 (0) Total database tables backed up: 163 (backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db.gz, size: 5771241, checksum (SHA1): 64dcc72b23e2763434734d4175c66695c7491582)
+0014.927 (0) backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db.gz: db: This file has not yet been successfully uploaded: will queue
+0014.936 (0) Saving backup history. Total backup size: 5.5 MB
+0014.960 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0014.995 (0) Cloud backup selection (1/1):  (last)
+0015.007 (0) No remote despatch: user chose no remote backup service
+0015.029 (0) Recording as successfully uploaded: backup_2025-07-09-0001_Parks_and_Recreation_Foundation__9cee7061ea88-db.gz (2cf04c6c92b6af9088a7ba34fea0a006)
+0015.078 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=1, retain_db=1
+0015.097 (0) Number of backup sets in history: 2; groups (db): 1
+0015.105 (0) Examining (for databases) backup set with group_id=0, nonce=9cee7061ea88, datestamp=1752019294 (Jul 09 2025 00:01:34)
+0015.114 (0) This backup set is the backup set just made, so will not be deleted.
+0015.123 (0) Examining (for databases) backup set with group_id=0, nonce=d0be4b0ad125, datestamp=1751932987 (Jul 08 2025 00:03:07)
+0015.132 (0) 1751932987: db: this set includes a database (backup_2025-07-08-0003_Parks_and_Recreation_Foundation__d0be4b0ad125-db.gz); db count is now 1
+0015.140 (0) 1751932987: db: over retain limit (1); will delete this database
+0015.148 (0) Delete file: backup_2025-07-08-0003_Parks_and_Recreation_Foundation__d0be4b0ad125-db.gz, service=none
+0015.156 (0) Deleting local copy (backup_2025-07-08-0003_Parks_and_Recreation_Foundation__d0be4b0ad125-db.gz)
+0015.171 (0) This backup set is now empty; will remove from history
+0015.184 (0) Deleting log file (log.d0be4b0ad125.txt)
+0015.201 (0) Number of backup sets in history: 1; groups (files): 1
+0015.211 (0) Examining (for files) backup set with nonce=9cee7061ea88, datestamp=1752019294 (Jul 09 2025 00:01:34)
+0015.221 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+0015.229 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0015.254 (0) Resume backup (9cee7061ea88, 0): finish run
+0015.273 (0) Decremented the semaphore (fd) by 1
+0015.283 (0) Semaphore (fd) unlocked
+0015.292 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0015.321 (0) No email will/can be sent - the user has not configured an email address.
+0015.331 (0) The backup apparently succeeded and is now complete

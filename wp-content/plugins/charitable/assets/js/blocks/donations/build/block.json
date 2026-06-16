@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "charitable/donations-block",
+  "version": "0.1.0",
+  "title": "Donations",
+  "category": "widgets",
+  "icon": "feedback",
+  "description": "Display a simple donation widget for a campaign.",
+  "keywords": [
+    "charitable",
+    "campaign",
+    "donation"
+  ],
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "campaignID": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "center",
+      "left",
+      "right",
+      "wide"
+    ]
+  },
+  "textdomain": "charitable",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

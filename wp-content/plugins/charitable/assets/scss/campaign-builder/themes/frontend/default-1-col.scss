@@ -1,0 +1,138 @@
+// Campaign Builder Preview styles.
+//
+// default-1-col styles.
+//
+// @since 1.8.0
+
+@import '../partials/common';
+
+.charitable-campaign-wrap.template-default-1-col {
+
+    margin: 0;
+    padding: 0;
+
+    .charitable-campaign-container {
+
+        width: 100%;
+        margin: 20px auto;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .column {
+            padding-left: 15px;
+            padding-right: 15px;
+            display: flex;
+            flex-direction: column;
+            // flex-basis: 100%;
+            flex-grow: 1;
+            flex-basis: 0;
+            flex: 1;
+        }
+
+        header {
+            display: block;
+        }
+
+        /* fields */
+
+        .charitable-campaign-field_campaign-title {
+            h1 {
+                margin: 0;
+                font-size: 42px;
+                list-style: 45px;
+            }
+        }
+
+        .charitable-campaign-field_campaign-description {
+            margin: 0;
+            font-size: $font_size_s;
+        }
+
+        .charitable-campaign-field_photo {
+
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .charitable-campaign-field_donate-button {
+            background-color: $color_green;
+            margin: 10px auto;
+            text-align: center;
+            a {
+                display: block;
+                font-weight: 500;
+                color: $color_white;
+                text-decoration: none;
+                padding: 10px 15px;
+                width: auto;
+            }
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        /* base tabs */
+
+        nav.charitable-campaign-preview-nav {
+            margin: 20px auto;
+            a {
+                text-decoration: none;
+            }
+            ul {
+                list-style: none;
+                margin-block-end: 0;
+                margin-block-start: 0;
+                margin-inline-end: 0;
+                margin-inline-start: 0;
+                padding: 0;
+            }
+            li {
+                display: inline-block;
+                margin: 0 20px 0 0;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: #2d2d2d;
+                padding-bottom: 15px;
+                &.active {
+                    border-bottom: 1px solid #2d2d2d;
+                }
+            }
+
+            &.tab-size-medium {
+                li {
+                    a {
+                        font-size: 14px;
+                        padding: 15px;
+                    }
+                }
+            }
+
+        }
+        .tab-content {
+            ul {
+                list-style: none;
+                margin-block-end: 0;
+                margin-block-start: 0;
+                margin-inline-end: 0;
+                margin-inline-start: 0;
+                padding: 0;
+            }
+            li {
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+}

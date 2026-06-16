@@ -1,0 +1,30 @@
+// Selectors.
+$choices-selector:     'choices' !default;
+$choices-rtl-selector: 'body.rtl' !default;
+
+// Colors.
+$choices-bg-color:          #ffffff !default;
+$choices-bg-color-disabled: #bbbbbb !default;
+$choices-bg-color-dropdown: $choices-bg-color !default;
+$choices-text-color:        currentColor !default;
+$choices-keyline-color:     #cccccc !default;
+$choices-primary-color:     #036aab !default;
+$choices-disabled-color:    #bbbbbb !default;
+$choices-highlight-color:   $choices-primary-color !default;
+$choices-focused-color:     #016aab !default;
+$choices-dropdown-color:    #777777;
+$color_placeholder:         #999999;
+$color_heading:             #a6a6a6;
+
+// Sizing.
+$choices-guttering:        24px !default;
+$choices-button-dimension: 12px !default;
+$choices-button-offset:    2px !default;
+
+// Border radius.
+$choices-border-radius:      4px !default;
+$choices-border-radius-item: 2px !default;
+
+// Path to icons.
+$choices-button-icon-path: '../images' !default;
+

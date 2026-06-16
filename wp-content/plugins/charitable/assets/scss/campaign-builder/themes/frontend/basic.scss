@@ -1,0 +1,18 @@
+// Campaign Builder Preview styles.
+//
+// Basic styles.
+//
+// @since 1.8.0
+
+// Template name
+$template: 'basic';
+
+// Colors by name:
+$color_theme_primary:   #000;
+$color_theme_secondary: #000;
+$color_theme_tertiary:  #000;
+$color_theme_accent:    #000;
+$color_button_bg:       #0caf60;
+
+@import '../frontend/partials/template-basic';
+

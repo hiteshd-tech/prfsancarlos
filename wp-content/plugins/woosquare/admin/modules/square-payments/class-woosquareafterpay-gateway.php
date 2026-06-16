@@ -1,0 +1,811 @@
+<?php
+/**
+ * Woosquare_Plus v1.0 by wpexperts.io
+ *
+ * @package Woosquare_Plus
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+/**
+ * Represents a custom AfterPay payment gateway for WooCommerce using Square.
+ *
+ * This class extends the WC_Payment_Gateway class and provides custom functionality
+ * for processing AfterPay payments with Square integration.
+ */
+class WooSquareAfterPay_Gateway extends WC_Payment_Gateway {
+
+	/**
+	 * The connection object for connecting to a database or external service.
+	 *
+	 * @var Connection
+	 */
+	protected $connect;
+
+	/**
+	 * The token used for authentication or authorization.
+	 *
+	 * @var string
+	 */
+	protected $token;
+
+	/**
+	 * A flag indicating whether logging is enabled or not.
+	 *
+	 * @var bool
+	 */
+	public $log;
+
+	/**
+	 * Flag to enable logging.
+	 *
+	 * @var bool
+	 */
+	public $logging;
+
+	/**
+	 * Flag to capture payment immediately.
+	 *
+	 * @var bool
+	 */
+	protected $capture;
+
+	/**
+	 * Indicates whether to create a new customer.
+	 *
+	 * @var bool
+	 */
+	public $create_customer;
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		$this->id                 = 'square_after_pay' . get_transient( 'is_sandbox' );
+		$this->method_title       = __( 'Square After Pay', 'wpexpert-square' );
+		$this->method_description = __( 'Square After pay works by adding payments button in an woocommerce checkout and then sending the details to Square for verification and processing.', 'wpexpert-square' );
+		$this->has_fields         = true;
+		$this->supports           = array(
+			'products',
+			'refunds',
+		);
+
+		// Load the form fields.
+		$this->init_form_fields();
+
+		// Load the settings.
+		$this->init_settings();
+
+		// Get setting values.
+		$this->title       = $this->get_option( 'title' );
+		$this->description = $this->get_option( 'description' );
+		$this->enabled     = $this->get_option( 'enabled' ) === 'yes' ? 'yes' : 'no';
+		$this->capture     = $this->get_option( 'capture' ) === 'yes' ? false : true;
+		$settings_key      = 'woocommerce_square_plus' . get_transient( 'is_sandbox' ) . '_settings';
+		$settings          = get_option( $settings_key );
+
+		$this->create_customer = ( is_array( $settings ) && isset( $settings['create_customer'] ) && 'yes' === $settings['create_customer'] );
+		$this->logging         = $this->get_option( 'logging' ) === 'yes' ? true : false;
+		$this->connect         = new WooSquare_Payments_Connect(); // decouple in future when v2 is ready.
+		$this->token           = get_option( 'woo_square_access_token' . get_transient( 'is_sandbox' ) );
+
+		$this->connect->set_access_token( $this->token );
+
+		// Hooks.
+		add_action( 'wp_enqueue_scripts', array( $this, 'payment_scripts_afterpay' ) );
+		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
+	}
+
+	/**
+	 * Check if this gateway is enabled
+	 */
+	public function is_available() {
+		$is_available = true;
+
+		if ( 'yes' === $this->enabled ) {
+			if ( ! get_transient( 'is_sandbox' ) && ! wc_checkout_is_https() ) {
+				$is_available = false;
+			}
+
+			if ( ! get_transient( 'is_sandbox' ) && empty( $this->token ) ) {
+				$is_available = true;
+			}
+
+			if ( ! $this->token ) {
+				$is_available = false;
+			}
+
+			// Square only supports US, Canada and Australia for now.
+			if (
+				( 'US' !== WC()->countries->get_base_country()
+				&& 'CA' !== WC()->countries->get_base_country()
+				&& 'GB' !== WC()->countries->get_base_country()
+				&& 'AU' !== WC()->countries->get_base_country() )
+				|| ( 'USD' !== get_woocommerce_currency()
+				&& 'CAD' !== get_woocommerce_currency()
+				&& 'AUD' !== get_woocommerce_currency()
+				&& 'GBP' !== get_woocommerce_currency() )
+			) {
+				$is_available = false;
+			}
+
+			// if enabled and sandbox credentials not setup.
+			$woocommerce_square_plus_settings = get_option( 'woocommerce_square_plus' . get_transient( 'is_sandbox' ) . '_settings' );
+			if ( get_transient( 'is_sandbox' ) ) {
+				if (
+					empty( WOOSQU_PLUS_APPID )
+					|| empty( get_option( 'woo_square_access_token' . get_transient( 'is_sandbox' ) ) )
+					|| empty( get_option( 'woo_square_location_id' . get_transient( 'is_sandbox' ) ) )
+				) {
+					$is_available = false;
+				}
+			}
+		} else {
+			$is_available = false;
+		}
+
+		return apply_filters( 'woocommerce_square_payment_afterpay_gateway_is_available', $is_available );
+	}
+
+	/**
+	 * Initialize Gateway Settings Form Fields
+	 */
+	public function init_form_fields() {
+		$this->form_fields = apply_filters(
+			'woocommerce_square_afterpay_gateway_settings',
+			array(
+				'enabled'     => array(
+					'title'       => __( 'Enable/Disable', 'wpexpert-square' ),
+					'label'       => __( 'Enable Square After Pay', 'wpexpert-square' ),
+					'type'        => 'checkbox',
+					'description' => '',
+					'default'     => 'no',
+				),
+				'title'       => array(
+					'title'       => __( 'Title', 'wpexpert-square' ),
+					'type'        => 'text',
+					'description' => __( 'This controls the title which the user sees during checkout.', 'wpexpert-square' ),
+					'default'     => __( 'After Pay (Square)', 'wpexpert-square' ),
+				),
+				'description' => array(
+					'title'       => __( 'Description', 'wpexpert-square' ),
+					'type'        => 'textarea',
+					'description' => __( 'This controls the description which the user sees during checkout.', 'wpexpert-square' ),
+					'default'     => __( 'Pay with your credit card via Square.', 'wpexpert-square' ),
+				),
+				'capture'     => array(
+					'title'       => __( 'Delay Capture', 'woosquare' ),
+					'label'       => __( 'Enable Delay Capture', 'woosquare' ),
+					'type'        => 'checkbox',
+					'description' => __( 'When enabled, the request will only perform an Auth on the provided card. You can then later perform either a Capture or Void.', 'woosquare' ),
+					'default'     => 'no',
+				),
+				'logging'     => array(
+					'title'       => __( 'Logging', 'wpexpert-square' ),
+					'label'       => __( 'Log debug messages', 'wpexpert-square' ),
+					'type'        => 'checkbox',
+					'description' => __( 'Save debug messages to the WooCommerce System Status log.', 'wpexpert-square' ),
+					'default'     => 'no',
+				),
+			)
+		);
+	}
+
+	/**
+	 * Payment form on checkout page
+	 */
+	public function payment_fields() {
+		?>
+		<div id="payment-form">
+			<div id="afterpay-button"></div>
+			<input type="hidden" id="square_pay_nonce" name="square_pay_nonce" value="<?php echo esc_attr( wp_create_nonce( 'square-pay-nonce' ) ); ?>">
+		</div>
+		<div id="payment-status-container"></div>
+		<?php
+	}
+
+	/**
+	 * Payment_scripts function.
+	 *
+	 * @access public
+	 */
+	public function payment_scripts_afterpay() {
+		if ( ! is_checkout() ) {
+			return;
+		}
+		$location = get_option( 'woo_square_location_id' . get_transient( 'is_sandbox' ) );
+
+		$woocommerce_square_plus_settings = get_option( 'woocommerce_square_plus' . get_transient( 'is_sandbox' ) . '_settings' );
+
+		global $woocommerce;
+		$shipping_amount             = WC()->cart->get_shipping_total();
+		$woocommerce_square_settings = get_option( 'woocommerce_square_settings' );
+		$currency_cod                = get_option( 'woocommerce_currency' );
+		$country_code                = WC()->countries->get_base_country();
+		// need to add condition square payment enable so disable below script.
+		if ( get_transient( 'is_sandbox' ) ) {
+			$endpoint     = 'squareupsandbox';
+			$environment  = 'development';
+			$web_endpoint = 'sandbox.web';
+		} else {
+			$endpoint     = 'squareup';
+			$environment  = 'production';
+			$web_endpoint = 'web';
+		}
+
+		$woocommerce_square_after_pay_settings = get_option( 'woocommerce_square_after_pay' . get_transient( 'is_sandbox' ) . '_settings' );
+
+		if ( isset( $woocommerce_square_after_pay_settings['enabled'] ) && 'yes' === $woocommerce_square_after_pay_settings['enabled'] ) {
+			if ( ! wp_script_is( 'squareSDK', 'enqueued' ) && ! wp_script_is( 'squareSDK', 'registered' ) ) {
+				wp_enqueue_script(
+					'squareSDK',
+					'https://' . $web_endpoint . '.squarecdn.com/v1/square.js',
+					array(),
+					WOOSQUARE_VERSION,
+					true
+				);
+			}
+			wp_register_script( 'woosquare-after-pay', WOOSQUARE_PLUGIN_URL_PAYMENT . '/js/SquarePaymentsAfterPay.js', array( 'jquery', 'square' ), WOOSQUARE_VERSION, true );
+
+			wp_localize_script(
+				'woosquare-after-pay',
+				'square_afterpay_params',
+				array(
+					'application_id'   => WOOSQU_PLUS_APPID,
+					'lid'              => $location,
+					'merchant_name'    => 'Square After Pay',
+					'order_total'      => $woocommerce->cart->total,
+					'shipping_rate'    => $shipping_amount * 100,
+					'environment'      => $environment,
+					'currency_code'    => $currency_cod,
+					'currency_sym'     => get_woocommerce_currency_symbol(),
+					'country_code'     => $country_code,
+					'sandbox'          => get_transient( 'is_sandbox' ),
+					'square_pay_nonce' => wp_create_nonce( 'square-pay-nonce' ),
+				)
+			);
+			wp_enqueue_script( 'woosquare-after-pay' );
+		}
+		return true;
+	}
+
+
+	/**
+	 * Handles Square customer creation and synchronization with WooCommerce orders.
+	 *
+	 * This function checks if a customer exists in Square, and if not, it creates a new customer.
+	 *
+	 * @param WC_Order $order The WooCommerce order object.
+	 */
+	public function handle_square_customer_creation( $order ) {
+		// Check if we need to sync the customer with Square.
+
+		if ( get_option( 'woo_square_customer_sync_square_order_sync' ) === '1' || $this->create_customer ) {
+
+			// Initialize Square customer ID.
+			$square_customer_id = null;
+
+			// Get the customer ID from WooCommerce.
+			$customer_id = $order->get_customer_id();
+
+			// Fetch the Square customer ID based on the customer or parent order.
+			if ( $customer_id ) {
+				$square_customer_id = get_user_meta( $customer_id, '_square_customer_id', true );
+			} else {
+				$square_customer_id = $order->get_meta( '_square_customer_id', true );
+			}
+
+			// Check if the customer exists in Square.
+			if ( $square_customer_id ) {
+				$response = $this->fetch_square_customer( $square_customer_id );
+
+				if ( is_wp_error( $response ) ) {
+					$error_message = $response->get_error_message();
+
+					$square_customer_id = null; // Customer does not exist.
+				} else {
+					$response_body = json_decode( wp_remote_retrieve_body( $response ), true );
+
+					if ( isset( $response_body['customer'] ) ) {
+						$customer = $response_body['customer'];
+						$order->update_meta_data( 'retrieveCustomer', wp_json_encode( $customer ) );
+					} else {
+
+						$square_customer_id = null; // Customer does not exist.
+					}
+				}
+			}
+
+			// If the customer doesn't exist in Square, try to search by email.
+			$search_customer = $this->search_square_customer_by_email( $order->get_billing_email() );
+
+			$order->update_meta_data( 'retrievesearchCustomer', wp_json_encode( $search_customer ) );
+
+			if ( empty( $search_customer->customers[0]->id ) ) {
+				// Check if we need to create a new customer in Square.
+				if ( empty( $square_customer_id ) || get_option( 'woo_square_create_customer_guest' ) === '1' || ! is_user_logged_in() || $this->create_customer ) {
+					$order->update_meta_data( '_createcustomer', '1' );
+
+					// Ensure the customer object is valid.
+					if ( empty( get_object_vars( $search_customer ) ) ) {
+						$order->update_meta_data( 'get_object_vars_searchCustomer', empty( get_object_vars( $search_customer ) ) );
+
+						// Prepare to create a new customer in Square.
+						$square_customer_id = $this->create_new_square_customer( $order );
+
+					}
+				}
+			} else {
+				$square_customer_id = $search_customer->customers[0]->id;
+				$order->update_meta_data( '_square_customer_id', $square_customer_id );
+				// translators: %s is the customer id.
+				$order->add_order_note( sprintf( __( 'Customer created or updated on Square: %s', 'woosquare' ), $square_customer_id ) );
+			}
+		}
+	}
+
+	/**
+	 * Fetch a Square customer by ID.
+	 *
+	 * @param string $square_customer_id The Square customer ID.
+	 * @return array|WP_Error The response from Square API or WP_Error if the request failed.
+	 */
+	public function fetch_square_customer( $square_customer_id ) {
+		$url     = 'https://connect.squareup' . get_transient( 'is_sandbox' ) . '.com/v2/customers/' . $square_customer_id;
+		$headers = array(
+			'Accept'        => 'application/json',
+			'Authorization' => 'Bearer ' . $this->token,
+			'Content-Type'  => 'application/json',
+			'Cache-Control' => 'no-cache',
+		);
+
+		return wp_remote_get(
+			$url,
+			array(
+				'headers'     => $headers,
+				'httpversion' => '1.0',
+				'sslverify'   => false,
+			)
+		);
+	}
+
+	/**
+	 * Search a Square customer by email.
+	 *
+	 * @param string $email The customer's email address.
+	 * @return array|WP_Error The response from Square API or WP_Error if the request failed.
+	 */
+	public function search_square_customer_by_email( $email ) {
+		$url     = 'https://connect.squareup' . get_transient( 'is_sandbox' ) . '.com/v2/customers/search';
+		$headers = array(
+			'Accept'        => 'application/json',
+			'Authorization' => 'Bearer ' . $this->token,
+			'Content-Type'  => 'application/json',
+			'Cache-Control' => 'no-cache',
+		);
+
+		$customer_data = array(
+			'query' => array(
+				'filter' => array(
+					'email_address' => array(
+						'exact' => strtolower( sanitize_email( $email ) ),
+					),
+				),
+			),
+		);
+
+		return json_decode(
+			wp_remote_retrieve_body(
+				wp_remote_post(
+					$url,
+					array(
+						'method'      => 'POST',
+						'headers'     => $headers,
+						'httpversion' => '1.0',
+						'sslverify'   => false,
+						'body'        => wp_json_encode( $customer_data ),
+					)
+				)
+			)
+		);
+	}
+
+	/**
+	 * Retrieve the shipping address from the WooCommerce order.
+	 *
+	 * @param WC_Order $order The WooCommerce order object.
+	 * @return array The shipping address details.
+	 */
+	public function get_order_billing_shipping_address( $order ) {
+		$shipping_country = sanitize_text_field( $order->get_shipping_country() ) ? sanitize_text_field( $order->get_shipping_country() ) : sanitize_text_field( $order->get_billing_country() );
+
+		if ( ! empty( $shipping_country ) ) {
+			return array(
+				'address_line_1'                  => sanitize_text_field( $order->get_shipping_address_1() ) ? sanitize_text_field( $order->get_shipping_address_1() ) : sanitize_text_field( $order->get_billing_address_1() ),
+				'address_line_2'                  => sanitize_text_field( $order->get_shipping_address_2() ) ? sanitize_text_field( $order->get_shipping_address_2() ) : sanitize_text_field( $order->get_billing_address_2() ),
+				'locality'                        => sanitize_text_field( $order->get_shipping_city() ) ? sanitize_text_field( $order->get_shipping_city() ) : sanitize_text_field( $order->get_billing_city() ),
+				'administrative_district_level_1' => sanitize_text_field( $order->get_shipping_state() ) ? sanitize_text_field( $order->get_shipping_state() ) : sanitize_text_field( $order->get_billing_state() ),
+				'postal_code'                     => sanitize_text_field( $order->get_shipping_postcode() ) ? sanitize_text_field( $order->get_shipping_postcode() ) : sanitize_text_field( $order->get_billing_postcode() ),
+				'country'                         => sanitize_text_field( $order->get_shipping_country() ) ? sanitize_text_field( $order->get_shipping_country() ) : sanitize_text_field( $order->get_billing_country() ),
+			);
+		}
+
+		return array();
+	}
+
+	/**
+	 * Create a new customer in Square.
+	 *
+	 * @param WC_Order $order The WooCommerce order object.
+	 * @return string|null The Square customer ID or null if failed.
+	 */
+	public function create_new_square_customer( $order ) {
+		$url     = 'https://connect.squareup' . get_transient( 'is_sandbox' ) . '.com/v2/customers';
+		$headers = array(
+			'Accept'        => 'application/json',
+			'Authorization' => 'Bearer ' . $this->token,
+			'Content-Type'  => 'application/json',
+			'Cache-Control' => 'no-cache',
+		);
+
+		$shipping_address = $this->get_order_billing_shipping_address( $order );
+		$customer_data    = array(
+			'given_name'    => null !== $order->get_shipping_first_name() ? sanitize_text_field( $order->get_shipping_first_name() ) : sanitize_text_field( $order->get_billing_first_name() ),
+			'family_name'   => null !== $order->get_shipping_last_name() ? sanitize_text_field( $order->get_shipping_last_name() ) : sanitize_text_field( $order->get_billing_last_name() ),
+			'email_address' => sanitize_email( $order->get_billing_email() ),
+			'address'       => $shipping_address,
+			'phone_number'  => sanitize_text_field( $order->get_billing_phone() ),
+			'reference_id'  => $order->get_customer_id() ? (string) $order->get_customer_id() : sanitize_text_field( __( 'Guest', 'woosquare' ) ),
+		);
+
+		$response = wp_remote_post(
+			$url,
+			array(
+				'method'      => 'POST',
+				'headers'     => $headers,
+				'httpversion' => '1.0',
+				'sslverify'   => false,
+				'body'        => wp_json_encode( $customer_data ),
+			)
+		);
+
+		$response_body = json_decode( wp_remote_retrieve_body( $response ), true );
+		if ( isset( $response_body['customer']['id'] ) ) {
+			$square_customer_id = $response_body['customer']['id'];
+			$order->update_meta_data( '_square_customer', $square_customer_id );
+			// translators: %s is the customer id.
+			$order->add_order_note( sprintf( __( 'Customer created or updated on Square: %s', 'woosquare' ), $square_customer_id ) );
+			return $square_customer_id;
+		}
+
+		return null;
+	}
+
+	/**
+	 * Process a payment for an order.
+	 *
+	 * This method is responsible for processing a payment for a given order.
+	 *
+	 * @param int  $order_id The ID of the order to process the payment for.
+	 * @param bool $retry    Whether to retry the payment if it fails initially (default is true).
+	 *
+	 * @throws Exception If there is an error during payment capture.
+	 */
+	public function process_payment( $order_id, $retry = true ) {
+		if ( ! isset( $_POST['square_pay_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['square_pay_nonce'] ) ), 'square-pay-nonce' ) ) {
+			wp_die( esc_html__( 'Cheatin&#8217; huh?', 'woosquare-square' ) );
+		}
+		$order = wc_get_order( $order_id );
+		$nonce = isset( $_POST['square_nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['square_nonce'] ) ) : '';
+
+		$order->update_meta_data( '_POST_requuest' . wp_rand( 1, 1000 ), $_POST );
+		$order->update_meta_data( 'errors_apay', isset( $_POST['errors'] ) ? sanitize_text_field( wp_unslash( $_POST['errors'] ) ) : '' );
+		$order->update_meta_data( 'errors_noncedatatype', isset( $_POST['noncedatatype'] ) ? sanitize_text_field( wp_unslash( $_POST['noncedatatype'] ) ) : '' );
+		$order->update_meta_data( 'errors_cardData', isset( $_POST['cardData'] ) ? sanitize_text_field( wp_unslash( $_POST['cardData'] ) ) : '' );
+
+		$currency = version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->get_order_currency() : $order->get_currency();
+		$this->log( "Info: Begin processing payment for order {$order_id} for the amount of {$order->get_total()}" );
+		$woocommerce_square_plus_settings = get_option( 'woocommerce_square_plus' . get_transient( 'is_sandbox' ) . '_settings' );
+		if ( 'yes' === $woocommerce_square_plus_settings['Send_customer_info'] ) {
+			$first_name = version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_first_name : $order->get_billing_first_name();
+			$last_name  = version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_last_name : $order->get_billing_last_name();
+			if ( empty( $first_name ) && empty( $last_name ) ) {
+				$first_name = null;
+				$last_name  = null;
+			}
+		} else {
+			$first_name = null;
+			$last_name  = null;
+		}
+		try {
+			if ( function_exists( 'square_order_sync_add_on' ) ) {
+				$amount = (int) round( $this->format_amount( $order->get_total(), $currency ), 1 );
+			} else {
+				$amount = (int) $this->format_amount( $order->get_total(), $currency );
+			}
+
+			$idempotency_key = uniqid();
+			$data            = array(
+				'idempotency_key'     => $idempotency_key,
+				'amount_money'        => array(
+					'amount'   => $amount,
+					'currency' => $currency,
+				),
+				'reference_id'        => (string) $order->get_order_number(),
+				'autocomplete'        => $this->capture,
+				'source_id'           => $nonce,
+				'buyer_email_address' => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_email : $order->get_billing_email(),
+				'billing_address'     => array(
+					'address_line_1'                  => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_address_1 : $order->get_billing_address_1(),
+					'address_line_2'                  => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_address_2 : $order->get_billing_address_2(),
+					'locality'                        => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_city : $order->get_billing_city(),
+					'administrative_district_level_1' => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_state : $order->get_billing_state(),
+					'postal_code'                     => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_postcode : $order->get_billing_postcode(),
+					'country'                         => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->billing_country : $order->get_billing_country(),
+				),
+				'note'                => apply_filters( 'woosquare_payment_order_note', 'WooCommerce: Order #' . (string) $order->get_order_number() . ' ' . $first_name . ' ' . $last_name, $order ),
+			);
+
+			if ( $order->needs_shipping_address() ) {
+				$data['shipping_address'] = array(
+					'address_line_1'                  => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->shipping_address_1 : $order->get_shipping_address_1(),
+					'address_line_2'                  => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->shipping_address_2 : $order->get_shipping_address_2(),
+					'locality'                        => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->shipping_city : $order->get_shipping_city(),
+					'administrative_district_level_1' => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->shipping_state : $order->get_shipping_state(),
+					'postal_code'                     => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->shipping_postcode : $order->get_shipping_postcode(),
+					'country'                         => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->shipping_country : $order->get_shipping_country(),
+				);
+			}
+
+			$sandbox_prefix = '';
+			$location_id    = get_option( 'woo_square_location_id' . get_transient( 'is_sandbox' ) );
+			if ( get_transient( 'is_sandbox' ) ) {
+				$sandbox_prefix = ' via Sandbox ';
+			}
+
+			$this->handle_square_customer_creation( $order );
+
+			if ( function_exists( 'square_order_sync_add_on' ) ) {
+				$data['order_id'] = square_order_sync_add_on( $order, $location_id, $currency, $idempotency_key, $this->token, 'squareup' . get_transient( 'is_sandbox' ), $square_customer_id );
+			}
+
+			$order->update_meta_data( 'request_Data' . wp_rand( 1, 1000 ), $data );
+
+			$url     = 'https://connect.squareup' . get_transient( 'is_sandbox' ) . '.com/v2/payments';
+			$headers = array(
+				'Accept'         => 'application/json',
+				'Authorization'  => 'Bearer ' . $this->token,
+				'Square-Version' => '2021-11-17',
+				'Content-Type'   => 'application/json',
+				'Cache-Control'  => 'no-cache',
+			);
+
+			$result = json_decode(
+				wp_remote_retrieve_body(
+					wp_remote_post(
+						$url,
+						array(
+							'method'      => 'POST',
+							'headers'     => $headers,
+							'httpversion' => '1.0',
+							'sslverify'   => false,
+							'body'        => wp_json_encode( $data ),
+						)
+					)
+				)
+			);
+
+			$order->update_meta_data( 'woosquare_request_results_afterpay_' . wp_rand( 1, 1000 ), $result );
+
+			if ( is_wp_error( $result ) ) {
+				wc_add_notice( __( 'Error: Unable to complete your transaction with square due to some issue. For now you can try some other payment method or try again later.', 'wpexpert-square' ), 'error' );
+
+				throw new Exception( $result->get_error_message() );
+			}
+
+			if ( ! empty( $result->errors ) ) {
+				if ( 'INVALID_REQUEST_ERROR' === $result->errors[0]->category ) {
+					wc_add_notice( __( 'Error: Unable to complete your transaction with square due to some issue. For now you can try some other payment method or try again later.', 'wpexpert-square' ), 'error' );
+				}
+
+				if ( 'PAYMENT_METHOD_ERROR' === $result->errors[0]->category || 'VALIDATION_ERROR' === $result->errors[0]->category ) {
+					$error_html  = __( 'Payment Error: ', 'wpexpert-square' );
+					$error_html .= '<br />';
+					$error_html .= '<ul>';
+
+					foreach ( $result->errors as $error ) {
+						$error_html .= '<li>' . $error->detail . '</li>';
+					}
+
+					$error_html .= '</ul>';
+
+					wc_add_notice( $error_html, 'error' );
+				}
+				$print_r = 'print_r';
+				$errors  = $print_r( $result->errors, true );
+
+				if ( get_transient( 'square_fulfillments' ) ) {
+					do_action( 'cancelled_orphened_order', get_transient( 'square_fulfillments' ) );
+				}
+
+				throw new Exception( $errors );
+			}
+
+			if ( empty( $result ) ) {
+				wc_add_notice( __( 'Error: Unable to complete your transaction with square due to some issue. For now you can try some other payment method or try again later.', 'wpexpert-square' ), 'error' );
+
+				throw new Exception( 'Unknown Error' );
+			}
+
+			if ( isset( $result->payment->id ) && 'BUY_NOW_PAY_LATER' === $result->payment->source_type && 'COMPLETED' === $result->payment->status ) {
+				// Payment complete.
+				$order->payment_complete( $result->payment->id );
+				$amount = number_format( $result->payment->amount_money->amount / 100, 2 ); // Assuming amount is in cents.
+				$order->add_meta_data( 'woosquare_transaction_id', $result->payment->id, true );
+				// translators: %1$s is the message, %2$s is the payment ID.
+				$complete_message = sprintf( __( 'Square AfterPay Payment %1$s complete for $%3$s (Transaction ID: %2$s).', 'woosquare' ), $sandbox_prefix, $result->payment->id, $amount );
+				$order->add_order_note( $complete_message );
+				$this->log( "Success: $complete_message" );
+			}
+			// Remove cart.
+			WC()->cart->empty_cart();
+
+			$order->save();
+			// Return thank you page redirect.
+			return array(
+				'result'   => 'success',
+				'redirect' => $this->get_return_url( $order ),
+			);
+		} catch ( Exception $e ) {
+			// translators: %s is the error message.
+			$this->log( sprintf( __( 'Error: %s', 'wpexpert-square' ), $e->getMessage() ) );
+
+			$order->update_status( 'failed', $e->getMessage() );
+			$order->save();
+			return;
+		}
+	}
+
+	/**
+	 * Format an amount to be passed to Square.
+	 *
+	 * This method formats the given amount to be compatible with Square payment processing.
+	 *
+	 * @param float  $total    The total amount to be formatted.
+	 * @param string $currency (Optional) The currency code for the amount (e.g., "USD").
+	 *
+	 * @return float The formatted amount.
+	 */
+	public function format_amount( $total, $currency = '' ) {
+		if ( ! $currency ) {
+			$currency = get_woocommerce_currency();
+		}
+
+		switch ( strtoupper( $currency ) ) {
+			// Zero decimal currencies.
+			case 'BIF':
+			case 'CLP':
+			case 'DJF':
+			case 'GNF':
+			case 'JPY':
+			case 'KMF':
+			case 'KRW':
+			case 'MGA':
+			case 'PYG':
+			case 'RWF':
+			case 'VND':
+			case 'VUV':
+			case 'XAF':
+			case 'XOF':
+			case 'XPF':
+				$total = absint( $total );
+				break;
+			default:
+				$total = round( $total, 2 );
+				$total = (int) round( $total * 100, 0 );
+				break;
+		}
+
+		return $total;
+	}
+
+	/**
+	 * Refund a charge
+	 *
+	 * @param int    $order_id The ID of the order for which the refund is being processed.
+	 * @param float  $amount   The amount to refund. This parameter is optional and can be used to specify a partial refund amount.
+	 * @param string $reason   An optional reason for the refund.
+	 *
+	 * @return bool True if the refund was successful, false otherwise.
+	 *
+	 * @throws Exception If there is an error during payment capture.
+	 */
+	public function process_refund( $order_id, $amount = null, $reason = '' ) {
+		$order    = wc_get_order( $order_id );
+		$trans_id = $order->get_meta( 'woosquare_transaction_id', true );
+		if ( ! $order || ! $trans_id ) {
+			return false;
+		}
+
+		if ( 'square_after_pay' . get_transient( 'is_sandbox' ) === ( version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->payment_method : $order->get_payment_method() ) ) {
+			try {
+				$this->log( "Info: Begin refund for order {$order_id} for the amount of {$amount}" );
+
+				$captured = $order->get_meta( '_square_charge_captured', true );
+
+				$transaction_status = $this->connect->get_transaction_status( $trans_id );
+
+				$currency = $order->get_order_currency();
+				$fields   = array(
+					'idempotency_key' => uniqid(),
+					'payment_id'      => $trans_id,
+					'reason'          => $reason,
+					'amount_money'    => array(
+						'amount'   => (int) $this->format_amount( $amount, $currency ),
+						'currency' => version_compare( WC_VERSION, '3.0.0', '<' ) ? $order->get_order_currency() : $order->get_currency(),
+					),
+				);
+
+				$url     = 'https://connect.squareup' . get_transient( 'is_sandbox' ) . '.com/v2/refunds';
+				$headers = array(
+					'Accept'        => 'application/json',
+					'Authorization' => 'Bearer ' . $this->token,
+					'Content-Type'  => 'application/json',
+					'Cache-Control' => 'no-cache',
+				);
+
+				$result = json_decode(
+					wp_remote_retrieve_body(
+						wp_remote_post(
+							$url,
+							array(
+								'method'      => 'POST',
+								'headers'     => $headers,
+								'httpversion' => '1.0',
+								'sslverify'   => false,
+								'body'        => wp_json_encode( apply_filters( 'modify_square_refund_fields', $fields ) ),
+							)
+						)
+					)
+				);
+
+				if ( is_wp_error( $result ) ) {
+					throw new Exception( $result->get_error_message() );
+				} elseif ( ! empty( $result->errors ) ) {
+					$print_r = 'print_r';
+					throw new Exception( 'Error: ' . $print_r( $result->errors, true ) );
+				} elseif ( 'APPROVED' === $result->refund->status || 'PENDING' === $result->refund->status ) {
+					// translators: %1$s is the refunded amount, %2$s is the refund ID, %3$s is the reason for the refund.
+					$refund_message = sprintf( __( 'Refunded %1$s - Refund ID: %2$s - Reason: %3$s', 'wpexpert-square' ), wc_price( $result->refund->amount_money->amount / 100 ), $result->refund->id, $reason );
+
+					$order->add_order_note( $refund_message );
+
+					$this->log( 'Success: ' . html_entity_decode( wp_strip_all_tags( $refund_message ) ) );
+
+					return true;
+				}
+			} catch ( Exception $e ) {
+				// translators: %s is the error message.
+				$this->log( sprintf( __( 'Error: %s', 'wpexpert-square' ), $e->getMessage() ) );
+
+				return false;
+			}
+		}
+	}
+
+	/**
+	 * Logs a message.
+	 *
+	 * @since   1.0.0
+	 * @version 1.0.0
+	 *
+	 * @param string $message The message to be logged.
+	 */
+	public function log( $message ) {
+		if ( $this->logging ) {
+			WooSquare_Payment_Logger::log( $message );
+		}
+	}
+}

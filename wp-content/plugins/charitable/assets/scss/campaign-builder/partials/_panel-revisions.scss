@@ -1,0 +1,281 @@
+// Form Builder styles.
+//
+// Revisions panel.
+//
+// @since 1.7.3
+
+.charitable-panels-toggle {
+
+	// Make sure the button is aligned to the bottom with minimum of 20px gap on smaller screens.
+	.charitable-panel-revisions-button-spacer {
+		margin-top: auto;
+	}
+
+	// Revisions button.
+	.charitable-panel-revisions-button {
+		position: relative;
+		width: 55px;
+		height: 44px;
+		margin: 20px auto;
+		background-color: #333333;
+		border: 1px solid #444444;
+		border-radius: 4px;
+
+		&:hover {
+			background-color: #444444;
+
+			.fa {
+				color: #ffffff;
+				transition: color ease-in 0.05s;
+			}
+		}
+
+		&.active {
+			background-color: #e27730;
+			border-color: #e27730;
+		}
+
+		.fa {
+			margin-top: -2px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		.badge-exclamation {
+			position: absolute;
+			top: -5px;
+			right: -5px;
+			width: 16px;
+			height: 16px;
+			border-radius: 8px;
+			background: #d63638;
+			box-shadow: 0 0 0 2px #2d2d2d;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+#charitable-panel-revisions {
+
+	// Left panel (controls) - header section.
+	.charitable-revisions-header {
+		margin: 20px;
+		border-bottom: 1px solid #ced7e0;
+
+		h3 {
+			font-weight: 600;
+			font-size: 15px;
+			line-height: 18px;
+			color: #444444;
+			margin: 20px 0 5px 0;
+		}
+
+		p {
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 16px;
+			color: #86919e;
+			margin: 5px 0 20px 0;
+		}
+	}
+
+	// Left panel (controls) - notices below the revisions list.
+	.charitable-revisions-notice {
+		margin: 20px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+
+		h2 {
+			margin: 0;
+			color: #444444;
+			font-size: 14px;
+			line-height: 17px;
+		}
+
+		p {
+			margin: 5px 0 10px 0;
+			color: #777777;
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&.charitable-revisions-notice-error {
+			border-left: 4px solid #d63638;
+		}
+
+		&.charitable-revisions-notice-warning {
+			border-left: 4px solid #ffb900;
+		}
+	}
+
+	// Left panel (controls) - a list of revisions.
+	.charitable-revisions-content {
+		margin: 20px;
+	}
+
+	// Revisions list - shared styles for current version and a revision.
+	.charitable-revision-current-version,
+	.charitable-revision {
+
+		a {
+			display: flex;
+			align-items: center;
+			padding: 15px;
+			background-color: #e0e8f0;
+			border: 2px solid #e0e8f0;
+			border-radius: 4px;
+			text-decoration: none;
+
+			&:hover {
+				background-color: #ced7e0;
+				border-color: #ced7e0;
+			}
+		}
+
+		&.active {
+
+			a {
+				background-color: #ffffff;
+				border: 2px solid #e27730;
+			}
+		}
+	}
+
+	// Revisions list - single revision.
+	.charitable-revision {
+		margin: 0 0 0 10px;
+		padding: 20px 0 0 10px;
+		border-left: 2px solid #e0e8f0;
+		position: relative;
+
+		&.active a {
+
+			// Decorative circle.
+			&:before {
+				content: "";
+				position: absolute;
+				top: calc( 50% + 5px );
+				left: -6px;
+				display: block;
+				width: 10px;
+				height: 10px;
+				border: 2px solid #e27730;
+				border-radius: 5px;
+				background-color: #ffffff;
+			}
+
+			// Decorative line connecting revision item with the circle.
+			&:after {
+				content: "";
+				position: absolute;
+				top: calc( 50% + 9px );
+				left: 4px;
+				display: block;
+				width: 6px;
+				height: 2px;
+				background-color: #e27730;
+			}
+		}
+	}
+
+	.charitable-revision-gravatar {
+		width: 40px;
+		height: 40px;
+		margin-right: 15px;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+	.charitable-revision-details {
+		p {
+			margin: 3px 0;
+			line-height: 16px;
+		}
+	}
+
+	.charitable-revision-created {
+		font-size: 12px;
+		color: #6b6d6f;
+
+		strong {
+			font-weight: 600;
+			font-size: 14px;
+			color: #444444;
+		}
+	}
+
+	.charitable-revision-author {
+		font-size: 13px;
+		color: #86919e;
+	}
+
+	// Left panel (preview) - disable all interactions with any elements in the revision preview.
+	.charitable-preview * {
+		pointer-events: none;
+	}
+}
+
+// Revision notice on top of the Form Builder.
+.charitable-is-revision {
+
+	.charitable-revision-notice {
+		position: fixed;
+		z-index: 10;
+		top: calc( 76px + var( --charitable-admin-bar-height ));
+		left: 95px;
+		right: 0;
+		height: 40px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		background-color: #fdf6e7;
+		box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+		text-align: center;
+		font-size: 14px;
+		line-height: 16px;
+		color: #444444;
+
+		@include transition( top, $transition_slow, ease-out );
+
+		p {
+			margin: 0;
+		}
+
+		a {
+			color: #444444;
+
+			&:hover {
+				color: #e27730;
+			}
+		}
+
+		.fa {
+			margin: 0 10px;
+			font-size: 16px;
+			opacity: .35;
+		}
+	}
+
+	// Push the panel contents down by the notice height.
+	.charitable-panel-sidebar-content .charitable-panel-sidebar,
+	.charitable-panel-sidebar-content .charitable-panel-content-wrap,
+	.charitable-panel-full-content .charitable-panel-content-wrap,
+	#charitable-panel-design .charitable-tabs {
+		top: calc( 76px + var( --charitable-admin-bar-height ) + 40px );
+	}
+
+	// Push additional elements down by the notice height.
+	#charitable-panel-design .charitable-panel-sidebar,
+	.charitable-field-option-group-toggle {
+		top: calc( 124px + var( --charitable-admin-bar-height ) + 40px );
+	}
+
+	// Push even more elements down by the notice height.
+	#charitable-field-options:before {
+		top: calc( 125px + var( --charitable-admin-bar-height ) + 40px );
+	}
+}

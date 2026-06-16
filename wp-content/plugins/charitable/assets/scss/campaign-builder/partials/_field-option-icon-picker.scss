@@ -1,0 +1,137 @@
+// Form Builder styles.
+//
+// Icon Picker modal.
+// Styling tweaks for jQuery-confirm JS alert library and inner content.
+//
+// @since 1.7.9
+
+.charitable-icon-picker-jconfirm-box {
+	border-top: none !important;
+}
+
+.charitable-icon-picker-jconfirm-content-pane {
+	margin-bottom: $spacing_ms !important;
+	background-color: $color_lightest_grey;
+	border-radius: $border_radius_m;
+}
+
+.charitable-icon-picker-title {
+
+	.jconfirm-title {
+		margin-top: 0 !important;
+	}
+
+	.charitable-icon-picker-description {
+		display: block;
+		margin: $spacing_ms 0 $spacing_ml 0;
+		font-size: $font_size_m;
+		line-height: 22px;
+		font-weight: normal;
+	}
+
+	input {
+		$height: 40px;
+
+		width: 100%;
+		margin: $spacing_s auto;
+		border: none;
+		box-shadow: 0 0 0 1px $color_border;
+		text-align: center;
+		height: $height;
+		border-radius: $height / 2;
+		transition: box-shadow $transition_slow ease-in-out;
+
+		&:focus {
+			box-shadow: 0 0 0 2px $color_blue;
+		}
+
+		&::placeholder {
+			color: $color_hint;
+		}
+	}
+}
+
+.charitable-icon-picker-container {
+
+	.charitable-icon-picker-icons {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: $spacing_m + 2px;
+		grid-auto-rows: min-content;
+		padding: $spacing_m + 1px;
+		min-height: 368px;
+
+		li {
+			background-color: $color_white;
+			box-shadow: 0 0 0 1px $color_brighter_grey;
+			border-radius: $border_radius_m;
+			display: flex;
+			gap: $spacing_s;
+			flex-direction: column;
+			cursor: pointer;
+			padding: $spacing_s;
+			margin: 0;
+			transition: box-shadow $transition_fast ease-in-out;
+
+			&:hover {
+				box-shadow: 0 0 0 2px $color_secondary_text, 0 4px 4px $color_box_shadow;
+			}
+
+			&.selected {
+				box-shadow: 0 0 0 2px $color_orange, 0 4px 4px $color_box_shadow;
+
+				.ic-fa-solid,
+				.ic-fa-brands {
+					color: $color_orange
+				}
+
+				span {
+					color: $color_secondary_text;
+				}
+			}
+
+			.ic-fa-brands,
+			.ic-fa-regular,
+			.ic-fa-solid {
+				font-size: var(--charitable-icon-choices-size-medium);
+				line-height: var(--charitable-icon-choices-size-medium);
+				color: $color_secondary_text;
+			}
+
+			span {
+				font-size: $font_size_ss;
+				line-height: $font_size_m;
+				color: $color_hint;
+				font-weight: 400;
+				width: 102px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	// We need pagination element rendered, but invisible.
+	.charitable-icon-picker-pagination {
+		overflow: hidden;
+		height: 0;
+	}
+
+	.charitable-icon-picker-not-found {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $color_secondary_text;
+		position: absolute;
+
+		@include inset_0;
+
+		&.charitable-hidden {
+			display: none;
+		}
+
+		strong {
+			margin-left: $spacing_xs;
+		}
+	}
+}

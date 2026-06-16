@@ -1,0 +1,566 @@
+body.dashboard_page_charitable-getting-started #wpcontent {
+  padding-left: 0 !important;
+  position: relative;
+}
+
+body div.jconfirm .jconfirm-box-container .jconfirm-box.jconfirm-type-default {
+  max-width: 1300px;
+}
+
+#charitable-welcome {
+  border-top: 3px solid #e27730;
+  color: #555;
+  padding-top: 80px;
+}
+#charitable-welcome .container {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 0;
+}
+#charitable-welcome .intro {
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  border-radius: 2px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-top: 40px;
+}
+#charitable-welcome .intro .wpchar-logo {
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  padding: 0;
+  position: absolute;
+  top: -58px;
+  left: 50%;
+  margin-left: -55px;
+  background-image: url(../../images/charitable-logo.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 1px) calc(50% + 1px);
+  background-size: 90%;
+}
+#charitable-welcome .intro .video-thumbnail {
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+#charitable-welcome .block {
+  padding: 40px;
+}
+#charitable-welcome .charitable-btn {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#charitable-welcome h1 {
+  color: #222;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 16px 0;
+}
+#charitable-welcome h5 {
+  color: #222;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+#charitable-welcome h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+}
+#charitable-welcome p {
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+#charitable-welcome .charitable-button-wrap {
+  max-width: 590px;
+  margin: 35px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#charitable-welcome .charitable-button-wrap .left {
+  flex: 1;
+  margin-right: 10px;
+}
+#charitable-welcome .charitable-button-wrap .right {
+  flex: 1;
+  margin-left: 10px;
+}
+#charitable-welcome a.charitable-button-link {
+  background-color: #5aa152;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  position: relative;
+  top: -4px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-shadow: none;
+  line-height: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 80%;
+  text-align: center;
+}
+#charitable-welcome a.charitable-button-link:hover {
+  background-color: #43833b !important;
+  border-color: #43833b !important;
+}
+#charitable-welcome a.charitable-button-orange {
+  background-color: #e27730;
+}
+#charitable-welcome a.charitable-button-orange:hover {
+  background-color: #b65c21 !important;
+  border-color: #b65c21 !important;
+}
+#charitable-welcome a.charitable-button-grey {
+  background-color: #eee;
+  border-color: #ccc;
+  color: #666;
+}
+#charitable-welcome a.charitable-button-grey:hover {
+  background-color: #d7d7d7 !important;
+  border-color: #ccc !important;
+  color: #444 !important;
+}
+#charitable-welcome .charitable-clear:before {
+  content: " ";
+  display: table;
+}
+#charitable-welcome .charitable-clear:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+#charitable-welcome .charitable-checklist-section {
+  border-radius: 2px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  background: #444 url("../../images/onboarding/checklist/getting-started.png") center right 20px no-repeat;
+  background-size: contain;
+}
+#charitable-welcome .charitable-checklist-section .block {
+  padding: 40px;
+  max-width: 420px;
+}
+#charitable-welcome .charitable-checklist-section h1 {
+  color: #ffffff;
+  text-align: left;
+  margin: 20px 0 22px;
+}
+#charitable-welcome .charitable-checklist-section h6 {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: left;
+  color: #cccccc;
+  margin: 0 0 34px;
+}
+#charitable-welcome .charitable-checklist-section .button-wrap a {
+  background-color: #e27730;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  position: relative;
+  top: -4px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-shadow: none;
+  line-height: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: center;
+}
+#charitable-welcome .charitable-features {
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  border-bottom: 0;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#charitable-welcome .charitable-features .charitable-feature-list {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px 20px;
+}
+#charitable-welcome .charitable-features .feature-block {
+  padding-bottom: 35px;
+  overflow: auto;
+}
+#charitable-welcome .charitable-features .feature-block.last {
+  padding-left: 20px;
+}
+#charitable-welcome .charitable-features .feature-block img,
+#charitable-welcome .charitable-features .feature-block-icon {
+  float: left;
+  max-width: 46px;
+}
+#charitable-welcome .charitable-features .feature-block-icon svg {
+  max-width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+}
+#charitable-welcome .charitable-features .feature-block-icon.drag-drop svg {
+  width: 50px;
+  max-width: 50px;
+  margin: -2px 0 0 3px;
+}
+#charitable-welcome .charitable-features .feature-block h5 {
+  margin-left: 60px;
+}
+#charitable-welcome .charitable-features .feature-block p {
+  margin: 0;
+  margin-left: 60px;
+}
+#charitable-welcome .charitable-features .button-wrap {
+  margin-top: 25px;
+  text-align: center;
+  display: flex;
+}
+#charitable-welcome .charitable-upgrade-cta {
+  background-color: #000;
+  border: 2px solid #e1e1e1;
+  margin: 40px auto;
+  border-top: 0;
+  border-bottom: 0;
+  color: #fff;
+}
+#charitable-welcome .charitable-upgrade-cta .block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#charitable-welcome .charitable-upgrade-cta h2 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 0 30px 0;
+}
+#charitable-welcome .charitable-upgrade-cta ul {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+#charitable-welcome .charitable-upgrade-cta ul li {
+  display: flex;
+  width: 50%;
+  margin: 0 0 8px 0;
+  padding: 0;
+  gap: 5px;
+}
+#charitable-welcome .charitable-upgrade-cta ul li .dashicons {
+  color: #008a20;
+}
+#charitable-welcome .charitable-upgrade-cta .left {
+  max-width: 470px;
+}
+#charitable-welcome .charitable-upgrade-cta .right {
+  text-align: center;
+}
+#charitable-welcome .charitable-upgrade-cta .right h2 {
+  text-align: center;
+  margin: 0 span;
+  margin-display: inline-block;
+  margin-border-bottom: 1px solid #555;
+  margin-padding: 0 15px 12px;
+}
+#charitable-welcome .charitable-upgrade-cta .right .price {
+  padding: 26px 0;
+}
+#charitable-welcome .charitable-upgrade-cta .right .price .amount {
+  font-size: 48px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+#charitable-welcome .charitable-upgrade-cta .right .price .amount:before {
+  content: "$";
+  position: absolute;
+  top: -8px;
+  left: -16px;
+  font-size: 18px;
+}
+#charitable-welcome .charitable-upgrade-cta .right .price .term {
+  font-size: 12px;
+  display: inline-block;
+}
+#charitable-welcome .charitable-upgrade-cta .right a {
+  background-color: #e27730;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  position: relative;
+  top: -4px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-shadow: none;
+  line-height: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 80%;
+  text-align: center;
+}
+#charitable-welcome .testimonials {
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  border-top: 0;
+  padding: 20px 0;
+}
+#charitable-welcome .testimonials .testimonials-stars {
+  margin: -5px 0 0 132px;
+}
+#charitable-welcome .testimonials .testimonials-stars div {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin: 0 -4px 0 0;
+}
+#charitable-welcome .testimonials .testimonials-stars div svg {
+  fill: #fbbf24;
+  height: 30px;
+  width: 30px;
+}
+#charitable-welcome .testimonials .testimonial-block {
+  margin: 50px 0 0 0;
+}
+#charitable-welcome .testimonials .testimonial-block img {
+  border-radius: 50%;
+  float: left;
+  max-width: 100px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+}
+#charitable-welcome .testimonials .testimonial-block p {
+  font-size: 14px;
+  margin: 0 0 12px 140px;
+}
+#charitable-welcome .testimonials .testimonial-block p:last-of-type {
+  margin-bottom: 0;
+}
+#charitable-welcome .testimonials .charitable-cerified-user svg {
+  position: relative;
+  top: 6px;
+  left: 6px;
+}
+#charitable-welcome .footer {
+  background-color: #f1f1f1;
+  border: 2px solid #e1e1e1;
+  border-top: 0;
+  border-radius: 0 0 2px 2px;
+}
+#charitable-welcome .footer .button-wrap {
+  display: flex;
+  flex-direction: column;
+}
+#charitable-welcome .footer .button-wrap > div {
+  align-self: center;
+}
+#charitable-welcome .footer .charitable-text-link {
+  margin: 20px auto;
+  color: grey;
+  text-decoration: underline;
+  text-decoration-color: grey;
+  text-decoration-thickness: 2px;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+#charitable-welcome .footer .charitable-text-link:hover {
+  text-decoration: underline;
+}
+#charitable-welcome .gateway-connect {
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+#charitable-welcome .gateway-connect .gateway-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border-top: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid rgb(235, 235, 235);
+  padding: 10px 0;
+  margin: 20px auto;
+  background-color: #fff;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container .charitable-badge {
+  top: -4px;
+  position: relative;
+  left: 5px;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container h3 {
+  margin-bottom: 5px;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container.charitable-column {
+  flex-direction: column;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container:not(.charitable-column) div:first-child {
+  display: flex;
+  align-items: center;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container-row {
+  width: 100%;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container div.charitable-sub-container-row {
+  display: block;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container img.wpchar-arrow {
+  position: relative;
+  top: 5px;
+  margin-left: 5px;
+}
+#charitable-welcome .gateway-connect .charitable-sub-container:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#charitable-welcome .gateway-connect .charitable-gateway-icon,
+#charitable-welcome .gateway-connect .charitable-gateway-info-column {
+  display: inline-block;
+}
+#charitable-welcome .gateway-connect .charitable-gateway-info-column {
+  margin: 0 0 0 20px;
+  max-width: 250px;
+}
+#charitable-welcome .gateway-connect .charitable-gateway-footer label {
+  font-size: 15px;
+  line-height: 16px;
+}
+#charitable-welcome .gateway-connect .charitable-gateway-icon img {
+  border: 1px solid rgba(25, 29, 45, 0.14);
+  border-radius: 10px;
+  padding: 10px;
+}
+#charitable-welcome .gateway-connect .wpcharitable-stripe-connect {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1;
+  background-color: #635bff;
+  border-radius: 3px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* modal */
+body.dashboard_page_charitable-getting-started div.jconfirm .jconfirm-box-container .jconfirm-box .jconfirm-content-pane .jconfirm-content {
+  color: #444444;
+  font-size: 16px;
+  line-height: 24px;
+}
+body.dashboard_page_charitable-getting-started div.jconfirm .jconfirm-box-container .jconfirm-box .jconfirm-content-pane .jconfirm-content p {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0 0 16px;
+}
+body.dashboard_page_charitable-getting-started div.jconfirm .jconfirm-box-container .jconfirm-box .btn-confirm {
+  background-color: #0399ed;
+  border-color: #0399ed;
+  color: white;
+  font-weight: 700;
+}
+
+/* video popup */
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-content {
+  margin-bottom: 0 !important;
+}
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-closeIcon {
+  right: 10px !important;
+}
+
+@media (max-width: 767px) {
+  #charitable-welcome {
+    padding-top: 64px;
+  }
+}
+@media (max-width: 767px) {
+  #charitable-welcome .block {
+    padding: 20px;
+  }
+}
+@media (max-width: 767px) {
+  #charitable-welcome .button-wrap .left {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  #charitable-welcome .button-wrap .right {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  #charitable-welcome .features .feature-block {
+    float: none;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #charitable-welcome .features .feature-block.last {
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .charitable-upgrade-cta .left {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .charitable-upgrade-cta .right {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials .testimonial-block img {
+    width: 65px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials .testimonial-block p {
+    margin-left: 100px;
+  }
+}

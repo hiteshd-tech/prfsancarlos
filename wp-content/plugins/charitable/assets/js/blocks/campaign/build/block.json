@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/campaignblock",
+  "version": "0.2.0",
+  "title": "Charitable Campaign",
+  "category": "widgets",
+  "icon": "feedback",
+  "description": "Quickly add a single Charitable campaign.",
+  "keywords": [
+    "charitable",
+    "campaign",
+    "donation"
+  ],
+  "attributes": {
+    "campaignID": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "center",
+      "left",
+      "right",
+      "wide"
+    ]
+  },
+  "textdomain": "campaignblock",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

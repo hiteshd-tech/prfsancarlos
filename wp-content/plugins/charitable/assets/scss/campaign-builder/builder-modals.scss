@@ -1,0 +1,215 @@
+// Form Builder styles.
+//
+// Basic styles.
+//
+// @since 1.8.0
+
+@import 'partials/common';
+@import 'partials/buttons';
+
+body div.jconfirm .jconfirm-box-container .jconfirm-box {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    animation: none;
+    background: #ffffff;
+    border: 1px solid #DDD;
+    border-radius: 0;
+    box-shadow: none;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 0;
+    padding-right: 0;
+
+    .jconfirm-closeIcon {
+        color: #8C8E96;
+        top: 20px;
+        right: 20px;
+    }
+
+    .jconfirm-title-c {
+        grid-column: 1 / -1;
+        color: rgba(0,0,0,0.87);
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+        user-select: none;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .jconfirm-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 33px;
+    }
+
+    .jconfirm-title:first-letter{
+        text-transform: capitalize;
+    }
+
+    .jconfirm-content-pane {
+        height: auto !important;
+        min-height: fit-content;
+        grid-column: 1 / -1;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        .jconfirm-content p.small {
+            font-size: 14px;
+        }
+
+        .jconfirm-content.lite-upgrade p {
+            color: #757781;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 0 20px;
+        }
+    }
+
+    .jconfirm-content-pane .jconfirm-content input[type=text],
+    .jconfirm-content-pane .jconfirm-content input[type=number],
+    .jconfirm-content-pane .jconfirm-content input[type=email],
+    .jconfirm-content-pane .jconfirm-content input[type=url],
+    .jconfirm-content-pane .jconfirm-content input[type=password],
+    .jconfirm-content-pane .jconfirm-content input[type=search],
+    .jconfirm-content-pane .jconfirm-content input[type=tel],
+    .jconfirm-content-pane .jconfirm-content textarea,
+    .jconfirm-content-pane .jconfirm-content select {
+        margin: 10px 2px;
+        width: calc(100% - 4px);
+    }
+
+    .discount-note {
+        grid-row: 4;
+        grid-column: 1 / -1;
+        margin: 25px 0 0 0;
+        text-align: center;
+
+        p {
+            background-color: #fcf9e8;
+            color: #777777;
+            font-size: 16px;
+            margin: 0 -30px;
+            padding: 22px 52px 12px 52px;
+            position: relative;
+        }
+
+        p:after {
+            top: -16px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            color: #00a32a;
+            content: "\f058";
+            display: inline-block;
+            font: normal normal normal 14px FontAwesome;
+            font-size: 26px;
+            margin-right: -18px;
+            padding: 5px 6px;
+            position: absolute;
+            right: 50%;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        span {
+            color: #00a32a;
+            font-weight: 700;
+        }
+
+        a {
+            color: #777777;
+            display: block;
+            margin-top: 12px;
+        }
+
+    }
+
+    .already-purchased-div {
+        grid-row: 5;
+        grid-column: 1 / -1;
+    }
+
+    .already-purchased {
+        display: block;
+        grid-column: 1 / -1;
+        color: #757781;
+        font-size: 14px;
+        margin-top: 15px;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    .already-purchased:hover {
+        color: #777777;
+        text-decoration: underline;
+    }
+
+
+    .jconfirm-content.lite-upgrade {
+        margin-bottom: 0;
+        p {
+            color: #777777;
+            font-size: 18px;
+            padding: 0;
+        }
+    }
+
+    .jconfirm-buttons {
+        grid-column: 1 / -1;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .lite-promo {
+        grid-column: 1/-1;
+        display: block;
+        width: 100%;
+        background-color: #FCFAE8;
+        font-weight: normal;
+        color: #747578;
+        font-size: 15px;
+        line-height: 19px;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        padding: 20px 40px;
+        strong,
+        span {
+            font-weight: 700;
+        }
+        strong.percent {
+            color: #3A873D;
+        }
+    }
+
+    button {
+        min-width: 83px;
+        background: #f8f8f8;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        color: #777777;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        outline: none;
+        padding: 11px 17px;
+        text-transform: none;
+        transition-property: all;
+        transition-duration: 0.15s;
+        transition-timing-function: ease-out;
+        white-space: normal;
+
+        &.btn-confirm {
+            background-color: #e27730;
+            border-color: #e27730;
+            color: $color_white;
+            text-transform: capitalize;
+        }
+
+    }
+
+}

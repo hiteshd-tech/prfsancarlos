@@ -1,0 +1,42 @@
+// Admin styles.
+//
+// Loading spinner.
+//
+
+
+.charitable-loading-spinner {
+	background-image: url( "../../images/campaign-builder/spinner.svg" );
+	background-repeat: no-repeat;
+	background-size: 15px 15px;
+	background-position: center;
+	display: block;
+	height: 15px;
+	margin: 0;
+	vertical-align: -2px;
+	width: 15px;
+
+	@include animation( charitable-spinner-rotation .8s linear infinite );
+
+	&.charitable-loading-white {
+		background-image: url( "../../images/campaign-builder/spinner-white.svg" );
+	}
+
+	&.charitable-loading-md {
+		background-size: 24px 24px;
+		height: 24px;
+		width: 24px;
+	}
+
+	&.charitable-loading-inline {
+		display: inline-block;
+	}
+}
+
+@keyframes charitable-spinner-rotation {
+	from {
+		transform: rotate( 0deg );
+	}
+	to {
+		transform: rotate( 360deg );
+	}
+}

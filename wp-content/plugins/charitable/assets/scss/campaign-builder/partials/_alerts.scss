@@ -1,0 +1,125 @@
+// Form Builder styles.
+//
+// Alert styles.
+//
+// @since 1.8.0
+
+.charitable-admin-page {
+	.charitable-alert {
+		background-color: $color_white;
+		border: none;
+		border-left: 4px solid $color_divider;
+		box-shadow: 0 2px 2px rgba( 0, 0, 0, .05 );
+		color: $color_secondary_text;
+		font-size: $font_size_s;
+		font-weight: 400;
+		line-height: $font_size_l;
+		margin-bottom: $spacing_m;
+		padding: $spacing_s;
+
+		&-dismissible {
+			align-content: stretch;
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+			margin: $spacing_l $spacing_ms $spacing_m $spacing_ms;
+			max-height: 100px;
+			opacity: 1;
+			overflow: hidden;
+
+			@include transition( all, $transition_slow, ease-out );
+
+			&.out {
+				margin-bottom: 0;
+				margin-top: 0;
+				max-height: 0;
+				opacity: 0;
+				padding-bottom: 0;
+				padding-top: 0;
+			}
+
+			h4 {
+				margin: 0 0 2px 0;
+			}
+
+			p {
+				color: $color_primary_text;
+			}
+		}
+
+		&-buttons {
+			display: flex;
+			margin-left: auto;
+			padding-left: $spacing_s;
+
+			.charitable-dismiss-button {
+				color: rgba( 68, 68, 68, .35 );
+				margin-left: 7px;
+				margin-right: -3px;
+
+				&:hover {
+					color: rgba( 68, 68, 68, .75 );
+				}
+			}
+		}
+
+		h4 {
+			color: $color_primary_text;
+			font-size: $font_size_s;
+			font-weight: 600;
+			line-height: $font_size_l;
+			margin: 0 0 3px 0;
+		}
+
+		p {
+			line-height: $font_size_l;
+			margin: 0 0 $spacing_s 0;
+
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+
+		&.charitable-alert-nomargin {
+			margin: 0;
+		}
+
+		&.charitable-alert-success {
+			border-left-color: $color_green;
+		}
+
+		&.charitable-alert-info {
+			border-left-color: $color_blue;
+		}
+
+		&.charitable-alert-warning {
+			border-left-color: $color_yellow;
+		}
+
+		&.charitable-alert-danger {
+			border-left-color: $color_red;
+		}
+	}
+
+	.charitable-panel-content {
+		.charitable-alert {
+			box-shadow: none;
+
+			&.charitable-alert-success {
+				background-color: $color_lightest_green;
+			}
+
+			&.charitable-alert-info {
+				background-color: $color_lightest_blue;
+			}
+
+			&.charitable-alert-warning {
+				background-color: $color_lightest_yellow;
+			}
+
+			&.charitable-alert-danger {
+				background-color: $color_lightest_red;
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+// Form Builder styles.
+//
+// Variables.
+//
+// @since 1.8.0
+
+// Font sizes.
+$font_size_2xs:      11px;
+$font_size_xs:       12px;
+$font_size_ss:       13px;
+$font_size_s:        14px;
+$font_size_m:        16px;
+$font_size_l:        18px;
+$font_size_ll:       20px;
+$font_size_xl:       24px;
+$font_size_xxl:      28px;
+
+// Font family.
+$font_general:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font_mono:           monospace;
+$font_fa:             FontAwesome;
+
+// Spacing.
+$spacing_xs:          5px;
+$spacing_ss:          8px;
+$spacing_s:           10px;
+$spacing_ms:          15px;
+$spacing_m:           20px;
+$spacing_ml:          25px;
+$spacing_l:           30px;
+$spacing_ll:          35px;
+$spacing_xl:          40px;
+$spacing_xll:         45px;
+$spacing_xxl:         50px;
+
+// Border radius.
+$border_radius_xs:    3px;
+$border_radius_s:     4px;
+$border_radius_m:     6px;
+
+// Border.
+$border_std:          1px solid $color_border;
+
+// Transitions.
+$transition_slowest:  .50s;
+$transition_slower:   .40s;
+$transition_slow:     .25s;
+$transition_normal:   .15s;
+$transition_fast:     .05s;
+
+// Dimensions.
+$toolbar_height:      76px;
+$panels_toggle_width: 95px;
+$sidebar_width:       400px;
+$option_toggle_width: 13px;
+
+// Field preview size.
+$field_size_small:    25%;
+$field_size_medium:   60%;
+$field_size_large:    100%;
+
+$field_min_width:     250px;
+
+// Choices icons path.
+$choices-button-icon-path: '../../images';

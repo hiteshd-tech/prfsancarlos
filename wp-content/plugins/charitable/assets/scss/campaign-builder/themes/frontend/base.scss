@@ -1,0 +1,155 @@
+// Campaign Builder Preview styles.
+//
+// Base styles.
+//
+// @since 1.8.0
+
+// Template name
+// $template: 'base';
+
+// Colors by name:
+$color_theme_base_primary:   #000;
+$color_theme_base_secondary: #CCC;
+$color_theme_base_tertiary:  #999;
+$color_theme_base_accent:    #000;
+$color_button_base_bg:       #0caf60;
+
+:root {
+	--charitable_campaign_theme_primary: #000;
+	--charitable_campaign_theme_secondary: #CCC;
+	--charitable_campaign_theme_tertiary: #999;
+    --charitable_campaign_theme_accent: #000;
+	--charitable_campaign_theme_button: #0caf60;
+}
+
+/* Table of Contents */
+
+/* 1.0 - Fonts, Sizes */
+
+/* 2.0 - Rows / Columns */
+
+@import '../frontend/partials/base/rows-columns';
+
+/* 3.0 - Headlines */
+
+@import '../frontend/partials/base/headlines';
+
+/* 4.0 - Containers */
+
+@import '../frontend/partials/base/containers';
+
+/* 5.0 - Tabs  */
+
+@import '../frontend/partials/base/tabs';
+
+/* 6.0 - Fields/Blocks  */
+
+    /* 6.1 - Campaign Description */
+
+    @import '../frontend/partials/base/campaign-description';
+
+    /* 6.1 - Campaign Title */
+
+    @import '../frontend/partials/base/campaign-title';
+
+    /* 6.3 - Campaign Summary */
+
+    @import '../frontend/partials/base/campaign-summary';
+
+    /* 6.4 - Donation Button */
+
+    @import '../frontend/partials/base/donation-button';
+
+    /* 6.5 - Progress Bar */
+
+    @import '../frontend/partials/base/progress-bar';
+
+    /* 6.6 - Photo */
+
+    @import '../frontend/partials/base/photo';
+
+    /* 6.7 - Organizer */
+
+    @import '../frontend/partials/base/organizer';
+
+    /* 6.8 - Donate Amount */
+
+    @import '../frontend/partials/base/donate-amount';
+
+    /* 6.9 - Social Linking */
+
+    @import '../frontend/partials/base/social-linking';
+
+    /* 6.10 - Social Sharing */
+
+    @import '../frontend/partials/base/social-sharing';
+
+    /* 6.11 - Social Wall */
+
+    @import '../frontend/partials/base/donor-wall';
+
+    /* 6.12 - Donation Form */
+
+    @import '../frontend/partials/base/donation-form';
+
+    /* 6.13 - Text */
+
+    @import '../frontend/partials/base/text';
+
+    /* 6.14 - Shortcode */
+
+    @import '../frontend/partials/base/shortcode';
+
+/* 7.0 Alignment */
+
+@import '../frontend/partials/base/alignment';
+
+/* 8.0 Mobile / Responsive */
+
+@import '../frontend/partials/base/mobile';
+
+/* 9.0 Misc */
+
+.charitable-preview-messages {
+
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+    .charitable-preview-alert {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+}
+
+.charitable-campaign-wrap {
+
+    width: 100% !important;
+
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+    .charitable-campaign-container {
+
+        .charitable-notice {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #fff;
+        }
+        .charitable-notice-errors {
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .charitable-notice.charitable-notice-error {
+            border-left: 4px solid #dc3232;
+        }
+
+    }
+
+}

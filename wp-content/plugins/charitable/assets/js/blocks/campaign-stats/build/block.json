@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "charitable/campaign-stats",
+  "version": "0.1.0",
+  "title": "Campaign Stats",
+  "category": "widgets",
+  "icon": "feedback",
+  "description": "Allows various statistics to be dynamically calculated and displayed on a page.",
+  "keywords": [
+    "charitable",
+    "campaign",
+    "donation"
+  ],
+  "attributes": {
+    "campaignIDs": {
+      "type": "string"
+    },
+    "display": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "center",
+      "left",
+      "right",
+      "wide"
+    ]
+  },
+  "textdomain": "charitable",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

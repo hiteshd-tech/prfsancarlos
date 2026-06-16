@@ -1,0 +1,98 @@
+/* Receipts */
+.donation-summary {
+  margin-bottom: 1em;
+  padding-bottom: 0; }
+  .donation-summary dd, .donation-summary dt {
+    margin-top: 0; }
+  .donation-summary dt {
+    float: left;
+    margin-right: .5em;
+    font-weight: bold; }
+  .donation-summary dd {
+    display: block;
+    margin-bottom: 0; }
+  .donation-summary dd::after {
+    content: " ";
+    display: block;
+    clear: left; }
+
+.charitable-table tr, .charitable-table td {
+  padding-right: 1.5em; }
+
+body#charitable-print-stage {
+  font: 11pt Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  font-weight: normal;
+  color: #000;
+  margin: 0 !important;
+  background: #999 url("../images/halftone-pattern.png") repeat;
+  padding: 45px 0 0 0; }
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 1px 10px 1px #ccc; }
+  nav a {
+    background: #333;
+    display: flex;
+    padding: 7px;
+    border-radius: 5px;
+    color: #eee;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer; }
+    nav a svg {
+      margin-right: 5px;
+      width: 20px;
+      height: 20px; }
+
+article {
+  width: 159mm;
+  padding: 25mm 16mm;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 1px 10px 1px #ccc; }
+
+#charitable-donation-receipt {
+  border-radius: 0;
+  background: transparent; }
+  #charitable-donation-receipt .charitable-receipt-header .charitable-donation-status {
+    background: transparent;
+    color: #666;
+    text-transform: uppercase;
+    padding: 0.5em 0; }
+  #charitable-donation-receipt .charitable-donation-options {
+    display: none; }
+  #charitable-donation-receipt table {
+    width: 100%; }
+    #charitable-donation-receipt table td, #charitable-donation-receipt table th {
+      padding: 10px 0; }
+
+@page {
+  size: 210mm 297mm; }
+@media print {
+  body {
+    background: #fff;
+    padding-top: 0; }
+
+  article {
+    box-shadow: none; }
+
+  #hide-for-print {
+    display: none; }
+
+  #footer {
+    position: fixed;
+    bottom: 0;
+    height: 27mm; } }
+
+/*# sourceMappingURL=charitable-print.css.map */

@@ -1,0 +1,69 @@
+// Form Builder styles.
+//
+// Layout Selector.
+//
+// @since 1.8.0
+
+#charitable-panel-design .layout-selector-display {
+	.layouts {
+		background-color: $color_white;
+		border: 1px solid $color_fields_border;
+		border-radius: $border_radius_s;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 1px !important;
+		padding: $spacing_s $spacing_xs 2px $spacing_xs;
+		width: 100% !important;
+	}
+
+	.layout-selector-display-layout {
+		cursor: pointer;
+		min-width: 25%;
+		padding: 0 $spacing_xs $spacing_xs $spacing_xs;
+	}
+
+	span {
+		background-color: $color_fields_border;
+		border: 1px solid $color_white;
+		display: inline-block;
+		height: 30px;
+
+		@include transition( background-color, $transition_slow, ease-in );
+
+		&.one-half {
+			width: #{ 100% * 1 / 2 };
+		}
+
+		&.one-third {
+			width: #{ 100% * 1 / 3 };
+		}
+
+		&.two-third {
+			width: #{ 100% * 2 / 3 };
+		}
+
+		&.one-fourth {
+			width: #{ 100% * 1 / 4 };
+		}
+
+		&.two-fourth {
+			width: #{ 100% * 2 / 4 };
+		}
+	}
+
+	.layout-selector-display-layout:hover span,
+	.layout-selector-display-columns span:hover {
+		background-color: $color_blue;
+	}
+
+	.layout-selector-display-columns {
+		min-width: 100%;
+		padding: 0 $spacing_xs $spacing_xs $spacing_xs;
+
+		span {
+			border: 2px solid $color_white;
+			cursor: pointer;
+			height: 70px;
+		}
+	}
+}

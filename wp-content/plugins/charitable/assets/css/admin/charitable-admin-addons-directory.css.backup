@@ -1,0 +1,397 @@
+/* addon settings */
+
+.charitable-clear:before {
+    content:" ";
+    display:table
+   }
+  .charitable-clear:after {
+    clear:both;
+    content:" ";
+    display:table
+  }
+
+  .charitable-admin-wrap {
+    margin: 0;
+  }
+
+  #charitable-admin-addons *,
+  #charitable-admin-addons *::before,
+  #charitable-admin-addons *::after {
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   box-sizing:border-box
+  }
+  #charitable-admin-addons #charitable-admin-addons-list .list {
+   display:flex;
+   flex-wrap:wrap;
+   align-items:stretch;
+   margin-left:-20px;
+   margin-right:-20px
+  }
+  #charitable-admin-addons #charitable-admin-addons-list .list .action-button button {
+   background:none;
+   border:1px solid #ddd;
+   border-radius:3px;
+   box-shadow:none;
+   font-weight:600;
+   width:140px;
+   text-align:center;
+   padding:8px 5px
+  }
+  #charitable-admin-addons #charitable-admin-addons-list .list .action-button button:hover,
+  #charitable-admin-addons #charitable-admin-addons-list .list .action-button button:focus,
+  #charitable-admin-addons #charitable-admin-addons-list .list .action-button button.loading {
+   background-color:#e9e9e9
+  }
+  #charitable-admin-addons #charitable-admin-addons-list .list .action-button button:focus {
+   border-color:#2271b1;
+   box-shadow:0 0 0 1px #2271b1;
+   outline:none
+  }
+  #charitable-admin-addons .addons-container {
+   display:flex;
+   flex-wrap:wrap;
+   align-items:stretch;
+   margin-left:-20px;
+   margin-right:-20px
+  }
+  #charitable-admin-addons .unlock-msg {
+   padding:0;
+   margin-top:-20px;
+   clear:both
+  }
+  #charitable-admin-addons .unlock-msg h4 {
+   margin:1.5em 0 8px
+  }
+  #charitable-admin-addons .unlock-msg p {
+   margin:0 0 1.5em
+  }
+  #charitable-admin-addons #charitable-admin-addons-search {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #333;
+    vertical-align: middle;
+    padding: 2px 12px;
+    margin: -2px -10px 0 0;
+    width: 200px;
+    min-height: 30px;
+    float: right;
+  }
+  #charitable-admin-addons #charitable-admin-addons-search:focus {
+   border-color:#bbb
+  }
+  #charitable-admin-addons .addon-container {
+   padding:0 20px;
+   width:33.333333%;
+   margin-bottom:20px
+  }
+  @media (max-width: 1249px) {
+   #charitable-admin-addons .addon-container {
+    width:50%
+   }
+  }
+  @media (max-width: 767px) {
+   #charitable-admin-addons .addon-container {
+    width:100%
+   }
+  }
+  #charitable-admin-addons h4 {
+   font-size:17px;
+   font-weight:700
+  }
+  #charitable-admin-addons .addon-item {
+   background-color:#fff;
+   border:1px solid #ddd;
+   border-radius:3px;
+   margin:0;
+   height:100%;
+   display:flex;
+   flex-direction:column;
+   justify-content:space-between;
+   overflow:hidden;
+   position: relative;
+  }
+  #charitable-admin-addons .addon-item img {
+   border:1px solid #eee;
+  }
+  #charitable-admin-addons .addon-item h5 {
+   margin:0 0 0 0;
+   font-size:16px
+  }
+  #charitable-admin-addons .addon-item h5 a {
+   color:#444;
+   display:inline-block;
+   margin:0 10px 10px 0;
+   text-decoration: none;
+  }
+  #charitable-admin-addons .addon-item h5 a:hover {
+   color:#006799
+  }
+  #charitable-admin-addons .addon-item p {
+   margin:0 0 0 0
+  }
+  #charitable-admin-addons .addon-item .details {
+   padding:30px 20px
+  }
+  #charitable-admin-addons .addon-item .actions {
+   display:flex;
+   align-items:center;
+   background-color:#f7f7f7;
+   border-top:1px solid #ddd;
+   padding:20px;
+   min-height:75px;
+   position:relative
+  }
+  #charitable-admin-addons .addon-item .actions .msg {
+   background-color:#f7f7f7;
+   border:none;
+   position:absolute;
+   text-align:center;
+   font-weight:600;
+   top:0;
+   left:0;
+   height:100%;
+   width:100%;
+   margin:0;
+   z-index:99;
+   padding:20px;
+   display:flex;
+   align-items:center;
+   justify-content:center
+  }
+  #charitable-admin-addons .addon-item .actions .msg.success {
+   color:#2a9b39
+  }
+  #charitable-admin-addons .addon-item .actions .msg.error {
+   color:red
+  }
+  #charitable-admin-addons .addon-item .actions .msg p {
+   margin:0
+  }
+  #charitable-admin-addons .addon-item .actions .msg a,
+  #charitable-admin-addons .addon-item .actions .msg a:hover {
+   color:inherit
+  }
+  #charitable-admin-addons .addon-item .status {
+   flex-grow:1
+  }
+  #charitable-admin-addons .addon-item .status .status-missing,
+  #charitable-admin-addons .addon-item .status .status-go-to-url {
+   color:#666
+  }
+  #charitable-admin-addons .addon-item .status .status-installed {
+   color:red
+  }
+  #charitable-admin-addons .addon-item .status .status-active {
+   color:#2a9b39
+  }
+  #charitable-admin-addons .addon-item .upgrade-button {
+   text-align:center
+  }
+  #charitable-admin-addons .addon-item .upgrade-button a,
+  #charitable-admin-addons .addon-item .action-button-charitable-pro-plugin a {
+   font-weight:600;
+   width:140px;
+   text-align:center;
+   padding:8px 5px
+  }
+  #charitable-admin-addons .addon-item .action-button button {
+   width:140px
+  }
+  #charitable-admin-addons .addon-item .charitable-addon-recommended {
+   background-color:#00a32a;
+   border-radius:4px;
+   color:#ffffff;
+   font-size:10px;
+   font-weight:700;
+   line-height:1;
+   padding:4px 5px;
+   margin-bottom:5px;
+   display:inline-block;
+   position:relative;
+   top:-2px;
+   text-transform:uppercase;
+   cursor:default
+  }
+  #charitable-admin-addons .addon-item .charitable-addon-recommended i {
+   opacity:0.8
+  }
+  .addon-item .status {
+   flex-grow:1
+  }
+  .addon-item .status .status-inactive {
+   color:red
+  }
+  .addon-item .status .status-active {
+   color:#2a9b39
+  }
+  .addon-item .upgrade-button {
+   text-align:center
+  }
+  .addon-item .upgrade-button a {
+   font-weight:600;
+   width:140px;
+   text-align:center;
+   padding:8px 5px
+  }
+  .addon-item .action-button button {
+   cursor:pointer
+  }
+  .addon-item .action-button button .fa {
+   margin-right:8px
+  }
+  .addon-item .action-button button .fa.fa-spinner {
+   margin-right:0
+  }
+  .addon-item .action-button button.status-active .fa {
+   color:#2a9b39
+  }
+  .addon-item .action-button button.status-inactive .fa {
+   color:red
+  }
+  .addon-item .action-button button.status-missing .fa {
+   color:#999
+  }
+  .addon-item .action-button button.disabled {
+   cursor:default;
+   pointer-events:none
+  }
+  .addon-item .action-button button.loading {
+   cursor:default
+  }
+  .addon-item .action-button button.loading .fa {
+   color:#666
+  }
+  .addon-item .action-button a {
+   text-decoration:none
+  }
+  #charitable-admin-addons .addon-item .recommended {
+    position: absolute;
+    background: green;
+    padding: 10px 15px;
+    color: White;
+    font-size: 14px;
+    font-weight: 700;
+    top: 1px;
+    left: 1px;
+  }
+  body.charitable_page_charitable-addons #charitable-addons {
+    margin-top: 20px;
+  }
+  body.charitable_page_charitable-addons #charitable-settings h1 {
+    display: none;
+  }
+  body.charitable_page_charitable-addons #charitable-settings h1.page-title {
+    display: block;
+  }
+
+  /* cta settings */
+
+#charitable-settings .settings-lite-cta {
+  background-color:#fff;
+  border:1px solid #dadada;
+  padding:25px 20px;
+  margin:10px 0 40px 0;
+  position:relative
+ }
+ #charitable-settings .settings-lite-cta .dismiss {
+  position:absolute;
+  top:10px;
+  right:10px;
+  color:#666;
+  font-size:16px
+ }
+ #charitable-settings .settings-lite-cta h5 {
+  margin:0 0 16px;
+  font-size:18px;
+  font-weight:700
+ }
+ #charitable-settings .settings-lite-cta h6 {
+  font-weight:700;
+  font-size:14px;
+  margin:0 0 16px
+ }
+ #charitable-settings .settings-lite-cta p {
+  color:#555;
+  font-size:14px;
+  margin:0 0 16px
+ }
+ #charitable-settings .settings-lite-cta p:last-of-type {
+  margin:0
+ }
+ #charitable-settings .settings-lite-cta p a {
+  color:#e27730
+ }
+ #charitable-settings .settings-lite-cta p a:hover {
+  color:#b85a1b
+ }
+ #charitable-settings .settings-lite-cta ul {
+  margin:0;
+  padding:0;
+  width:50%;
+  float:left
+ }
+ @media (max-width: 600px) {
+  #charitable-settings .settings-lite-cta ul {
+   width:100%;
+   float:none
+  }
+ }
+ #charitable-settings .settings-lite-cta ul li {
+  margin:0;
+  padding:0 0 2px 16px;
+  color:#555;
+  font-size:14px;
+  position:relative
+ }
+ #charitable-settings .settings-lite-cta ul li:before {
+  content:'+';
+  position:absolute;
+  top:-1px;
+  left:0
+ }
+ #charitable-settings .settings-lite-cta .list {
+  margin:0 0 16px 0;
+  overflow:auto;
+  max-width:900px
+ }
+ #charitable-settings .settings-lite-cta .green {
+  color:#218900;
+  font-weight:700
+ }
+ #charitable-settings .settings-lite-cta .fa-star {
+  color:#ff982d
+ }
+ #charitable-settings .tablenav .tablenav-pages a,
+ #charitable-settings .tablenav-pages-navspan {
+  min-width:28px;
+  height:auto
+ }
+ .charitable-admin-wrap #charitable-settings .notice {
+  margin-left:0 !important;
+  margin-right:0 !important
+ }
+
+ /* Ensure Charitable Pro button matches other addon buttons */
+ #charitable-admin-addons .addon-item button[data-plugin="charitable-pro/charitable.php"] {
+  background:none;
+  border:1px solid #ddd;
+  border-radius:3px;
+  box-shadow:none;
+  font-weight:600;
+  width:140px;
+  text-align:center;
+  padding:8px 5px;
+  cursor:pointer;
+ }
+ #charitable-admin-addons .addon-item button[data-plugin="charitable-pro/charitable.php"]:hover,
+ #charitable-admin-addons .addon-item button[data-plugin="charitable-pro/charitable.php"]:focus {
+  background-color:#e9e9e9;
+ }
+ #charitable-admin-addons .addon-item button[data-plugin="charitable-pro/charitable.php"]:focus {
+  border-color:#2271b1;
+  box-shadow:0 0 0 1px #2271b1;
+  outline:none;
+ }

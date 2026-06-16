@@ -1,0 +1,13 @@
+{
+	"name": "wpcharitable/charitable",
+	"description": "Charitable - WordPress Donation Plugin",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0+",
+	"autoload": {
+		"psr-4": {
+			"Charitable\\": "includes/"
+		}
+	},
+	"require": {}
+}
+

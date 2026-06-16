@@ -1,0 +1,112 @@
+.charitable-campaign-field.charitable-campaign-field-social-sharing {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+    .charitable-field-template-social-sharing-headline-container {
+        display: block;
+        float: left;
+        padding: 0;
+    }
+
+    .charitable-field-row {
+        display: block;
+        float: left;
+        width: auto;
+        margin: 0 0 0 0;
+    }
+
+    .charitable-placeholder {
+        padding: 10px;
+    }
+
+    .charitable-field-template-social-sharing {
+        display: table;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .charitable-field-row p {
+            display: none;
+        }
+
+        h5.charitable-field-template-headline {
+            font-size: 14px !important;
+            line-height: 36px !important;
+            font-weight: 300 !important;
+            margin: 0 20px 0 0;
+            padding: 0;
+            color: $color_theme_base_primary;
+            word-break: keep-all;
+        }
+
+        .charitable-field-row {
+
+            .charitable-social-field-column {
+                float: left;
+                margin-right: 20px;
+
+                .charitable-campaign-social-link {
+                    margin-top: 5px;
+                    min-height: 20px !important;
+
+                    img {
+                      width: auto;
+                      height: 25px;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      bottom: 0;
+                      border: 0;
+                  }
+
+                  a {
+                      width: 25px;
+                      height: 25px;
+                      display: block;
+                      position: relative;
+                  }
+
+                    a:hover {
+                        opacity: 0.65;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+
+/* echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-twitter .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-twitter .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/twitter-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-facebook .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-facebook .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/facebook-dark.svg');
+}
+
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-linkedin .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-linkedin .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/linkedin-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-instagram .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-instagram .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/instagram-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-pinterest .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-pinterest .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/pinterest-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-tiktok charitable-.placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-tiktok .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/tiktok-dark.svg');
+}
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-links .charitable-social-sharing-preview-mastodon .charitable-placeholder,
+<?php echo $wrapper; ?> .charitable-field.charitable-field-social-sharing .charitable-social-sharing-preview-mastodon .charitable-placeholder {
+  background-image: url('../../../../../assets/images/campaign-builder/fields/social-links/mastodon-dark.svg');
+} */

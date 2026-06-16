@@ -1,0 +1,1797 @@
+/* page */
+
+@charset "UTF-8";
+
+
+.charitable-setup-checklist {
+    max-width: 937px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.charitable-setup-checklist h1 {
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 27.3px;
+    text-align: left;
+    color: rgba(25, 29, 45, 0.9);
+}
+.charitable-setup-checklist h1 + p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(25, 29, 45, 0.7);
+}
+.charitable-main-header {
+    margin: 0 auto 20px auto;
+}
+
+.charitable-step-highlight {
+    background-color: rgb(255, 255, 77) !important;
+}
+
+/* sections */
+
+section.charitable-step {
+    display: inline-block;
+    background-color: white;
+    margin-bottom: 20px;
+    width: 100%;
+    /* animation for background color */
+    transition: background-color 0.5s;
+	header {
+    	padding: 20px;
+ 	   	border-bottom: 1px solid rgba(235, 235, 235, 1);
+	}
+	h2 {
+		color: rgba(25, 29, 45, 0.9);
+		font-weight: 600;
+		font-size: 17px;
+		line-height: 20px;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		small {
+			display: block;
+			font-weight: 100;
+			font-size: 14px;
+			line-height: 16px;
+			text-indent: 35px;
+			margin: 5px 0;
+		}
+	}
+}
+section.charitable-step header a {
+    display: block;
+    float: right;
+    font-size: 23px;
+    line-height: 23px;
+}
+section.charitable-step h2 {
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22.1px;
+    text-align: left;
+    color: rgba(25, 29, 45, 0.9);
+}
+section.charitable-step p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+    color: rgba(25, 29, 45, 0.9);
+}
+
+.charitable-upgrade-cta {
+    background-color: #000;
+    border: 2px solid #e1e1e1;
+    border-top: 0;
+    border-bottom: 0;
+    color: #fff;
+    padding: 10px;
+    .block {
+        display: flex;
+        flex-direction: row;
+        padding: 40px;
+		justify-content: space-between;
+    }
+    h2 {
+        color: #fff;
+        font-size: 20px;
+        margin: 0 0 30px 0;
+    }
+    ul {
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        li {
+            display: flex;
+            width: 50%;
+            margin: 0 0 8px 0;
+            padding: 0;
+            gap: 5px;
+            .dashicons {
+                color: #008a20
+            }
+        }
+    }
+    .left {
+		max-width: 600px;
+    }
+    .right {
+        // float: right;
+        // width: 33.333333%;
+        // padding: 20px 0 0 20px;
+        text-align: center;
+        h2 {
+            text-align: center;
+            margin: 0
+            span {
+                display: inline-block;
+                border-bottom: 1px solid #555;
+                padding: 0 15px 12px
+            }
+        }
+        .price {
+            padding: 26px 0;
+            .amount {
+                font-size: 48px;
+                font-weight: 600;
+                position: relative;
+                display: inline-block
+            }
+            .amount:before {
+                content: '$';
+                position: absolute;
+                top: -8px;
+                left: -16px;
+                font-size: 18px
+            }
+            .term {
+                font-size: 12px;
+                display: inline-block
+            }
+        }
+        a {
+            background-color: #e27730;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 28px;
+            position: relative;
+            top: -4px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-shadow: none;
+            line-height: 24px;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            max-width: 80%;
+            text-align: center;
+        }
+    }
+}
+
+.charitable-more-links {
+	list-style-type: none;
+	margin: 0 0 0 0;
+	background: white;
+	padding: 20px;
+	li {
+		font-size: 14px;
+		line-height: 24px;
+		margin: 0 0 5px 0;
+		span {
+			margin-right: 6px;
+			margin-top: 2px;
+		}
+	}
+}
+
+/* gateway / stripe */
+
+.charitable-step-connect-payment {
+    .charitable-gateway-icon,
+    .charitable-gateway-info-column {
+        display: inline-block;
+    }
+    .charitable-gateway-info-column {
+        margin: 10px 0 0 20px;
+        max-width: 350px;
+		p {
+			margin-top: 5px;
+		}
+    }
+    .charitable-gateway-footer label {
+        font-size: 15px;
+        line-height: 16px;
+    }
+    .charitable-gateway-icon img {
+        border: 1px solid rgba(25, 29, 45, 0.14);
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .wpcharitable-stripe-connect {
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 1;
+        background-color: #635bff;
+        border-radius: 3px;
+        padding: 10px 20px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+/* opt-in */
+
+.charitable-checklist-allow {
+	display: none;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			display: flex;
+			align-items: top;
+			margin-bottom: 10px;
+			justify-content: flex-start;
+			align-content: flex-start;
+			.charitable-checklist-allow-icon {
+				span {
+					display: inline-block;
+
+					background-color: white;
+					background-size: contain;
+					border-radius: 50%;
+					color: #fff;
+					font-size: 32px;
+					margin: -3px 0 0 0;
+					line-height: 42px;
+					text-align: center;
+					width: 40px;
+					height: 40px;
+				}
+				span:before {
+					margin: 0 auto;
+					color: #5aa152;
+					display: block;
+					text-align: center;
+					width: 35px;
+					height: 35px;
+				}
+				/* select last span */
+				span.not-shared:before {
+					color: #dd0f0f;
+				}
+			}
+			.charitable-checklist-allow-text {
+				margin-left: 10px;
+				text-align: left !important;
+				width: 100%;
+				h6 {
+					font-size: 15px;
+					line-height: 15px;
+					font-weight: 600;
+					margin: 0;
+					padding: 0;
+				}
+				p {
+					font-size: 12px;
+					line-height: 18px;
+					margin: 2px 0;
+				}
+			}
+		}
+	}
+}
+
+/* buttons */
+
+.charitable-setup-checklist input.charitable-button-primary[type="submit"],
+.charitable-setup-checklist a.charitable-button-primary {
+    background-color: #5aa152;
+    border-color: #5aa152;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "Inter",sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 15px 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    display: inline-block;
+    cursor: pointer;
+    min-height: 30px;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.charitable-setup-checklist input.charitable-button-primary[type="submit"]:hover,
+.charitable-setup-checklist a.charitable-button-primary:hover {
+    background-color: #5aa152;
+    border-color: #5aa152;
+}
+.charitable-setup-checklist input.charitable-button-primary[type="submit"].alt,
+.charitable-setup-checklist a.charitable-button-primary.alt {
+    background-color: #df7739;
+    border-color: #df7739;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-shadow: none;
+    font-size: 16px;
+    font-weight: 600 !important;
+    line-height: 19px;
+    padding: 10px 20px;
+    background-color: #df7739;
+    text-transform: capitalize;
+    letter-spacing: normal;
+}
+.charitable-setup-checklist input.charitable-button-primary[type="submit"].alt:hover,
+.charitable-setup-checklist a.charitable-button-primary.alt:hover {
+    background-color: #df7739;
+    border-color: #df7739;
+}
+
+/* checks */
+
+.charitable-checklist-checkbox {
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="23" height="23" rx="11.5" stroke="%235AA152"/></svg>');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 10px;
+}
+.charitable-checklist-checkbox.charitable-checklist-checked {
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="23" height="23" rx="11.5" fill="%235AA152" stroke="%235AA152"/><path d="M10.3985 16.4489L6.27692 12.3273L7.3073 11.297L10.3985 14.3881L17.0327 7.75388L18.0631 8.78426L10.3985 16.4489Z" fill="white"/></svg>');
+}
+
+/* content */
+
+body.charitable-checklist-page {
+
+	.charitable-toggle-container {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 20px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+		align-items: center;
+		.charitable-bonus-step-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid rgba(25, 29, 45, 0.14);
+			padding-bottom: 20px;
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+				border-bottom: 0;
+				padding-bottom: 0;
+				display: flex;
+				flex-direction: row;
+				align-items: stretch;
+			}
+			a.charitable-button {
+				margin-left: 25px;
+				margin-top: 15px;
+				i {
+					font-weight: 100;
+					margin-left: 6px;
+				}
+			}
+			p:first-child {
+				margin-top: 0;
+			}
+			.charitable-button-column {
+
+			}
+		}
+		input[type="text"],
+		input[type="email"] {
+			border: 1px solid rgba(25, 29, 45, 0.14);
+			width: 80%;
+		}
+	}
+	section.charitable-step-opt-in .charitable-toggle-container {
+		align-items: baseline;
+	}
+	section.charitable-step-opt-in a.charitable-button {
+		top: 20px;
+		position: relative;
+	}
+	.charitable-toggle-container.charitable-column {
+		flex-direction: column;
+		.charitable-reduced-width p {
+			max-width: 80%;
+		}
+	}
+	.charitable-toggle-container.charitable-equal-flex .charitable-reduced-width p {
+		max-width: 80%;
+	}
+	.charitable-toggle-container p {
+		color: rgba(25, 29, 45, 0.7);
+		font-family: Inter;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 22.4px;
+	}
+	.charitable-toggle-container h4,
+	.charitable-toggle-container h3 {
+		margin: 0;
+		.charitable-badge {
+			left: 10px;
+			top: -5px;
+			position: relative;
+		}
+	}
+	.charitable-toggle-container label {
+		color: rgba(25, 29, 45, 0.9);
+		margin-left: 7px;
+		font-family: Inter;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22.4px;
+		text-align: left;
+	}
+	.charitable-toggle-container.charitable-step-two-col-content {
+		div:first-child {
+			text-align: left;
+		}
+		.charitable-reduced-width {
+			margin-right: 25px;
+			line-break: pretty !important;
+			p {
+				max-width: 100%;
+				line-break: pretty !important;
+			}
+		}
+	}
+	.charitable-toggle-container.charitable-step-two-col-content div:last-child {
+		text-align: right;
+	}
+	.charitable-toggle-container.charitable-step-one-col-content .charitable-sub-container {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+		border-bottom: 1px solid rgba(235, 235, 235, 1);
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+	.charitable-toggle-container.charitable-step-one-col-content .charitable-sub-container.charitable-column {
+		flex-direction: column;
+	}
+	.charitable-toggle-container.charitable-step-one-col-content .charitable-sub-container:not(.charitable-column) div:first-child {
+		display: flex;
+		align-items: center;
+	}
+	.charitable-sub-container-row {
+		width: 100%;
+	}
+	.charitable-toggle-container.charitable-step-one-col-content .charitable-sub-container div.charitable-sub-container-row {
+		display: block;
+	}
+	.charitable-toggle-container.charitable-step-one-col-content .charitable-sub-container img.wpchar-arrow {
+		position: relative;
+		top: 5px;
+		margin-left: 5px;
+	}
+	.charitable-toggle-container.charitable-step-one-col-content .charitable-sub-container:last-of-type {
+		border-bottom: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	.charitable-step-footer {
+		width: 100%;
+		text-align: center;
+		a {
+			margin: 20px auto 40px auto;
+			color: grey;
+			text-decoration: underline;
+			text-decoration-color: currentcolor;
+			text-decoration-style: solid;
+			text-decoration-thickness: auto;
+			text-decoration-color: grey;
+			text-decoration-thickness: 2px;
+			text-decoration-style: dotted;
+			text-underline-offset: 3px;
+			display: block;
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+
+	.charitable-gateway-icon,
+	.charitable-gateway-info-column {
+		display: inline-block;
+	}
+	.charitable-gateway-info-column {
+		margin: 20px 0 0 20px;
+	}
+	.charitable-gateway-icon img {
+		border: 1px solid rgba(25, 29, 45, 0.14);
+		border-radius: 10px;
+		padding: 10px;
+	}
+
+	.charitable-next-level-icon {
+		width: 58px;
+	}
+
+	.charitable-angle-down {
+		transform: rotate(0deg);
+		transition: transform .1s linear;
+	}
+	.charitable-angle-down.charitable-angle-right {
+		transform: rotate(-90deg);
+		transition: transform .1s linear;
+	}
+
+	.charitable-learn-more a {
+		color: rgba(25, 29, 45, 0.5) !important;
+		display: inline-block;
+		text-decoration: none;
+		font-family: Inter;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 21px;
+		text-align: center;
+		margin: 15px auto;
+	}
+	.charitable-learn-more a:hover {
+		color: rgba(25, 29, 45, 0.5) !important;
+		text-decoration: underline;
+	}
+
+	.wpchar-disabled {
+		opacity: 0.35;
+	}
+	.wpchar-disabled a {
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+}
+
+/* widget */
+
+$color_1: #ffffff;
+$color_2: #cccccc;
+$color_3: #222222;
+$color_4: #b6b6b6;
+$color_5: #df7739;
+$color_6: #777777;
+$color_7: #74ae5e;
+$color_8: #6ab255;
+$color_9: #909090;
+$color_10: #2c3338;
+$color_11: #444444;
+$color_12: #fdb72c;
+$color_13: #a7aaad;
+$color_14: #23282c;
+$color_15: #1d7bac;
+$font-family_1: FontAwesome;
+$background-color_1: white;
+$background-color_2: #dddddd;
+$background-color_3: #df7739;
+$background-color_4: #d06e2d;
+$background-color_5: #555555;
+$background-color_6: #777777;
+$background-color_7: #222222;
+$background-color_8: #2d2d2d;
+$background-color_9: #3178a0;
+$background-color_10: #ffffff;
+$background-color_11: rgba(112,128,144,0.6);
+$background-color_12: #b85a1b;
+$border-top-color_1: white;
+$border-right-color_1: white;
+$border-bottom-color_1: white;
+$border-left-color_1: white;
+
+@keyframes charitable-checklist-bar-shift {
+	0% {
+		background-position-x: 27px;
+	}
+	100% {
+		background-position-x: 0;
+	}
+}
+@keyframes charitable-checklist-dot-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(223,119,57,0.6);
+	}
+	100% {
+		box-shadow: 0 0 0 10px rgba(223,119,57,0);
+	}
+}
+#charitable-welcome {
+	.checklist {
+		border-radius: 2px;
+		box-shadow: 0 0 50px 0 rgba(0,0,0,0.1);
+		margin-bottom: 30px;
+		background: #444 url("../../images/onboarding/checklist/getting-started.png") center right no-repeat;
+		background-size: contain;
+		.block {
+			max-width: 480px;
+		}
+		h1 {
+			color: $color_1;
+			text-align: left;
+			margin: 20px 0 22px;
+		}
+		h6 {
+			font-size: 17px;
+			font-weight: 400;
+			text-align: left;
+			color: $color_2;
+			margin: 0 0 34px;
+		}
+	}
+}
+.charitable-checklist {
+	// display: none;
+	position: fixed;
+	right: 20px;
+	bottom: 0;
+	width: 230px;
+	z-index: 100110;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	box-shadow: 0 0 30px rgba(0,0,0,0.15);
+	p {
+		font-size: 14px;
+		line-height: 20px;
+		margin: 0 0 15px 0;
+		color: $color_3;
+	}
+	b {
+		font-weight: 600;
+	}
+	.charitable-checklist-list-block {
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		padding: 26px 20px 20px 20px;
+		background-color: $background-color_1;
+		overflow: hidden;
+		position: relative;
+		// transition: all 0.3s;
+		// transition-timing-function: ease;
+		.list-block-button {
+			position: absolute;
+			color: $color_4;
+			top: 10px;
+			cursor: pointer;
+			width: 16px;
+			height: 16px;
+			background-size: 16px 16px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			opacity: 0.25;
+			// transition: 0.3s;
+			z-index: 999;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+		.list-block-button.checklist-toggle {
+			right: 30px;
+            background-image: url(../../images/onboarding/checklist/chevron-circle-down-regular.svg);
+		}
+		.list-block-button.checklist-skip {
+			right: 10px;
+			background-image: url(../../images/onboarding/checklist/times-circle-regular.svg);
+			color: $color_4;
+		}
+		.list-block-button.checklist-cancel {
+			right: 10px;
+			background-image: url(../../images/onboarding/checklist/times-circle-regular.svg);
+			color: $color_4;
+		}
+	}
+	.charitable-checklist-list-block.closed {
+		padding: 10px;
+        p {
+            margin-bottom: 0;
+        }
+
+		.list-block-button.checklist-toggle {
+			transform: rotate(180deg);
+		}
+		.charitable-checklist-list {
+			display: block;
+			li {
+				opacity: 0;
+				height: 0;
+				margin: 0;
+			}
+			// .charitable-checklist-item-completed {
+			// 	opacity: 0 !important;
+			// 	height: 0 !important;
+			// }
+			// .charitable-checklist-item-current {
+			// 	opacity: 1;
+			// 	height: 16px;
+			// 	span {
+			// 		&:before {
+			// 			opacity: 0;
+			// 			margin-left: -20px;
+			// 			transition: opacity 0s;
+			// 		}
+			// 	}
+			// }
+		}
+	}
+	.charitable-checklist-list-block.transition-back {
+		// .charitable-checklist-list {
+		// 	li {
+		// 		transition: opacity 0.1s 0.2s, height 0.3s, margin 0.3s;
+		// 	}
+		// 	.charitable-checklist-item-current {
+		// 		span {
+		// 			&:before {
+		// 				transition: opacity 0.1s 0.2s;
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+	.charitable-checklist-list {
+		list-style: none;
+		margin: 0;
+		font-size: 12px;
+		line-height: 16px;
+		// transition: all 0.3s;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		justify-content: flex-start;
+		li {
+			display: flex;
+			span {
+				&:before {
+					display: inline-block;
+					font-family: $font-family_1;
+					content: "\f1db";
+					font-size: 18px;
+					color: $color_4;
+					margin-right: 8px;
+					line-height: 16px;
+					vertical-align: bottom;
+					border-radius: 50%;
+				}
+			}
+			.dashicons-yes {
+				display: none;
+				vertical-align: middle;
+			}
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            a:hover {
+                color: $color_5;
+            }
+		}
+		li.charitable-checklist-item-current {
+			font-weight: bold;
+			cursor: pointer;
+			span {
+				&:before {
+					color: $color_5;
+					content: '\f111';
+					font-size: 17.5px;
+					line-height: 1;
+					text-indent: .5px;
+				}
+			}
+		}
+		li.charitable-checklist-item-completed {
+			font-weight: initial;
+			text-decoration: line-through;
+			color: $color_6;
+			span {
+				&:before {
+					color: $color_7;
+					font-size: 18px;
+					background-color: $background-color_1;
+					content: "\f058";
+				}
+			}
+		}
+		li.charitable-checklist-completed {
+			// opacity: 0.8;
+			// height: 0;
+			// margin-bottom: 0;
+			// transition: opacity 0.1s 0.3s, height 0.3s, margin 0.3s;
+			// span {
+			// 	&:before {
+			// 		opacity: 0;
+			// 		margin-left: -20px;
+			// 	}
+			// }
+			span {
+				&:before {
+					// color: $color_5;
+					// content: '\f111';
+					// font-size: 17.5px;
+					// line-height: 1;
+					// text-indent: .5px;
+                    background-size: contain;
+                    color: transparent;
+                    background-repeat: no-repeat;
+                    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="23" height="23" rx="11.5" fill="%235AA152" stroke="%235AA152"/><path d="M10.3985 16.4489L6.27692 12.3273L7.3073 11.297L10.3985 14.3881L17.0327 7.75388L18.0631 8.78426L10.3985 16.4489Z" fill="white"/></svg>');
+				}
+			}
+		}
+	}
+	.charitable-checklist-bar {
+		background-color: $background-color_2;
+		div {
+			width: 0;
+			height: 8px;
+			border-radius: 0;
+			background-image: url(../../images/onboarding/checklist/bar-bg.png);
+			background-size: auto 8px;
+			background-repeat: repeat-x;
+			animation: charitable-checklist-bar-shift 1.5s linear infinite;
+		}
+	}
+	.charitable-checklist-cancel {
+		float: right;
+		color: $color_9;
+		font-size: 12px;
+		font-weight: 100;
+	}
+	.charitable-checklist-skip {
+		float: right;
+		color: $color_9;
+		font-size: 12px;
+		font-weight: 100;
+	}
+	.charitable-btn {
+		cursor: pointer;
+		color: $color_1;
+		border-radius: 2px;
+	}
+	.charitable-btn-md {
+		min-height: initial;
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 15px;
+		padding: 5px 10px;
+		border: none;
+	}
+	.charitable-btn-orange {
+		background-color: $background-color_3;
+		&:hover {
+			background-color: $background-color_4;
+		}
+	}
+	.charitable-btn-grey {
+		background-color: $background-color_5;
+		&:hover {
+			background-color: $background-color_6;
+		}
+	}
+	.charitable-checklist-block-timer {
+		padding: 10px 0;
+		background-color: $background-color_7;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		align-items: center;
+		line-height: 20px;
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+		h3 {
+			font-size: 15px;
+			font-weight: 600;
+			color: $color_1;
+			margin: 0;
+		}
+		p {
+			font-size: 14px;
+			font-weight: 300;
+			color: $color_1;
+			opacity: 0.6;
+			margin: 0;
+		}
+	}
+	.charitable-checklist-block-under-status {
+		background-color: $background-color_8;
+		text-align: center;
+		padding: 10px;
+		min-height: 24.4px;
+        a.charitable-btn {
+            display: inline-block;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+            box-shadow: none;
+            font-size: 16px;
+            font-weight: 600 !important;
+            line-height: 19px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #df7739;
+            color: #ffffff;
+            text-transform: capitalize;
+            letter-spacing: normal;
+        }
+	}
+}
+.charitable-checklist.charitable-checklist-start {
+	display: initial;
+}
+.charitable-checklist.paused {
+	.charitable-checklist-bar {
+		div {
+			animation-play-state: paused;
+		}
+	}
+}
+.charitable-checklist.charitable-checklist-completed {
+	.charitable-checklist-bar {
+		div {
+			animation-play-state: paused;
+		}
+	}
+	.charitable-checklist-block-timer {
+		p {
+			color: $color_8;
+			opacity: 1;
+		}
+	}
+	.charitable-checklist-block-under-status {
+		.charitable-btn {
+            display: inline-block;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+            box-shadow: none;
+            font-size: 16px;
+            font-weight: 600 !important;
+            line-height: 19px;
+            padding: 7px 16px;
+            border: none;
+            background-color: #df7739;
+            color: #ffffff;
+            text-transform: capitalize;
+            letter-spacing: normal;
+		}
+        p {
+            margin: 0;
+            color: white;
+            a {
+                color: #df7739;
+                text-decoration: none;
+            }
+        }
+	}
+}
+span.charitable-checklist-dot {
+	display: inline-block;
+	width: 12px;
+	height: 12px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	border-radius: 50%;
+	background-color: $background-color_3;
+	animation: charitable-checklist-dot-pulse 1.5s infinite !important;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-step1 {
+	margin: 0 80px 0 20px;
+	position: absolute;
+	right: 1px;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-step2 {
+	margin-left: 10px;
+	vertical-align: -2px;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-step3 {
+	float: right;
+	margin-top: 5px;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-step3.charitable-checklist-dot-completed {
+	margin-top: 2px;
+	background: transparent;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-step4 {
+	margin-left: 24px;
+	vertical-align: middle;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-step5 {
+	margin: 3px 10px;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-next {
+	background-color: $background-color_9;
+	box-shadow: 0 0 0 6px #eeeeee;
+	animation: none !important;
+}
+span.charitable-checklist-dot.charitable-checklist-dot-completed {
+	background-color: $background-color_10;
+	width: 16px !important;
+	height: 16px !important;
+	box-shadow: none;
+	position: relative;
+	animation: none !important;
+	&:before {
+		color: $color_7;
+		font-size: 18px;
+		line-height: 16px;
+		width: 14px;
+		height: 14px;
+		background-color: $background-color_10;
+		content: "\f058";
+		font-family: $font-family_1;
+		position: absolute;
+		border-radius: 50%;
+		left: 0;
+	}
+}
+span.charitable-checklist-dot.charitable-checklist-dot-completed.charitable-checklist-dot-step1 {
+	position: absolute;
+}
+.wp-editor-tools {
+	span.charitable-checklist-dot.charitable-checklist-dot-step5 {
+		margin-top: 9px;
+	}
+}
+.charitable-checklist-tooltips {
+	display: none;
+}
+.charitable-checklist-popup-container {
+	display: none;
+	background-color: $background-color_11;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100100;
+	overflow: hidden;
+	overflow-y: scroll;
+	transition: all .25s ease-out;
+}
+.charitable-checklist-popup {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 600px;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: $background-color_1;
+	box-shadow: 0 0 40px 0 rgba(0,0,0,0.2);
+	z-index: 9999;
+	.charitable-checklist-popup-close {
+		font-size: 27px;
+		color: $color_13;
+		position: absolute;
+		right: 0;
+		margin: 11px 10px 10px 10px;
+		background-color: $background-color_10;
+		border-radius: 50%;
+		cursor: pointer;
+		&:hover {
+			color: $color_6;
+		}
+	}
+	.charitable-checklist-popup-btn {
+		display: inline-block;
+		border-radius: 4px;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+		vertical-align: middle;
+		white-space: nowrap;
+		box-shadow: none;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 19px;
+		padding: 10px 20px;
+		border: none;
+		background-color: $background-color_3;
+		color: $color_1;
+		&:hover {
+			background-color: $background-color_12;
+		}
+		.dashicons-external {
+			margin-left: 6px;
+		}
+		&:last-child {
+			margin-left: 20px;
+		}
+		&:disabled {
+			cursor: default;
+			opacity: 0.5;
+			&:hover {
+				background-color: $background-color_3;
+			}
+		}
+	}
+	.charitable-checklist-popup-btn.charitable-checklist-popup-contact-btn {
+		margin-left: 0;
+	}
+	.charitable-checklist-popup-btn.charitable-checklist-popup-rate-btn {
+		margin-left: 0;
+	}
+	.charitable-checklist-popup-flex {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: stretch;
+		* {
+			margin: 0 !important;
+		}
+	}
+	.charitable-admin-popup-content {
+		padding: 60px 50px;
+	}
+}
+.charitable-checklist-popup-congrats {
+	background: #fff url("../../images/onboarding/checklist/confetti.svg") repeat center;
+}
+.charitable-checklist-popup-header {
+	width: 100%;
+	height: 212px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.charitable-checklist-popup-header-contact {
+	background: #eee url("../../images/onboarding/checklist/popup-contact.png") no-repeat center;
+	background-size: auto 57%;
+}
+.charitable-checklist-popup-footer {
+	padding: 40px;
+	background: #f5f5f5;
+	h3 {
+		font-size: 20px;
+		line-height: 24px;
+		color: $color_10;
+		margin: 0 0 20px;
+		img {
+			vertical-align: -4px;
+			margin-left: 2px;
+		}
+	}
+	p {
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	a.charitable-checklist-popup-btn {
+		margin-left: 0 !important;
+		background: #2271b1;
+		&:hover {
+			background: #215d8f;
+		}
+	}
+}
+.charitable-checklist-popup-content {
+	padding: 40px;
+	-webkit-font-smoothing: antialiased;
+	h3 {
+		color: $color_5;
+		margin: 0 0 10px 0;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 30px;
+		img {
+			vertical-align: -6px;
+			margin-left: 6px;
+			width: 32px;
+			height: 32px;
+		}
+	}
+	p {
+		font-size: 16px;
+		margin: 0 0 20px;
+		color: $color_11;
+		line-height: 28px;
+	}
+	b {
+		font-weight: 600;
+	}
+	.charitable-checklist-contact-message {
+		box-shadow: none;
+		resize: none;
+		margin-bottom: 21px;
+		width: 100%;
+		min-height: 175px;
+		padding: 10px;
+	}
+	label {
+		font-size: 13.8px;
+		display: block;
+		margin-bottom: 23px;
+	}
+	input[type=checkbox] {
+		margin-right: 8px;
+	}
+	.rating-stars {
+		color: $color_12;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	select {
+		border-radius: 4px;
+		border: 1px solid #d6d6d6;
+		padding: 8px 12px;
+		width: 320px;
+		font-size: 14px;
+		line-height: 21px;
+		color: $color_6;
+		vertical-align: middle;
+		&:focus {
+			color: $color_6;
+		}
+	}
+	input[type=text] {
+		border-radius: 4px;
+		border: 1px solid #d6d6d6;
+		padding: 8px 12px;
+		width: 320px;
+		font-size: 14px;
+		line-height: 21px;
+		color: $color_6;
+		vertical-align: middle;
+		&:focus {
+			color: $color_6;
+		}
+	}
+}
+.charitable-checklist-popup.charitable-checklist-popup-plain {
+	border-radius: 0;
+	max-width: 550px;
+	text-align: center;
+	.charitable-checklist-popup-content {
+		padding: 60px 50px;
+	}
+	h3 {
+		text-align: center;
+		font-weight: bold;
+		font-size: 24px;
+		letter-spacing: 0;
+		color: $color_11;
+	}
+	p {
+		text-align: center;
+		font-size: 18px;
+		letter-spacing: 0;
+		color: $color_6;
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip {
+	z-index: 100099 !important;
+	.tooltipster-arrow-border {
+		border: none;
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-top {
+	.tooltipster-box {
+		margin-bottom: 18px;
+	}
+	.tooltipster-arrow-background {
+		top: 0;
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-right {
+	.tooltipster-box {
+		margin-left: 18px;
+	}
+	.tooltipster-arrow {
+		left: 8px;
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-base {
+	.tooltipster-box {
+		max-width: 260px;
+		background: white;
+		border: none;
+		border-radius: 4px;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+		.tooltipster-content {
+			color: $color_11;
+			padding: 16px 20px 18px;
+			text-align: center;
+			div {
+				* {
+					&:first-child {
+						margin-top: 0 !important;
+					}
+				}
+			}
+			h3 {
+				font-size: 16px;
+				letter-spacing: 0;
+				line-height: 18px;
+				margin: 0;
+				color: $color_14;
+			}
+			p {
+				font-size: 14px;
+				letter-spacing: 0;
+				line-height: 18px;
+				margin: 10px 0 0;
+				color: $color_11;
+			}
+			a {
+				color: $color_15;
+			}
+		}
+		.charitable-checklist-done-btn {
+			border-radius: 3px;
+			cursor: pointer;
+			text-decoration: none;
+			text-align: center;
+			vertical-align: middle;
+			white-space: nowrap;
+			box-shadow: none;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 0;
+			padding: 7px 18px;
+			border: none;
+			background-color: $background-color_3;
+			color: $color_1;
+			display: block;
+			margin: 15px auto 0;
+			&:hover {
+				background-color: $background-color_12;
+			}
+			&:disabled {
+				cursor: default;
+				opacity: 0.5;
+				&:hover {
+					background-color: $background-color_3;
+				}
+			}
+		}
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-base.tooltipster-top {
+	.tooltipster-arrow-background {
+		border-top-color: $border-top-color_1;
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-base.tooltipster-right {
+	.tooltipster-arrow-background {
+		border-right-color: $border-right-color_1;
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-base.tooltipster-bottom {
+	.tooltipster-arrow-background {
+		border-bottom-color: $border-bottom-color_1;
+	}
+}
+.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-base.tooltipster-left {
+	.tooltipster-arrow-background {
+		border-left-color: $border-left-color_1;
+	}
+}
+.block-editor-page {
+	.edit-post-layout {
+		.components-notice-list {
+			>div {
+				padding-left: 50px;
+			}
+		}
+	}
+	.charitable-checklist-dot-step5 {
+		position: absolute;
+		top: 75px;
+		left: 20px;
+		z-index: 9999;
+	}
+	.charitable-checklist-tooltip.charitable-checklist-tooltip-step5 {
+		width: 260px !important;
+		z-index: 1000002 !important;
+		margin-top: 5px;
+		.tooltipster-box {
+			margin-top: 10px;
+		}
+		.charitable-checklist-tooltips-red-arrow {
+			position: absolute;
+			display: block;
+			width: 15px;
+			height: 42px;
+			top: -65px;
+			left: 145px;
+			background-image: url(../../images/onboarding/checklist/red-arrow.svg);
+			background-size: 15px 42px;
+			background-repeat: no-repeat;
+		}
+	}
+	.charitable-checklist-tooltip.charitable-checklist-tooltip-step5.charitable-checklist-tooltip-step5-hide {
+		z-index: -1 !important;
+	}
+}
+.block-editor-page.is-fullscreen-mode {
+	.edit-post-layout {
+		.components-notice-list {
+			>div {
+				padding-left: 125px;
+			}
+		}
+	}
+	.charitable-checklist-dot-step5 {
+		left: 75px;
+	}
+	.charitable-checklist-tooltip {
+		.charitable-checklist-tooltips-red-arrow {
+			left: 105px;
+		}
+	}
+}
+#charitable-builder {
+	.charitable-setup-title.core {
+		display: inline-block;
+		padding-right: 15px;
+		margin-right: 0;
+	}
+}
+.charitable_page_charitable-builder {
+	.charitable-checklist {
+		z-index: 100099;
+	}
+	.charitable-checklist-tooltip.tooltipster-sidetip.tooltipster-right {
+		.tooltipster-arrow {
+			left: 0;
+		}
+	}
+}
+.charitable-invisible {
+	opacity: 0 !important;
+}
+@media all and (max-height: 900px) {
+	#charitable-checklist-contact-popup {
+		margin: 50px 0 20px;
+	}
+}
+@media all and (max-width: 1023px) {
+	.charitable-checklist-tooltip.tooltipster-sidetip {
+		display: none !important;
+	}
+	.charitable-checklist {
+		display: none !important;
+	}
+}
+@media (max-width: 1024px) {
+	.charitable-checklist {
+		display: none !important;
+		visibility: hidden !important;
+		* {
+			display: none !important;
+			visibility: hidden !important;
+		}
+	}
+	.charitable-checklist-dot {
+		display: none !important;
+		visibility: hidden !important;
+		* {
+			display: none !important;
+			visibility: hidden !important;
+		}
+	}
+	.charitable-checklist-tooltips {
+		display: none !important;
+		visibility: hidden !important;
+		* {
+			display: none !important;
+			visibility: hidden !important;
+		}
+	}
+	.charitable-checklist-tooltip {
+		display: none !important;
+		visibility: hidden !important;
+		* {
+			display: none !important;
+			visibility: hidden !important;
+		}
+	}
+	.charitable-checklist-popup-container {
+		display: none !important;
+		visibility: hidden !important;
+		* {
+			display: none !important;
+			visibility: hidden !important;
+		}
+	}
+	#charitable-welcome {
+		.checklist {
+			display: none !important;
+			visibility: hidden !important;
+		}
+	}
+}
+
+/* Tour */
+
+.tippy-tooltip {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+.shepherd-content {
+    .shepherd-text {
+        p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0;
+            color: #777777;
+        }
+        p.charitable-tour-tip {
+            background-color: #5AA152;
+            color: #fff;
+            font-weight: 200;
+            padding: 10px 30px;
+            font-size: 16px;
+            line-height: 24px;
+            display: block;
+        }
+    }
+}
+.shepherd-has-title {
+    .shepherd-content {
+        padding: 15px 30px;
+        header.shepherd-header {
+            background-color: transparent;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 0px;
+            h3 {
+                margin-top: 0;
+                justify-content: center;
+                text-align: center;
+                font-weight: bold;
+                font-size: 21px;
+                letter-spacing: 0;
+                color: #444444;
+            }
+            .shepherd-cancel-icon {
+                color: grey;
+            }
+        }
+        .shephard-text {
+            margin: 0 0 15px 0;
+        }
+    }
+    .shepherd-cancel-icon {
+        position: absolute;
+        font-size: 1.25em;
+        top: 5px;
+        right: 9px;
+    }
+    footer {
+        justify-content: center;
+    }
+}
+
+.wpchar-visual-campaign-builder-step-2 {
+    .shepherd-text {
+        text-align: left;
+    }
+}
+
+.shepherd-footer {
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Progress */
+
+.shepherd-content {
+    .charitable-tour-progress-bar {
+        display: block;
+        border: 1px solid #e6e6e6;
+        width: 50%;
+        height: 5px;
+        margin: 0 auto;
+    }
+    .charitable-tour-progress {
+        background-color: #5AA152;
+        display: block;
+        height: 5px
+    }
+}
+
+/* Buttons */
+
+.charitable-tour-btn-primary.shepherd-button {
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-shadow: none;
+    font-size: 16px;
+    font-weight: 600 !important;
+    line-height: 19px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #df7739;
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: normal;
+}
+.charitable-tour-btn-primary.shepherd-button:hover {
+    background-color: #f89d36;
+}
+.charitable-tour-btn-disabled {
+    opacity: 0.5;
+}
+
+.shepherd.tippy-popper[x-placement^="bottom"].shepherd-has-title .tippy-arrow {
+    border-bottom-color: white !important;
+}
+
+/* Step 0 */
+
+.wpchar-visual-campaign-builder-step-0 {
+    padding: 20px 50px;
+    header {
+        display: none;
+
+    }
+    .shepherd-text {
+        text-align: center;
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 0;
+            color: #444444;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0;
+            color: #777777;
+        }
+    }
+    .shepherd-footer {
+        justify-content: center;
+        margin-top: 0px;
+    }
+    .shepherd-content .charitable-tour-progress,
+    .shepherd-content .charitable-tour-progress-bar {
+        border: 0;
+        visibility: hidden;
+        display: none !important;
+    }
+}
+
+/* Video */
+
+#charitable-tour-video {
+
+}
+
+
+
+/* Tour Blocks */
+
+#tippy-3 {
+    max-width: 375px !important;
+}
+#tippy-4 {
+    max-width: 400px !important;
+}
+#tippy-2,
+#tippy-5,
+#tippy-6,
+#tippy-7 {
+    max-width: 400px !important;
+}
+#tippy-9,
+#tippy-10,
+#tippy-11,
+#tippy-12,
+#tippy-13 {
+    max-width: 300px !important;
+}
+
+/* overrides for outside the visual builder */
+body.charitable-admin-settings-emails #tippy-2,
+body.charitable-admin-settings-emails #tippy-3 {
+	max-width: 500px !important;
+}
+@media screen and (max-width: 1500px) {
+	body.charitable-admin-settings-emails #tippy-2,
+	body.charitable-admin-settings-emails #tippy-3 {
+		max-width: 450px !important;
+	}
+}
+
+#charitable-tour-block-1,
+#charitable-tour-block-2,
+#charitable-tour-block-3 {
+    background-color: transparent;
+    display: block;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+}
+#charitable-tour-block-1 {
+    top: 0;
+    height: 193px;
+}
+#charitable-tour-block-2 {
+    top: 193px;
+    height: 350px;
+}
+#charitable-tour-block-3 {
+    top: 556px;
+    height: 250px;
+}
+#charitable-tour-block-4 {
+    background-color: transparent;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 180px;
+    height: 145px;
+    z-index: 999999;
+}
+#charitable-tour-block-5 {
+    background-color: red;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    height: 50px;
+    z-index: 999999;
+}
